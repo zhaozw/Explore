@@ -53,6 +53,8 @@ public class OutDetailOutLineFragment extends BaseHttpFragment {
 
 	private ExpandableListView detail_listView;
 	private OutLineModifyExpandListAdapter outLineAdapter;
+    // 已经存在列表中的商品
+    public static List<String> productIdInList;
 
 	private String outId;
 
@@ -93,6 +95,7 @@ public class OutDetailOutLineFragment extends BaseHttpFragment {
 			mActivity = (OutDetailActivity) getActivity();
 			outId = mActivity.getOutId();
 			outInfoList = new ArrayList<ExpandListData>();
+            productIdInList = new ArrayList<String>();
 			outLineAdapter = new OutLineModifyExpandListAdapter(outInfoList,
 					getActivity(), this, !mActivity.hasAudit);
 			detail_listView.setAdapter(outLineAdapter);
@@ -191,6 +194,7 @@ public class OutDetailOutLineFragment extends BaseHttpFragment {
 					.get(ResponseConstant.STATUS))) {
 				JSONArray jsonArray = jsonObject.getJSONArray("OUTLINE1S");
 				outInfoList.clear();
+                productIdInList.clear();
 
 				List<String> keyList = new ArrayList<String>();
 				keyList.add("product_partno");
@@ -245,6 +249,7 @@ public class OutDetailOutLineFragment extends BaseHttpFragment {
 					}
 					outInfo.setDetailList(infoList);
 					outInfoList.add(outInfo);
+                    productIdInList.add(outInfo.getId2());
 				}
 
 				outLineAdapter.notifyDataSetChanged();

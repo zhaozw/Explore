@@ -30,6 +30,7 @@ import com.explore.android.core.base.BaseAsynTask.TaskResult;
 import com.explore.android.core.http.AsynDataTask;
 import com.explore.android.core.http.SubmitTask;
 import com.explore.android.core.model.ExResponse;
+import com.explore.android.mobile.activity.out.OutDetailOutLineFragment;
 import com.explore.android.mobile.common.SharePreferencesManager;
 import com.explore.android.mobile.constants.AppStatus;
 import com.explore.android.mobile.constants.ErrorConstants;
@@ -87,15 +88,25 @@ public class OutLineAddAdapter extends BaseAdapter{
 		
 		TextView tv_outlineInfo = (TextView) view.findViewById(R.id.list_outline_add_product);
 		ImageButton btn_operation = (ImageButton) view.findViewById(R.id.list_outline_add_btn);
-		
-		btn_operation.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View arg0) {
-				createDialog(index);
-			}
-		});
-		
-		tv_outlineInfo.setText(proList.get(position).getProductInfo());
+
+        if (isProductExist(proList.get(position).getProductId())) {
+            btn_operation.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context, R.string.outline_product_repeat, Toast.LENGTH_SHORT).show();
+                }
+            });
+            tv_outlineInfo.setText(context.getString(R.string.outline_product_exists)
+                    + proList.get(position).getProductInfo());
+        } else {
+            btn_operation.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View arg0) {
+                    createDialog(index);
+                }
+            });
+            tv_outlineInfo.setText(proList.get(position).getProductInfo());
+        }
 		
 		return view;
 	}
@@ -309,5 +320,19 @@ public class OutLineAddAdapter extends BaseAdapter{
 		public Spinner spi_priceunit;
 		public EditText edt_remarks;
 	}
+
+    private boolean isProductExist(String productId) {
+        int length = OutDetailOutLineFragment.productIdInList.size();
+        int i = 0;
+        boolean flag = false;
+        while (i < length) {
+            if (OutDetailOutLineFragment.productIdInList.get(i).equals(productId)) {
+                flag = true;
+                break;
+
+            }
+        }
+        return flag;
+    }
 
 }
