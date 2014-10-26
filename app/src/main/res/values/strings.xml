@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_settings">设置</string>
+    <string name="sliding_menu_title">主菜单</string>
+    <string name="welcome">欢迎</string>
+    
+    <string name="main_menu_home">首页</string>
+    <string name="main_menu_sdin">采购</string>
+    <string name="main_menu_sdout">销售</string>
+    <string name="main_menu_sdtransport">物流</string>
+    <string name="main_menu_finance">财务</string>
+    <string name="main_menu_oa">行政办公</string>
+    <string name="main_menu_hr">人力资源</string>
+    <string name="main_menu_it">IT服务</string>
+    <string name="main_menu_setting">程序设置</string>
+
+    <!-- 页面标题 -->
+    <string name="top_title_home">主页</string>
+    <string name="top_title_init">初始化应用</string>
+    <string name="top_title_navigation">主菜单</string>
+    <string name="top_title_audit">我的审核</string>
+    <string name="top_title_contact">联系人</string>
+    <string name="top_title_settings">应用设置</string>
+    <string name="top_title_customer_search">客户查询</string>
+    <string name="top_title_product_search">商品查询</string>
+    <string name="top_title_stock_search">库存查询</string>
+    <string name="top_title_transport_search">发货查询</string>
+    <string name="top_title_schedule">我的日程</string>
+    <string name="top_title_schedule_detail">日程详情</string>
+    <string name="top_title_outline_add">添加商品</string>
+    <string name="top_title_add_product_cat">新建商品-选择类别</string>
+    <string name="top_title_modify_product_cat">修改商品-选择类别</string>
+    <string name="top_title_add_product_detail">新建商品-商品信息</string>
+    <string name="top_title_modify_product_detail">修改商品-商品信息</string>
+	<string name="top_title_outmanage">销售管理</string>
+    
+    <!-- 应用全局相关 -->
+    <string name="app_name">EX</string>
+    <string name="app_name_bak">Explore-android</string>
+    <string name="menu_settings">Settings</string>
+    <string name="list_nodata">没有数据</string>
+    <string name="app_welcome">欢迎界面</string>
+    <string name="text">Text</string>
+    <string name="app_underline">Underline</string>
+    <string name="app_yes">是</string>
+    <string name="app_no">否</string>
+    <string name="app_back">返回</string>
+    <string name="app_save">保存</string>
+    <string name="app_text">Text</string>
+    <string name="app_test">测试</string>
+    <string name="app_delete">删除</string>
+    <string name="app_delete_success">删除成功</string>
+    <string name="app_delete_failed">删除失败，请重试</string>
+    <string name="app_new">新建</string>
+    <string name="app_edit">修改</string>
+    <string name="app_submit">提交</string>
+    <string name="app_action_success">操作成功</string>
+    <string name="app_action_failed">操作失败，请重试</string>
+    <string name="app_loading">正在加载中&#8230;</string>
+    <string name="app_date_text">2013,09,27</string>
+    <string name="app_username_text">用户名</string>
+    <string name="app_more_ch">更多</string>
+    <string name="app_more_en">More</string>
+    <string name="app_back_event_msg">再按一次后退键退出</string>
+    <string name="app_null">null</string>
+    <string name="app_pick_data">选择时间</string>
+    <string name="app_data_null">未设置</string>
+    <string name="app_stop_polling">停止轮询服务</string>
+    <string name="app_next_step">下一步</string>
+    <string name="app_finish">已完成</string>
+    <string name="app_wait">等待</string>
+    <string name="app_failed">失败</string>
+    <string name="app_no_value">无</string>
+    <string name="app_data_keyword">输入关键字</string>
+    <string name="app_qrcode">扫码</string>
+    
+    <string name="gen_sts_new">新建</string>
+    <string name="gen_sts_clo">锁定</string>
+    <string name="gen_sts_run">可用</string>
+    
+    <string name="layout_list_nodata_title">没有数据</string>
+    <string name="layout_list_nodata_fresh">刷新</string>
+    
+    <string name="download_sdcard_busy_dlg_title">"SD卡不可用"</string>
+    <string name="download_no_sdcard_dlg_title">"SD卡不存在"</string>
+    <string name="cannot_download">"无法下载"</string>
+
+    <string name="scan_tips">将二维码或条码图片对准扫描框即可自动扫描</string>
+    <string name="scan_init_camera">初始化相机</string>
+    <string name="scan_code_init">正在初始化相机&#8230;</string>
+
+    <!-- Navigation -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    
+    <!-- 应用初始化 -->
+    <string name="init_product_category">初始化商品类别数据</string>
+    <string name="init_location_data">初始化地理信息数据</string>
+
+    <!-- 应用设置 -->
+    <string name="setup_title">系統设置</string>
+    <string name="setup_keep_login">自动登入</string>
+    <string name="setup_keep_login_info">成功登录之后，下次登录跳过用户名、密码输入步骤</string>
+    <string name="setup_save_login">保存登录信息</string>
+    <string name="setup_save_logininfo">成功登录之后保存用户名和密码</string>
+    <string name="setup_open_locationservice">开启定位服务</string>
+    <string name="setup_clear_cache">清空缓存</string>
+    <string name="setup_logout">注销当前账户</string>
+    <string name="setup_receive_p2pinfo">接收推送信息</string>
+    <string name="setup_msg_p2p_succeed">设置成功，重启后生效。</string>
+    
+    <string name="prefs_categoty_account">账号设置</string>
+    <string name="prefs_account_save_login">保存登录信息</string>
+    <string name="prefs_account_save_login_summary">成功登录之后保存用户名和密码</string>
+    <string name="prefs_account_auto_login">自动登入</string>
+    <string name="prefs_account_auto_login_summary">成功登录之后，下次登录跳过用户名、密码输入步骤</string>
+    <string name="prefs_categoty_service">功能设置</string>
+    <string name="prefs_service_receive_p2pinfo">接收推送信息</string>
+    <string name="prefs_service_receive_p2pinfo_summary">定时接收服务器的推送消息</string>
+    <string name="prefs_service_location">定位服务</string>
+    <string name="prefs_service_location_summary">向服务器上传位置信息</string>
+    <string name="prefs_account_logout">登出</string>
+    <string name="prefs_account_logout_summary">注销当前账户</string>
+    
+    <!-- 对话框相关 -->
+    <string name="dialog_exit_title">退出Explore</string>
+    <string name="dialog_exit_msg">点击确定退出程序，如不需要退出，请点取消</string>
+    <string name="dialog_logout_title">注销Explore</string>
+    <string name="dialog_logout_msg">点击确定注销登录，如不需要注销，请点取消</string>
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_submit">提交</string>
+    <string name="dialog_save">保存</string>
+    <string name="dialog_add">添加</string>
+    <string name="dialog_reset">重置</string>
+    <string name="dialog_outsal_create_title">销售发货新建</string>
+    
+    <string name="dataloader_title_customer">查询客户</string>
+    <string name="dataloader_title_vatto">查询客户</string>
+    <string name="dataloader_title_default">选择数据</string>
+
+    <!-- 登录相关 -->
+    <string name="login_username">请输入用户名</string>
+    <string name="login_password">请输入密码</string>
+    <string name="login_setup_remname">记住用户名</string>
+    <string name="login_title">登录Explore</string>
+    <string name="login_info">explore.imwork.net</string>
+    <string name="login_login">登录</string>
+    <string name="login_success">登录成功</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_title">设备注册</string>
+    <string name="register_btn_text">注册</string>
+    <string name="register_info">注册、版权等信息显示</string>
+    <string name="register_statement">如果当前使用的是双卡双待手机，默认使用主卡注册</string>
+
+    <!-- 测试相关 -->
+    <string name="test_btn_crefile">创建配置文件</string>
+    <string name="test_text">Explore Test</string>
+    <string name="test_actv_hint">选择你需要的数据</string>
+    <string name="test_db_cre_text">数据库创建测试</string>
+    <string name="test_db_in_text">数据插入测试</string>
+    <string name="test_db_query_text">数据库查询测试</string>
+    <string name="test_db_del_text">数据库删除测试</string>
+    <string name="test_setupurl_title">设置服务器地址</string>
+    <string name="test_setupurl_submit">确认</string>
+    <string name="test_setupurl_reset">重置</string>
+    <string name="test_setupurl_default">使用默认地址</string>
+    
+    <!-- 下拉刷新列表相关 -->
+	<string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">刷新\u2026</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+    <string name="pull_to_refresh_nomore_data">没有更多数据了</string>
+    <string name="pull_to_refresh_data_count">加载了<g id="part1">%1$s</g>条数据</string>
+	<string name="pull_to_refresh_finish">数据已刷新</string>
+    
+    <!-- 底部选项卡标签名称 -->
+    <string name="bottom_tab_menu1">主菜单</string>
+    <string name="bottom_tab_menu2">日程</string>
+    <string name="bottom_tab_menu3">通讯录</string>
+    <string name="bottom_tab_menu4">审核</string>
+    <string name="bottom_tab_menu5">更多</string>
+    <string name="bottom_tab_text">0</string>
+
+    <!-- 联系人相关 -->
+    <string name="contact_btn_fresh">更新联系人</string>
+    <string name="contact_fresh_success">更新联系人成功</string>
+    <string name="contact_fresh_dberroe">数据库错误，更新联系人失败</string>
+    <string name="contact_avatar">头像</string>
+    <string name="contact_name">姓名</string>
+    <string name="contact_gender">性别</string>
+    <string name="contact_gender_m">男</string>
+    <string name="contact_gender_f">女</string>
+    <string name="contact_mobile">手机</string>
+    <string name="contact_email">邮箱</string>
+    <string name="contact_department">部门</string>
+    <string name="contact_positon">职位</string>
+    <string name="contact_positonlevel">职级</string>
+    <string name="contact_info_mobile">手机</string>
+    <string name="contact_info_email">Email</string>
+    <string name="contact_info_department">部门</string>
+    <string name="contact_info_position">职位</string>
+    <string name="contact_debtn_call">拨打电话</string>
+    <string name="contact_debtn_msg">发送短息</string>
+
+    <!-- 菜单显示相关 -->
+    <string name="home_icon_text">主菜单图标</string>
+    <string name="home_item_title">标题</string>
+    <string name="home_item_code">Code</string>
+
+    <!-- 日程信息相关 -->
+    <string name="schedule_view_title">当天日期详情</string>
+    <string name="schedule_list_nodate">当天没有日程信息</string>
+    <string name="schedule_schedule_time">时间段</string>
+    <string name="schedule_schedule_title">标题</string>
+    <string name="schedule_schedule_description">内容</string>
+    <string name="week_mon">MON</string>
+    <string name="week_tue">TUE</string>
+    <string name="week_wed">WED</string>
+    <string name="week_thu">THU</string>
+    <string name="week_fri">FRI</string>
+    <string name="week_sat">SAT</string>
+    <string name="week_sun">SUN</string>
+
+    <!-- 审核信息相关  de = detail -->
+    <string name="audit_page_title">审核详情</string>
+    <string name="audit_list_nodate">当前没有待审核的信息</string>
+    <string name="audit_info_nodata">审核详情获取失败,请重试</string>
+    <string name="audit_info_other">相关参数</string>
+    <string name="audit_info_title">审核内容</string>
+    <string name="audit_info_action">审核操作</string>
+    
+    <string name="audit_dev">开发审核</string>
+    <string name="audit_exp">出差审核</string>
+    <string name="audit_loa">借款审核</string>
+    <string name="audit_los">还款审核</string>
+    <string name="audit_pro">项目审核</string>
+    <string name="audit_rec">招聘审核</string>
+    <string name="audit_wkr">工作报告审核</string>
+    
+    <string name="audit_info_remark">备注</string>
+    <string name="audit_info_sts">状态</string>
+    <string name="audit_info_dept">部门</string>
+    <string name="audit_info_operdept">经营单位</string>
+    <string name="audit_info_billcode">单据编号</string>
+    <string name="audit_info_billtype">单据类型</string>
+    <string name="audit_info_crebyname">创建人</string>
+    <string name="audit_info_crebytime">创建时间</string>
+    <string name="audit_info_commitname">提交人</string>
+    <string name="audit_info_committime">提交时间</string>
+    <string name="audit_info_content">摘要</string>
+	<string name="audit_info_paytype">支付方式</string>
+	<string name="audit_info_totalmoney">总金额</string>
+	<string name="audit_info_startdate">开始日期</string>
+	<string name="audit_info_enddate">结束日期</string>
+	<string name="audit_info_year">年份</string>
+	<string name="audit_info_month">月份</string>
+    
+    <string name="audit_info_act_name">指定人员</string>
+    <string name="audit_info_act_result">审核意见</string>
+    <string name="audit_info_act_time">审核时间</string>
+    <string name="audit_info_act_start">开始节点</string>
+    <string name="audit_info_act_finish">结束节点</string>
+    <string name="audit_info_act_dela">驳回</string>
+    <string name="audit_info_act_pas">通过</string>
+    <string name="audit_info_act_sign">加签</string>
+    <string name="audit_info_act_transmit">转交</string>
+    <string name="audit_info_actch_group">选择项目组</string>
+    <string name="audit_info_actch_emp">指定人员</string>
+    <string name="audit_info_ch_progroup">选择项目组</string>
+    
+    <!-- 开发审核 -->
+    <string name="audit_info_dev_name">开发名称</string>
+    <string name="audit_info_dev_pro">所属项目</string>
+    <string name="audit_info_dev_content">开发内容</string>
+    
+    <!-- 费用报销审核 -->
+    <string name="audit_info_exp_type">费用类型</string>
+    <string name="audit_info_exp_extype2">费用类别</string>
+    <string name="audit_info_exp_cusdept">支付经营单位</string>
+    <string name="audit_info_exp_cus">支付单位</string>
+    <string name="audit_info_exp_nccode">NC凭证</string>
+    <string name="audit_info_exp_realname">支付人员</string>
+    <string name="audit_info_exp_currency">支付币种</string>
+    <string name="audit_info_exp_paytype">支付对象</string>
+    <string name="audit_info_exp_paytype2">支付方式</string>
+    <string name="audit_info_exp_bank">支付银行</string>
+    <string name="audit_info_exp_accountname">支付帐号开户人</string>
+    <string name="audit_info_exp_account">支付帐号</string>
+    <string name="audit_info_exp_paydate">预计支付日期</string>
+    <string name="audit_info_exp_paydate2">实际支付日期</string>
+    <string name="audit_info_exp_profrom">起始省份</string>
+    <string name="audit_info_exp_cityfrom">起始城市</string>
+    <string name="audit_info_exp_proto">到达省份</string>
+    <string name="audit_info_exp_cityto">到达城市</string>
+    <string name="audit_info_exp_clbedindate">出发日期</string>
+    <string name="audit_info_exp_clenddate">返回日期</string>
+    <string name="audit_info_exp_clprovincefrom">出发地P1</string>
+    <string name="audit_info_exp_clcityfrom">出发地P2</string>
+    <string name="audit_info_exp_clprovinceto">到达地P1</string>
+    <string name="audit_info_exp_clcityto">到达地P2</string>
+    
+    <!-- 借款审核 -->
+    <string name="audit_info_loa_account">支付账号</string>
+    <string name="audit_info_loa_opradeptcode">经营单位编号</string>
+    <string name="audit_info_loa_deptcode">部门编号</string>
+    <string name="audit_info_loa_opradept">费用所属经营单位</string>
+    <string name="audit_info_loa_dept">费用所属部门</string>
+    <string name="audit_info_loa_type">借款类型</string>
+    <string name="audit_info_loa_paytype">支付类型</string>
+    <string name="audit_info_loa_reason">借款原因</string>
+    <string name="audit_info_loa_returndate">预计还款日期</string>
+    <string name="audit_info_loa_paybankaccount">支付帐号</string>
+    <string name="audit_info_loa_money">借款总金额</string>
+
+    <!-- 还款审核 -->
+    <string name="audit_info_los_relationtype">冲抵类型</string>
+    <string name="audit_info_los_returnmoney">已还金额</string>
+    <string name="audit_info_los_code">还款编号</string>
+    
+    <!-- 项目审核 -->
+    <string name="audit_info_pro_name">项目名称</string>
+    <string name="audit_info_pro_des">项目描述</string>
+    
+    <!-- 招聘审核 -->
+    <string name="audit_info_rec_code">招聘编号</string>
+    <string name="audit_info_rec_name">招聘名称</string>
+    <string name="audit_info_rec_type">招聘类型</string>
+    
+    <!-- 工作报告审核 -->
+    <string name="audit_info_wkr_name">报告名称</string>
+    <string name="audit_info_wkr_code">报告编号</string>
+    <string name="audit_info_wkr_type">报告类型</string>
+    
+    <!-- 工作计划审核 -->
+    <string name="audit_info_pla_code">工作计划编号</string>
+    <string name="audit_info_pla_name">工作计划描述</string>
+    
+    <!-- 绩效审核 -->
+    <string name="audit_info_acm_code">绩效编号</string>
+    <string name="audit_info_acm_name">绩效名称</string>
+    
+    <!-- 会议审核 -->
+    <string name="audit_info_met_content">会议内容</string>
+    <string name="audit_info_met_code">会议内容</string>
+    <string name="audit_info_met_type">会议内容</string>
+    
+    <!-- 采购审核 -->
+    <string name="audit_info_pop_code">采购报价编号</string>
+    <string name="audit_info_pop_popricelognocode">采购批次编号</string>
+    <string name="audit_info_pop_popricelogno">采购批次</string>
+    <string name="audit_info_pop_cusdept">销售经营单位</string>
+    <string name="audit_info_pop_cusproject">所属项目</string>
+    <string name="audit_info_pop_vendor">供应商</string>
+    
+    <!-- 销售退货审核 -->
+    <string name="audit_info_ins_incode1">收货编号</string>
+    <string name="audit_info_ins_incode2">收货附属编号</string>
+    <string name="audit_info_ins_customer">销售经营单位</string>
+    <string name="audit_info_ins_warehouse">仓库</string>
+    <string name="audit_info_ins_inqty1">退货数量</string>
+    <string name="audit_info_ins_inqty2">理货数量</string>
+    <string name="audit_info_ins_inmoney1">含税收货金额</string>
+    <string name="audit_info_ins_innotaxmoney1">未税收货金额</string>
+    <string name="audit_info_ins_inmoney2">含税理货金额</string>
+    <string name="audit_info_ins_innotaxmoney2">含税理货金额</string>
+    
+    <!-- 销售报价审核 -->
+    <string name="audit_info_sop_code">销售报价编号</string>
+    <string name="audit_info_sop_name">销售报价名称</string>
+    <string name="audit_info_sop_customer">销售经营单位</string>
+    <string name="audit_info_sop_cusproject">项目</string>
+    <string name="audit_info_sop_sopricelognocode">销售批次编号</string>
+    <string name="audit_info_sop_sopricelogno">销售批次</string>
+    
+    <!-- 出差审核 -->
+    <string name="audit_info_tra_code">出差申请编号</string>
+    <string name="audit_info_tra_transport">交通工具</string>
+    <string name="audit_info_tra_purpose">出差目的</string>
+    <string name="audit_info_tra_task">出差任务</string>
+    <string name="audit_info_tra_isloan">是否借款</string>
+    <string name="audit_info_tra_tramoney">借款金额</string>
+    <string name="audit_info_tra_dept">申请人所在部门</string>
+    <string name="audit_info_tra_operdept">申请人所在经营单位</string>
+    <string name="audit_info_tra_money">出差费用</string>
+    <string name="audit_info_tra_isload">是否借款</string>
+    <string name="audit_info_tra_begindate">开始日期</string>
+    <string name="audit_info_tra_enddate">结束日期</string>
+    
+    <!-- 销售发货审核 -->
+    <string name="audit_info_out_code">销售编号</string>
+    <string name="audit_info_out_code2">销售附属编号</string>
+    <string name="audit_info_out_type">销售类型</string>
+    <string name="audit_info_out_cusdept">经营单位</string>
+    <string name="audit_info_out_time">发货时间</string>
+    <string name="audit_info_out_qty1">销售数量</string>
+    <string name="audit_info_out_money1">含税销售金额</string>
+    <string name="audit_info_out_notaxmoney1">未税销售金额</string>
+    <string name="audit_info_out_traqty1">发货数量</string>
+    <string name="audit_info_out_traqty2">捡货数量</string>
+    <string name="audit_info_out_tramoney1">含税发货金额</string>
+    <string name="audit_info_out_tranotaxmoney1">未税发货金额</string>
+    <string name="audit_info_out_tramoney2">含税拣货金额</string>
+    <string name="audit_info_out_tranotaxmoney2">未税拣货金额</string>
+    <string name="audit_info_out_shipto">配送到</string>
+    <string name="audit_info_out_vatto">开票到</string>
+    <string name="audit_info_out_warehouse">调拨仓库</string>
+    <string name="audit_info_out_amountmoney">额度</string>
+    <string name="audit_info_out_paymoney">超帐期</string>
+    <string name="audit_info_out_vendor">供应商</string>
+    <string name="audit_info_out_project">项目</string>
+    <string name="audit_info_out_warehouseto">发货仓库</string>
+
+    <!-- Tab more 有关信息 -->
+    <string name="more_contact_us">联系我们</string>
+    <string name="more_submit_problem">报告问题</string>
+    <string name="more_update_app">检测更新</string>
+    
+    <!-- 任务加载相关 -->
+    <string name="task_waitting">请稍等</string>
+    <string name="task_loading">正在操作中</string>
+    <string name="task_login">正在登录中</string>
+    
+    <!-- 搜索相关 -->
+    <string name="show_condition">显示查询条件</string>
+    <string name="search_text">查询</string>
+    <string name="search_reset">重置</string>
+    <string name="search_choose">选择</string>
+    <string name="search_time_start">开始时间</string>
+    <string name="search_time_end">结束时间</string>
+    <string name="search_time_to">到</string>
+    
+    <!-- stock相关 -->
+    <string name="search_stock_warehouse">仓库</string>
+    <string name="search_stock_prosts">库存状态</string>
+    <string name="search_stock_partno">商品编码</string>
+    <string name="search_stock_pocode1">订单编号</string>
+    <string name="search_stock_pocode2">订单附属编号</string>
+    <string name="search_stock_incode1">收货编号</string>
+    <string name="search_stock_incode2">收货附属编号</string>
+    <string name="search_stocktime_srart">库存日期(开始)</string>
+    <string name="search_stocktime_end">库存日期(结束)</string>
+    <string name="search_begindate_srart">生产日期(开始)</string>
+    <string name="search_begindate_end">生产日期(结束)</string>
+    <string name="search_enddate_srart">到期日期(开始)</string>
+    <string name="search_enddate_end">到期日期(结束)</string>
+    <string name="search_stock_npartno">商品国际码</string>
+    <string name="search_stock_proname">商品名称</string>
+    <string name="search_stock_project">所属项目</string>
+    <string name="search_stock_logno">批次</string>
+    <string name="search_stock_location">货位</string>
+    
+    <string name="sd_whs_title">库存状态</string>
+    <string name="sd_whs_good">良品</string>
+    <string name="sd_whs_back">返厂</string>
+    <string name="sd_whs_overday">超期</string>
+    <string name="sd_whs_scrap">报废</string>
+    <string name="sd_whs_package">打包</string>
+    
+    <string name="stockdetail_title">库存详情</string>
+    <string name="stockdetail_info">商品编码</string>
+    <string name="stockdetail_partno">商品编码</string>
+    <string name="stockdetail_npartno">商品条码</string>
+    <string name="stockdetail_productname">商品名称</string>
+    <string name="stockdetail_project">项目</string>
+    <string name="stockdetail_warehouse">仓库</string>
+    <string name="stockdetail_loc">货位</string>
+    <string name="stockdetail_logno">批次</string>
+    <string name="stockdetail_whs">库存状态</string>
+    <string name="stockdetail_cusdept">所属经营单位</string>
+    <string name="stockdetail_vendor">供应商</string>
+    <string name="stockdetail_incode1">收货编号</string>
+    <string name="stockdetail_incode2">收货附属编号</string>
+    <string name="stockdetail_pocode1">订单编号</string>
+    <string name="stockdetail_pocode2">订单附属编号</string>
+    <string name="stockdetail_poprice">销售单价</string>
+    <string name="stockdetail_enddate">到期日期</string>
+    <string name="stockdetail_remarks">备注</string>
+    <string name="stockdetail_stockqty">库存数量</string>
+    <string name="stockdetail_holdqty">捡货数量</string>
+    <string name="stockdetail_stocktime">入库时间</string>
+    <string name="stockdetail_begindate">生产日期</string>
+    <string name="stockdetail_standardproname">商品标准名称</string>
+    <string name="stockdetail_stockqtybak">库存数量备份</string>
+    
+    <!-- Product相关 -->
+    <string name="search_product_cusdept">经营单位</string>
+    <string name="search_product_project">项目</string>
+    <string name="search_product_name">商品信息</string>
+    <string name="search_product_partno">商品编码</string>
+    <string name="search_product_npartno">商品条码</string>
+    
+    <string name="prodetail_info">商品信息</string>
+    <string name="prodetail_partno">商品编码</string>
+    <string name="prodetail_npartno">商品条码</string>
+    <string name="prodetail_proname">商品名称</string>
+    <string name="prodetail_categoryname">所属类别</string>
+    <string name="prodetail_projectname">项目名称</string>
+    <string name="prodetail_productmodel">商品规格</string>
+    <string name="prodetail_productrate">转换率</string>
+    <string name="prodetail_othermodel">赠品规格</string>
+    <string name="prodetail_otherrate">赠品转换率</string>
+    <string name="prodetail_baseprice">零售价格</string>
+    <string name="prodetail_unitstr">转换率单位</string>
+    <string name="prodetail_unitratestr">转换率规格</string>
+    <string name="prodetail_overday">保质期</string>
+    <string name="prodetail_freshday">保鲜期</string>
+    <string name="prodetail_vatrate">税率</string>
+    <string name="prodetail_sts">商品状态</string>
+    <string name="prodetail_length">长(厘米)</string>
+    <string name="prodetail_width">宽(厘米)</string>
+    <string name="prodetail_height">高(厘米)</string>
+    <string name="prodetail_stanardproname">商品标准名称</string>
+    <string name="prodetail_costprice">采购价</string>
+    <string name="prodetail_gweight">毛重(千克)</string>
+    <string name="prodetail_nweight">净重(千克)</string>
+    
+    <string name="product_add_cusdept">经营单位</string>
+    <string name="product_add_project">项目</string>
+    <string name="product_add_partno">商品编码</string>
+    <string name="product_add_npartno">商品条码</string>
+    <string name="product_add_name">商品名称</string>
+    <string name="product_add_costprice">采购价</string>
+    <string name="product_add_baseprice">零售价</string>
+    <string name="product_add_vatrate">税率</string>
+    <string name="product_add_model">单件规格</string>
+    <string name="product_add_othermodel">搭赠单件规格</string>
+    <string name="product_add_otherrate">搭赠单件数量</string>
+    <string name="product_add_unitstr">转换率单位</string>
+    <string name="product_add_unitratestr">转换率规格</string>
+    <string name="product_add_pounit">采购单位预设</string>
+    <string name="product_add_sounit">销售单位预设</string>
+    <string name="product_add_overday">保质期(天)</string>
+    <string name="product_add_freshday">保鲜期(天)</string>
+    <string name="product_add_length">长(厘米)</string>
+    <string name="product_add_width">宽(厘米)</string>
+    <string name="product_add_height">高(厘米)</string>
+    <string name="product_add_gweight">毛重(千克)</string>
+    <string name="product_add_nweight">净重(千克)</string>
+    <string name="product_add_qz">权值</string>
+    <string name="product_add_isb2C">是否B2C专用</string>
+    <string name="product_add_relationproductid">B2C编码</string>
+    <string name="product_modify_pre_title">现在所属类别为</string>
+    
+    <string name="product_dlg_submit_title">商品提交</string>
+    <string name="product_dlg_submit_info">确定提交这个商品吗？</string>
+    <string name="product_dlg_delete_title">商品删除</string>
+    <string name="product_dlg_delete_info">确定要删除这个商品吗？</string>
+    <string name="product_dlg_exit_modify_title">取消操作</string>
+    <string name="product_dlg_exit_modify_info">确定放弃这次操作吗？</string>
+    
+    <!-- Customer 相关 -->
+    <string name="search_customer_name">用户名称</string>
+    <string name="search_customer_code">用户编码</string>
+    
+    <string name="cusdetail_info">客户信息</string>
+    <string name="cusdetail_address_info">客户地址信息</string>
+    <string name="cusdetail_dept_info">客户经营单位信息</string>
+    <string name="cusdetail_cuscode">客户编号</string>
+    <string name="cusdetail_cusname">客户名称</string>
+    <string name="cusdetail_custype">客户类型</string>
+    <string name="cusdetail_adress">地址</string>
+    <string name="cusdetail_mtel">手机号码</string>
+    <string name="cusdetail_tel">座机</string>
+    <string name="cusdetail_fax">传真</string>
+    <string name="cusdetail_email">邮件地址</string>
+    <string name="cusdetail_cusdept">经营单位</string>
+    <string name="cusdetail_amountmoney">额度</string>
+    <string name="cusdetail_dztype">对账类型</string>
+    <string name="cusdetail_zqtype">帐期类型</string>
+    <string name="cusdetail_zqday">帐期</string>
+    <string name="cusdetail_isvat">是否开票</string>
+    <string name="cusdetail_vatto">开票到</string>
+    
+    <string name="cusdetail_no_address_data">该客户没有地址信息</string>
+    <string name="cusdetail_no_dept_data">该客户没有经营单位信息</string>
+    
+    <string name="customer_title_modify">修改客户</string>
+    <string name="customer_title_create">新建客户-详细信息</string>
+    <string name="customer_title_createpre">新建客户-基本信息</string>
+    
+    <string name="customer_modify_zqtype_zqd">周期对账</string>
+    <string name="customer_modify_zqtype_jsd">及时对账</string>
+    
+    <string name="customer_modify_dztype_gdr">固定日</string>
+    <string name="customer_modify_dztype_gdt">固定天</string>
+    
+    <string name="customer_dlg_delete_title">客户删除</string>
+    <string name="customer_dlg_delete_info">确定要删除这个客户吗？</string>
+    
+    <string name="customer_address_type_fix">固定地址</string>
+    <string name="customer_address_type_tmp">临时地址</string>
+    
+    <string name="cusmodify_page_title_info">修改客户-基本信息</string>
+    <string name="cusmodify_page_title_address">修改客户-地址信息</string>
+    <string name="cusmodify_page_title_dept">修改客户-所属经营单位</string>
+    
+    <string name="cusmodify_title_code">客户编号</string>
+    <string name="cusmodify_title_namecn">客户中文名</string>
+    <string name="cusmodify_title_namecns">客户中文名简称</string>
+    <string name="cusmodify_title_nameen">客户英文名</string>
+    <string name="cusmodify_title_nameens">客户英文名简称</string>
+    <string name="cusmodify_title_companycode">工商营业执照注册号</string>
+    
+    <string name="cusmodify_tab_title_info">基本信息</string>
+    <string name="cusmodify_tab_title_address">地址信息</string>
+    <string name="cusmodify_tab_title_dept">所属经营单位</string>
+    
+    <string name="cusmodify_title_dept_cusdept">经营单位</string>
+    <string name="cusmodify_title_dept_amountmoney">额度(客户)</string>
+    <string name="cusmodify_title_dept_katype">渠道(客户)</string>
+    <string name="cusmodify_title_dept_cusarea">区域</string>
+    <string name="cusmodify_title_dept_dztype">对账类型(客户)</string>
+    <string name="cusmodify_title_dept_zqtype">账期类型(客户)</string>
+    <string name="cusmodify_title_dept_zqday">账期日(客户)</string>
+    <string name="cusmodify_title_dept_zqday1">每月</string>
+    <string name="cusmodify_title_dept_zqday2">号,结前</string>
+    <string name="cusmodify_title_dept_gdday">天</string>
+    <string name="cusmodify_title_dept_zqday3">个月回款</string>
+    <string name="cusmodify_title_dept_isvat">是否开票</string>
+    <string name="cusmodify_title_dept_isdh">是否调货生成金额</string>
+    <string name="cusmodify_title_dept_dhrate">调货扣率</string>
+    <string name="cusmodify_title_dept_vatto">开票客户(客户)</string>
+    
+    <string name="cusmodify_title_address_province">省份</string>
+    <string name="cusmodify_title_address_city">城市</string>
+    <string name="cusmodify_title_address_area">区域</string>
+    <string name="cusmodify_title_address_addresstype">地址类型</string>
+    <string name="cusmodify_title_address_isdefault">是否默认地址</string>
+    <string name="cusmodify_title_address_address">详细地址</string>
+    <string name="cusmodify_title_address_postcode">邮政编码</string>
+    <string name="cusmodify_title_address_contactname">联系人</string>
+    <string name="cusmodify_title_address_mtel">手机</string>
+    <string name="cusmodify_title_address_tel">电话</string>
+    <string name="cusmodify_title_address_fax">传真</string>
+    <string name="cusmodify_title_address_email">EMAIL</string>
+    <string name="cusmodify_title_address_remarks">备注</string>
+    <string name="cusmodify_title_address_lng">经度</string>
+    <string name="cusmodify_title_address_lat">纬度</string>
+
+    <string name="cusmodify_reset_address">重置地址信息</string>
+    <string name="cusmodify_reset_dept">重置经营单位信息</string>
+    <string name="cusmodify_get_location">获取GPS信息</string>
+    <!-- Transport相关 -->
+    <string name="transportline_outtype_sal">销售发货</string>
+    <string name="transportline_outtype_pol">采购退货</string>
+    <string name="transportline_outtype_oti">调拨发货</string>
+    <string name="transportline_outtype_rel">报损</string>
+    <string name="transportline_outtype_saf">非单发货</string>
+    <string name="transportline_info">发货信息</string>
+    <string name="search_trans_transtime_start">发货时间(开始)</string>
+    <string name="search_trans_transtime_end">发货时间(结束)</string>
+    <string name="search_trans_outtype">销售类型</string>
+    <string name="search_trans_outtype2">调货类型</string>
+    <string name="search_trans_outcode1">销售编号</string>
+    <string name="search_trans_outcode2">销售附属编号</string>
+    <string name="search_trans_transcode1">发货编号</string>
+    <string name="search_trans_transcode2">发货附属编号</string>
+    <string name="search_trans_warehouse">仓库</string>
+    <string name="search_trans_vendor">供应商</string>
+    <string name="search_trans_warehouseto">收货仓库</string>
+    <string name="search_trans_whs">库存状态</string>
+    <string name="search_trans_isdd">是否代垫</string>
+    <string name="search_trans_vatto">开票到</string>
+    <string name="search_trans_remarks">备注</string>
+    
+    <string name="transdetail_title">配送信息</string>
+    <string name="transportline1_title">发货明细</string>
+    <string name="transportline2_title">拣货明细</string>
+    <string name="transdetail_transportcode1">发货编号</string>
+    <string name="transdetail_transportcode2">发货附属编号</string>
+    <string name="transdetail_outtype">发货类型</string>
+    <string name="transdetail_customerdept">经营单位</string>
+    <string name="transdetail_project">项目</string>
+    <string name="transdetail_vendor">供应商</string>
+    <string name="transdetail_vatTo">开票客户</string>
+    <string name="transdetail_warehouse">发货仓库</string>
+    <string name="transdetail_transporttime">发货时间</string>
+    <string name="transdetail_createbyname">创建人</string>
+    <string name="transdetail_createbytime">创建日期</string>
+    <string name="transdetail_commitbyname">提交人</string>
+    <string name="transdetail_commitbytime">提交日期</string>
+    <string name="transdetail_outcode1">销售编号</string>
+    <string name="transdetail_outcode2">销售附属编号</string>
+    <string name="transdetail_shipto">配送客户</string>
+    <string name="transdetail_warehouseto">收货仓库</string>
+    <string name="transdetail_transportqty1">发货数量</string>
+    <string name="transdetail_transportmoney1">含税发货金额</string>
+    <string name="transdetail_transportnotaxmoney1">未税发货金额</string>
+    <string name="transdetail_transportqty2">拣货数量</string>
+    <string name="transdetail_transportmoney2">含税拣货金额</string>
+    <string name="transdetail_transportnotaxmoney2">未税拣货金额</string>
+    <string name="transdetail_sts">状态</string>
+    <string name="transdetail_isdd">是否代垫</string>
+    <string name="transdetail_remarks">备注</string>
+    <string name="transdetail_signbyname">签收人</string>
+    <string name="transdetail_signbytime">签收时间</string>
+    <string name="transport_loc">货位</string>
+    <string name="transport_loc_product_count">种商品</string>
+    <string name="transport_loc_product_sum2">件</string>
+    
+    <!-- 销售相关 -->
+    <string name="sd_qtyunit_pack">盒</string>
+    <string name="sd_qtyunit_box">箱</string>
+    <string name="sd_qtyunit_bottle">瓶</string>
+    <string name="sd_isdd_title">是否代垫</string>
+    
+    <string name="out_transportcode1">发货编号</string>
+    <string name="out_transportcode2">发货附属编号</string>
+    <string name="out_outcode2">销售附属编号</string>
+    <string name="out_createbytime">创建时间</string>
+    <string name="out_cusdept">经营单位</string>
+    <string name="out_project">项目</string>
+    <string name="out_vendor">供应商</string>
+    <string name="out_sts">状态</string>
+    <string name="out_prosts">商品状态</string>
+    <string name="out_outmoney1">含税销售金额</string>
+    <string name="out_outype">销售类型</string>
+    <string name="out_warehouse">发货仓库</string>
+    <string name="out_warehouseto">收货仓库</string>
+    <string name="out_sopricelogon">销售批次</string>
+    <string name="out_logno">批次</string>
+    <string name="out_shipto">配送到</string>
+    <string name="out_shipto2">调货到</string>
+    <string name="out_shipfrom">调货原客户</string>
+    <string name="out_vatto">开票到</string>
+    <string name="out_shipto_adress">送货地址</string>
+    <string name="out_outtime">送货日期</string>
+    <string name="out_remarks">备注</string>
+    
+    <string name="out_dlg_delete_title">数据删除</string>
+    <string name="out_dlg_delete_msg">确认要删除这条数据吗？</string>
+    
+    <string name="out_dlg_commit_title">数据提交</string>
+    <string name="out_dlg_commit_msg">确认要提交这条数据吗？</string>
+    
+    <string name="outsal">销售发货</string>
+    <string name="outttc">退货调货</string>
+    <string name="outdtc">送货调货</string>
+    <string name="outdtc_tab_transportinfo">配送信息</string>
+    <string name="outdtc_tab_transportline">发货明细</string>
+    <string name="outsal_title">新建销售发货</string>
+    <string name="outttc_title">新建退货调货</string>
+    <string name="outdtc_title">新建送货调货</string>
+    <string name="outttc_shipfrom">退货客户</string>
+    <string name="outdtc_transport_title">送货调货配置</string>
+    <string name="outdtc_customer">调货到</string>
+    <string name="outdtc_set_detail">配置明细</string>
+    <string name="outman_outcode">销售编号</string>
+    <string name="outman_outtype">销售类型</string>
+    <string name="outman_outcode2">销售附属编号</string>
+    <string name="outman_remarks">备注</string>
+    <string name="outman_outtime_start">销售时间（开始）</string>
+    <string name="outman_outtime_end">销售时间（结束）</string>
+    
+    <string name="outdetail_title">销售详情</string>
+    <string name="outdetail_outinfo">销售信息</string>
+    <string name="outdetail_outinfodetail">销售明细</string>
+    <string name="outdetail_outinfoaudit">审核流程</string>
+    
+    <string name="outdetail_outcode1">销售编号</string>
+    <string name="outdetail_outcode2">销售附属编号</string>
+    <string name="outdetail_customerdept">经营单位</string>
+    <string name="outdetail_warehouse">仓库</string>
+    <string name="outdetail_shipto">配送到</string>
+    <string name="outdetail_vatto">开票到</string>
+    <string name="outdetail_outtype">销售类型</string>
+    <string name="outdetail_outtime">销售时间</string>
+    <string name="outdetail_sts">状态</string>
+    <string name="outdetail_remarks">备注</string>
+    <string name="outdetail_outqty">销售数量</string>
+    <string name="outdetail_outmoney1">含税销售金额</string>
+    <string name="outdetail_outnotaxmoney1">未税销售金额</string>
+    <string name="outdetail_transportqty1">发货数量</string>
+    <string name="outdetail_transportmoney1">含税发货金额</string>
+    <string name="outdetail_transportnotaxmoney1">未税发货金额</string>
+    <string name="outdetail_transportqty2">拣货数量</string>
+    <string name="outdetail_transportmoney2">含税拣货金额</string>
+    <string name="outdetail_transportnotaxmoney2">未税拣货金额</string>
+    <string name="outdetail_sopricelogonid">销售批次</string>
+    <string name="outdetail_sopricelogonname">销售批次</string>
+    <string name="outdetail_createbyname">创建人</string>
+    <string name="outdetail_createbytime">创建时间</string>
+    <string name="outdetail_commitbyname">提交人</string>
+    <string name="outdetail_commitbytime">提交时间</string>
+    <string name="outdetail_vendorid">供应商</string>
+    <string name="outdetail_projectid">项目</string>
+    <string name="outdetail_logno">批次</string>
+    <string name="outdetail_warehouseto">调拨仓库</string>
+    <string name="outdetail_outtimeend">最晚结算日期</string>
+    <string name="outdetail_outtype2">销售附属类型</string>
+    <string name="outdetail_shipfrom">原客户</string>
+    <string name="outdetail_isdd">是否代垫</string>
+    <string name="outdetail_ddqty">代垫数量</string>
+    <string name="outdetail_ddmoney">含税代垫金额</string>
+    <string name="outdetail_ddnotaxmoney">未税代垫金额</string>
+    <string name="outdetail_shiptoaddress">送货地址</string>
+    
+    <string name="outinfo_add_outline">添加商品</string>
+    <string name="outinfo_detail_info">销售明细信息</string>
+    <string name="outinfo_detail_showproduct">商品列表</string>
+    <string name="outinfo_detail_addproduct">添加商品</string>
+    <string name="outinfo_detail_search_hint">商品关键字</string>
+    
+    <string name="outinfo_detail_product_partno">商品编码</string>
+    <string name="outinfo_detail_product_npartno">商品条码</string>
+    <string name="outinfo_detail_product_productname">商品描述</string>
+    <string name="outinfo_detail_whs">库存状态</string>
+    <string name="outinfo_detail_sopricebaks">含税制单单价</string>
+    <string name="outinfo_detail_sopricebakb">含税制单箱价</string>
+    <string name="outinfo_detail_sonotaxpricebaks">未税制单单价</string>
+    <string name="outinfo_detail_sonotaxpricebakb">未税制单箱价</string>
+    <string name="outinfo_detail_soprices">含税销售单价</string>
+    <string name="outinfo_detail_sopriceb">含税销售箱价</string>
+    <string name="outinfo_detail_sonotaxprices">未税销售单价</string>
+    <string name="outinfo_detail_sonotaxpriceb">未税销售箱价</string>
+    <string name="outinfo_detail_vatprices">含税成本单价</string>
+    <string name="outinfo_detail_vatpriceb">含税成本箱价</string>
+    <string name="outinfo_detail_vatnotaxprices">未税成本单价</string>
+    <string name="outinfo_detail_vatnotaxpriceb">未税成本箱价</string>
+    <string name="outinfo_detail_costrate">毛利率(成本)</string>
+    <string name="outinfo_detail_costprices">含税成本(加权)单价</string>
+    <string name="outinfo_detail_costpriceb">含税成本(加权)箱价</string>
+    <string name="outinfo_detail_costnotaxprices">未税成本(加权)单价</string>
+    <string name="outinfo_detail_costnotaxpriceb">未税成本(加权)箱价</string>
+    <string name="outinfo_detail_costrate2">毛利率(成本加权)</string>
+    <string name="outinfo_detail_sopricelogon_sopricecode">销售批次</string>
+    <string name="outinfo_detail_soPriceLineId">销售报价流水号</string>
+    <string name="outinfo_detail_sopricelineprices">含税销售报价单价</string>
+    <string name="outinfo_detail_sopricelinepriceb">含税销售报价箱价</string>
+    <string name="outinfo_detail_sopricelinenotaxprices">未税销售报价单价</string>
+    <string name="outinfo_detail_sopricelinenotaxpriceb">未税销售报价箱价</string>
+    <string name="outinfo_detail_outqty1baks">制单数量</string>
+    <string name="outinfo_detail_outqty1bakb">制单数量合计</string>
+    <string name="outinfo_detail_outQty1s">销售数量</string>
+    <string name="outinfo_detail_outQty1b">销售合计数量</string>
+    <string name="outinfo_detail_vatRate">税率</string>
+    <string name="outinfo_detail_transportqty1s">发货数量</string>
+    <string name="outinfo_detail_transportqty1b">发货合计数量</string>
+    <string name="outinfo_detail_transportqty2s">拣货数量</string>
+    <string name="outinfo_detail_transportqty2b">拣货合计数量</string>
+    <string name="outinfo_detail_inqtys">拒收数量</string>
+    <string name="outinfo_detail_inqtyb">拒收数量合计</string>
+    <string name="outinfo_detail_outqtys">成本单价</string>
+    <string name="outinfo_detail_outqtyb">成本单价</string>
+    <string name="outinfo_detail_inSoQtyS">退货数量</string>
+    <string name="outinfo_detail_inSoQtyB">退货数量合计</string>
+    <string name="outinfo_detail_logNo">批次</string>
+    <string name="outinfo_detail_remarks">备注</string>
+
+    <string name="outinfo_product_partno">商品</string>
+    <string name="outinfo_product_npartno">商品条码</string>
+    <string name="outinfo_product_productName">商品描述</string>
+    <string name="outinfo_product_whsName">状态</string>
+    <string name="outinfo_product_logno">批次</string>
+    <string name="outinfo_product_outQty1">数量</string>
+    <string name="outinfo_product_qtyUnit">数量单位</string>
+    <string name="outinfo_product_soPrice">单价</string>
+    <string name="outinfo_product_priceUnit">价格单位</string>
+    <string name="outinfo_product_remarks">备注</string>
+    <string name="outinfo_product_product">商品</string>
+    <string name="outinfo_product_info">商品信息</string>
+    
+    <string name="outline_product_name">商品名称：</string>
+    <string name="outline_product_qty">数量：</string>
+    
+    <string name="outline_view_title">销售明细</string>
+    <string name="outline_modify_view_title">商品信息编辑</string>
+    
+    <string name="out_dialog_title_product_add">商品添加</string>
+    <string name="out_dialog_title_product_edit">商品编辑</string>
+    
+    <string name="dialog_out_dtc_title">送货调货明细</string>
+    
+    <string name="outline_dlg_partno">商品</string>
+    <string name="outline_dlg_npartno">商品条码</string>
+	<string name="outline_dlg_productname">商品描述</string>
+	<string name="outline_dlg_whs">状态</string>
+	<string name="outline_dlg_logno">批次</string>
+	<string name="outline_dlg_outqty">数量</string>
+	<string name="outline_dlg_qtyunit">数量单位</string>
+	<string name="outline_dlg_soprice">单价</string>
+	<string name="outline_dlg_priceunit">价格单位</string>
+	<string name="outline_dlg_remarks">备注</string>
+	
+	<string name="outline_dlg_outdtcqty">调货数量</string>
+	<string name="outline_dlg_transqty1s">发货数量</string>
+	<string name="outline_dlg_transqty1b">发货合计数量</string>
+	<string name="outdtc_item_title_qty">数量\n(调货,发货)</string>
+	<string name="outline_proname_title">品名:</string>
+	<string name="outline_npartno_title">商品条码:</string>
+	<string name="outline_soprice_title">价格:</string>
+	<string name="outline_outqty1s_title">数量:</string>
+	
+	<string name="outline_dlg_delete_title">商品删除</string>
+	<string name="outline_dlg_delete_msg">是否删除该条商品信息?</string>
+    <string name="outline_product_exists">(已添加)</string>
+    <string name="outline_product_repeat">这个商品已经添加过了</string>
+	
+	<!-- 系统常量 -->
+	<string name="sd_outtype_title">销售类型</string>
+	<string name="sd_outtype_sal">销售发货</string>
+	<string name="sd_outtype_pol">采购退货</string>
+	<string name="sd_outtype_oti">调拨发货</string>
+	<string name="sd_outtype_rel">报损发货</string>
+	<string name="sd_outtype_saf">飞单发货</string>
+	<string name="sd_outtype_cbf">拆包发货</string>
+	<string name="sd_outtype_dbf">打包发货</string>
+	
+	<string name="sd_outtype2_dtc">送货调货</string>
+	<string name="sd_outtype2_ttc">退货调货</string>
+	
+	<string name="sd_transsts_title">发货状态</string>
+	<string name="sd_outsts_title">状态</string>
+	<string name="sd_outsts_new">待提交</string>
+    <string name="sd_outsts_fie">待财务审核</string>
+    <string name="sd_outsts_rej">已驳回</string>
+    <string name="sd_outsts_tsm">转交</string>
+    <string name="sd_outsts_rmk">加签</string>
+    <string name="sd_outsts_dsh">待送货</string>
+    <string name="sd_outsts_dqs">待签收</string>
+    <string name="sd_outsts_clo">签收完成</string>
+    
+    <string name="sd_product_new">新建</string>
+    <string name="sd_product_run">可用</string>
+    <string name="sd_product_loc">锁定</string>
+    
+	<!-- Audit TaskLine -->
+	<string name="audit_taskline_name">流程节点</string>
+	<string name="audit_taskline_auditbyname">处理人</string>
+	<string name="audit_taskline_auditcontent">处理意见</string>
+	<string name="audit_taskline_timeoutsts">超期状态</string>
+	<string name="audit_taskline_timeout">时效要求</string>
+	<string name="audit_taskline_auditsts">审核状态</string>
+	<string name="audit_taskline_title">审核信息</string>
+	
+	<!-- 通知相关 -->
+	<string name="notice_act_title">消息</string>
+	<string name="notice_title">标题</string>
+	<string name="notice_sendby">发送人</string>
+	<string name="notice_content">消息内容</string>
+	<string name="notice_sendtime">发送时间</string>
+	<string name="notice_refreshview_data_empty">没有数据，点我刷新</string>
+    
+    <!-- 提示信息 -->
+    <string name="msg_init_failed">加载本地权限失败,请联系管理员</string>
+    <string name="msg_init_cat_failed">加载商品类别失败</string>
+    <string name="msg_init_address_failed">加载地址常量信息失败</string>
+    <string name="msg_init_data_success">导入初始化信息成功</string>
+    <string name="msg_init_data_failed">导入初始化信息失败</string>
+    
+    <string name="msg_network_is_not_available">请求失败，无法连接到网络</string>
+    <string name="msg_server_nores">服务器无响应，请检查服务器地址设置或联系管理员</string>
+    <string name="msg_conn_failed">服务器拒绝访问,请联系管理员</string>
+    <string name="msg_request_timeout">请求超时</string>
+    <string name="msg_last_request_failed">上次请求失败</string>
+    <string name="msg_request_data_error">请求数据不完整</string>
+    <string name="msg_request_encode_error">数据格式化失败</string>
+    <string name="msg_request_cannot_blank">数据不能为空</string>
+    <string name="msg_login_again">用户信息丢失,请重新登录</string>
+    <string name="msg_get_location_failed">获取地址失败，请确认输入的地址是否正确</string>
+    <string name="msg_get_location_success">获取地址成功</string>
+    <string name="msg_submit_failed">数据提交失败，请重试</string>
+    <string name="msg_response_success">操作成功</string>
+    <string name="msg_response_failed">数据获取失败,请重试</string>
+    <string name="msg_action_failed">操作失败，请重试</string>
+    <string name="msg_pass_uname_bland">用户名或密码不能为空</string>
+    <string name="msg_no_server_url">服务器地址未设置</string>
+    <string name="msg_connet_failed">网络连接失败</string>
+    <string name="msg_register_failed">注册失败,请重试</string>
+    <string name="msg_register_success">注册成功</string>
+    <string name="msg_loadding">正在处理中.....</string>
+    <string name="msg_clear_cache_success">缓存已清空</string>
+    <string name="msg_outline_init_failed">销售信息获取失败，请重试</string>
+    <string name="msg_data_incomplete">数据不完整，请检查后重试</string>
+    <string name="msg_data_incomplete_withnum">个必填项未填写，请检查后重试</string>
+    <string name="msg_no_productcategory">请选择商品类别</string>
+    <string name="msg_product_wrong_sts">当前状态不能执行这个操作</string>
+    <string name="msg_product_delete_failed">删除失败，请检查数据后再试</string>
+    <string name="msg_product_commit_failed">提交失败，请重试</string>
+    <string name="msg_url_setup_null">服务器地址不能设置为空</string>
+    <string name="msg_imsi_error">无法获取sim卡信息</string>
+    <string name="msg_first_open">您是第一次使用Explore，正在初始化数据</string>
+    <string name="msg_appinit_info">正在初始化数据&#8230;</string>
+    <string name="msg_search_no_result">该条件查询不到数据</string>
+    <string name="msg_getdata_failed">获取不到数据，请重试！</string>
+    <string name="msg_input_two_atleast">请输入至少两个字符</string>
+    
+    <string name="msg_outline_qty_could_not_empty">销售数量不能为0</string>
+    
+    <string name="msg_product_modify_pounit">商品采购单位预设与商品单件规格不匹配</string>
+    <string name="msg_product_modify_sounit">商品销售单位预设与商品单件规格不匹配  </string>
+    
+    <string name="msg_customer_id_notfound">找不到这个商品ID</string>
+    <string name="msg_customer_no_vatto">请设置开票客户</string>
+    
+    <string name="msg_audit_action_success">审核操作成功</string>
+    <string name="msg_audit_action_failed">审核操作失败，请重试</string>
+    <string name="msg_audit_no_opinion">审核意见不能为空</string>
+    <string name="msg_audit_no_group">请选择项目组</string>
+    <string name="msg_audit_loademp_failed">加载人员数据失败,请重试</string>
+    <string name="msg_audit_no_emp">请选择人员</string>
+    <string name="msg_audit_no_idinfo">获取审核ID失败,请重试</string>
+    
+    <string name="msg_cuscreate_no_namecn">请输入中文名</string>
+    <string name="msg_cuscreate_no_namecns">请输入中文简称</string>
+    
+    <string name="msg_address_no_province">请选择省</string>
+    <string name="msg_address_no_city">请选择城市</string>
+    <string name="msg_address_no_area">请选择区</string>
+    <string name="msg_address_no_address">请填写详细地址</string>
+    
+    <string name="msg_out_isnull_cusdept">经营单位不能为空</string>
+    <string name="msg_out_credtc_notransport">无法获取发货信息，请检查发货编号</string>
+    
+    <!-- 异常处理 -->
+    <string name="error_app_error">系统错误</string>
+    <string name="error_app_unknow">未知错误</string>
+    <string name="error_empty_imei">无法获取设备信息</string>
+    <string name="error_empty_imsi">找不到SIM卡</string>
+    <string name="error_default">请求失败，请检查服务器设置</string>
+    <string name="error_login_nodevice">用户或设备信息不存在</string>
+    <string name="error_login_pwderror">密码错误</string>
+    <string name="error_login_nobinding">设备未绑定</string>
+    <string name="error_login_nobindingimei">该用户只能使用绑定设备登录</string>
+    <string name="error_login_nobindingimsi">该用户只能使用绑定SIM卡登录</string>
+    <string name="error_register_nouser">用户不存在</string>
+    <string name="error_request_exception">服务器异常</string>
+    <string name="error_request_userlock">该用户被锁定，请联系管理员</string>
+    <string name="error_request_devicelock">该设备被锁定，请联系管理员</string>
+    <string name="error_request_duplicated">该用户的设备已注册</string>
+    <string name="error_request_timeout">连接超时</string>
+    <string name="error_conn_error">连接错误，无法连接到服务器</string>
+    <string name="error_request_jsonerror">无法获取到数据或数据格式错误</string>
+    <string name="error_no_preference">获取应用信息失败，请重试</string>
+    
+    <!-- Notification消息（系统任务栏提示消息） -->
+    <string name="notifi_ticker">新消息</string>
+    <string name="notifi_new_msg">您有新消息!</string>
+    
+    <!-- add by third package -->
+    <!--  Strings for possible PreferenceActivity Back/Next buttons -->
+    <string name="back_button_label">Back</string>
+    <string name="next_button_label">Next</string>
+    <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+    <string name="skip_button_label">Skip</string>
+
+</resources>

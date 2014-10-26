@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:paddingTop="10dp">
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_province" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_province"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_city" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_area" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_addresstype" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_addresstype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_address" />
+
+        <EditText
+            android:id="@+id/frag_cusmodify_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" >
+        </EditText>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_postcode" />
+
+        <EditText
+            android:id="@+id/frag_cusmodify_postcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" >
+        </EditText>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_contactname" />
+
+        <EditText
+            android:id="@+id/frag_cusmodify_contactname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" >
+        </EditText>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_mtel" />
+
+        <EditText
+            android:id="@+id/frag_cusmodify_mtel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone" >
+        </EditText>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_tel" />
+
+        <EditText
+            android:id="@+id/frag_cusmodify_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone" >
+        </EditText>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_fax" />
+
+        <EditText
+            android:id="@+id/frag_cusmodify_fax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone" >
+        </EditText>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_email" />
+
+        <EditText
+            android:id="@+id/frag_cusmodify_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" >
+        </EditText>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_remarks" />
+
+        <EditText
+            android:id="@+id/frag_cusmodify_remarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" >
+        </EditText>
+        
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_isdefault" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_isdefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </Spinner>
+
+        <Button
+            android:id="@+id/frag_cusmodify_btn_getgps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cusmodify_get_location" />
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_lng" />
+
+        <EditText
+            android:id="@+id/frag_cusmodify_lng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:inputType="text" >
+        </EditText>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_address_lat" />
+
+        <EditText
+            android:id="@+id/frag_cusmodify_lat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:inputType="text" >
+        </EditText>
+    </LinearLayout>
+
+</ScrollView>

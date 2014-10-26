@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frag_product_condition_scv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="true"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <EditText
+            android:id="@+id/frag_edt_outttc_outcode2"
+            style="@style/SearchConditionEditText"
+            android:hint="@string/out_transportcode1"
+            android:inputType="text" >
+        </EditText>
+
+        <Spinner
+            android:id="@+id/frag_spi_outttc_cusdept"
+            style="@style/SearchConditionSpinner" >
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/frag_spi_outttc_warehouse"
+            style="@style/SearchConditionSpinner" >
+        </Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="2dp" >
+
+            <EditText
+                android:id="@+id/frag_edt_outttc_shipFrom"
+                style="@style/SearchConditionEditText2"
+                android:layout_weight="3"
+                android:enabled="false"
+                android:hint="@string/out_vatto"
+                android:inputType="text" >
+            </EditText>
+
+            <Button
+                android:id="@+id/frag_btn_outttc_shipFrom"
+                style="@style/SearchConditionButton"
+                android:layout_weight="1"
+                android:text="@string/search_choose" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/frag_spi_outttc_sologon"
+            style="@style/SearchConditionSpinner" >
+        </Spinner>
+
+        <EditText
+            android:id="@+id/frag_edt_outttc_logno"
+            style="@style/SearchConditionEditText"
+            android:hint="@string/out_logno"
+            android:inputType="text" >
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="2dp" >
+
+            <EditText
+                android:id="@+id/frag_edt_outttc_shipto"
+                style="@style/SearchConditionEditText2"
+                android:layout_weight="3"
+                android:enabled="false"
+                android:hint="@string/out_shipto"
+                android:inputType="text" >
+            </EditText>
+
+            <Button
+                android:id="@+id/frag_btn_outttc_shipto"
+                style="@style/SearchConditionButton"
+                android:layout_weight="1"
+                android:text="@string/search_choose" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="2dp" >
+
+            <EditText
+                android:id="@+id/frag_edt_outttc_vatto"
+                style="@style/SearchConditionEditText2"
+                android:layout_weight="3"
+                android:enabled="false"
+                android:hint="@string/out_vatto"
+                android:inputType="text" >
+            </EditText>
+
+            <Button
+                android:id="@+id/frag_btn_outttc_vatto"
+                style="@style/SearchConditionButton"
+                android:layout_weight="1"
+                android:text="@string/search_choose" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/frag_spi_outttc_shiptoadress"
+            style="@style/SearchConditionEditText" >
+        </Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="2dp" >
+
+            <EditText
+                android:id="@+id/frag_edt_outttc_outtime"
+                style="@style/SearchConditionEditText2"
+                android:layout_weight="3"
+                android:enabled="false"
+                android:hint="@string/out_outtime"
+                android:inputType="date" >
+            </EditText>
+
+            <Button
+                android:id="@+id/frag_btn_outttc_outtime"
+                style="@style/SearchConditionButton"
+                android:layout_weight="1"
+                android:text="@string/search_choose" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/frag_edt_outttc_remarks"
+            style="@style/SearchConditionEditText"
+            android:hint="@string/out_remarks"
+            android:inputType="text" >
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/frag_btn_outttc_save"
+                style="@style/SearchPageButton"
+                android:layout_weight="1"
+                android:text="@string/app_save" />
+
+            <Button
+                android:id="@+id/frag_btn_outttc_reset"
+                style="@style/SearchPageButton"
+                android:layout_weight="1"
+                android:text="@string/search_reset" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

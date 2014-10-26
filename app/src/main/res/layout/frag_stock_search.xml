@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/frag_stock_condition_scv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <Spinner
+                android:id="@+id/frag_spi_stock_cusdept"
+                style="@style/SearchConditionSpinner" />
+            
+            <Spinner
+                android:id="@+id/frag_spi_stocksearch_warehouse"
+                style="@style/SearchConditionSpinner" >
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/frag_spi_stocksearch_prosts"
+                style="@style/SearchConditionSpinner" >
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/frag_spi_stocksearch_project"
+                style="@style/SearchConditionSpinner" >
+            </Spinner>
+            
+            <EditText
+                android:id="@+id/frag_edt_stocksearch_partno"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_stock_partno"
+                android:inputType="text" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/frag_edt_stocksearch_npartno"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_stock_npartno"
+                android:inputType="text" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/frag_edt_stocksearch_proname"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_stock_proname"
+                android:inputType="text" >
+            </EditText>
+            
+            <EditText
+                android:id="@+id/frag_edt_stocksearch_pocode1"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_stock_pocode1"
+                android:inputType="text" >
+            </EditText>
+            
+            <EditText
+                android:id="@+id/frag_edt_stocksearch_pocode2"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_stock_pocode2"
+                android:inputType="text" >
+            </EditText>
+            
+            <EditText
+                android:id="@+id/frag_edt_stocksearch_incode1"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_stock_incode1"
+                android:inputType="text" >
+            </EditText>
+            
+            <EditText
+                android:id="@+id/frag_edt_stocksearch_incode2"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_stock_incode2"
+                android:inputType="text" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/frag_edt_stocksearch_logno"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_stock_logno"
+                android:inputType="text" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/frag_edt_stocksearch_location"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_stock_location"
+                android:inputType="text" >
+            </EditText>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2dp" >
+
+                <EditText
+                    android:id="@+id/frag_edt_stocksearch_stocktime_start"
+                    style="@style/SearchConditionEditText2"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:hint="@string/search_stocktime_srart"
+                    android:inputType="date" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/frag_btn_stocksearch_stocktime_start"
+                    style="@style/SearchConditionButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_choose" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2dp" >
+
+                <EditText
+                    android:id="@+id/frag_edt_stocksearch_stocktime_end"
+                    style="@style/SearchConditionEditText2"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:hint="@string/search_stocktime_end"
+                    android:inputType="date" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/frag_btn_stocksearch_stocktime_end"
+                    style="@style/SearchConditionButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_choose" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2dp" >
+
+                <EditText
+                    android:id="@+id/frag_edt_stocksearch_begindate_start"
+                    style="@style/SearchConditionEditText2"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:hint="@string/search_begindate_srart"
+                    android:inputType="date" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/frag_btn_stocksearch_begindate_start"
+                    style="@style/SearchConditionButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_choose" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2dp" >
+
+                <EditText
+                    android:id="@+id/frag_edt_stocksearch_begindate_end"
+                    style="@style/SearchConditionEditText2"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:hint="@string/search_begindate_end"
+                    android:inputType="date" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/frag_btn_stocksearch_begindate_end"
+                    style="@style/SearchConditionButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_choose" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2dp" >
+
+                <EditText
+                    android:id="@+id/frag_edt_stocksearch_enddate_start"
+                    style="@style/SearchConditionEditText2"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:hint="@string/search_enddate_srart"
+                    android:inputType="date" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/frag_btn_stocksearch_enddate_start"
+                    style="@style/SearchConditionButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_choose" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2dp" >
+
+                <EditText
+                    android:id="@+id/frag_edt_stocksearch_enddate_end"
+                    style="@style/SearchConditionEditText2"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:hint="@string/search_enddate_end"
+                    android:inputType="date" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/frag_btn_stocksearch_enddate_end"
+                    style="@style/SearchConditionButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_choose" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/frag_stocksearch_btn"
+                    style="@style/SearchPageButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_text" >
+                </Button>
+
+                <Button
+                    android:id="@+id/frag_stocksearch_resetbtn"
+                    style="@style/SearchPageButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_reset" >
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ViewStub
+        android:id="@+id/frag_stocksearch_result_stub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/layout_search_result" />
+
+</LinearLayout>

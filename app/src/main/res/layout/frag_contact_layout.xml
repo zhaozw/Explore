@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fefefe" >
+
+    <RelativeLayout
+        android:id="@+id/contact_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/frag_contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" >
+        </ListView>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/layout_loading"
+        android:visibility="gone" >
+    </include>
+
+</RelativeLayout>

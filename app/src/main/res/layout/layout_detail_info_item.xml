@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/content_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/audit_detail_info_title"
+        style="@style/AuditDetailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:textColor="@color/cola5"
+        android:text="@string/audit_info_crebyname" />
+
+    <TextView
+        android:id="@+id/audit_detail_info_content"
+        style="@style/AuditDetailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_c"
+        android:textStyle="bold"
+        android:text="@string/app_text" />
+
+</LinearLayout>

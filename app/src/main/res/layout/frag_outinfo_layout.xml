@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg" >
+
+    <ListView
+        android:id="@+id/frag_outdetail_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frag_out_detail_action_layout"
+        android:layout_alignParentTop="true"
+        android:listSelector="@color/content_bg" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/frag_out_detail_action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="1dp" >
+
+        <Button
+            android:id="@+id/frag_btn_outdetail_submit"
+            style="@style/BottomActionButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/bottom_action_btn_height"
+            android:layout_weight="1"
+            android:text="@string/app_submit" />
+
+        <View
+            android:layout_width="@dimen/app_thin_line_size"
+            android:layout_height="@dimen/bottom_action_btn_height"
+            android:background="@color/white2" />
+
+        <Button
+            android:id="@+id/frag_btn_outdetail_edit"
+            style="@style/BottomActionButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/bottom_action_btn_height"
+            android:layout_weight="1"
+            android:text="@string/app_edit" >
+        </Button>
+
+        <View
+            android:layout_width="@dimen/app_thin_line_size"
+            android:layout_height="@dimen/bottom_action_btn_height"
+            android:background="@color/white2" />
+
+        <Button
+            android:id="@+id/frag_btn_outdetail_delete"
+            style="@style/BottomActionButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/bottom_action_btn_height"
+            android:layout_weight="1"
+            android:text="@string/app_delete" >
+        </Button>
+    </LinearLayout>
+
+    <include
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_loading" />
+
+</RelativeLayout>

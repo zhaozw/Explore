@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frag_out_createdtc_info_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_thin_line_size"
+        android:background="@color/colccc" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_outdtc_title_height"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:paddingLeft="6dp"
+            android:text="@string/outline_dlg_partno" />
+
+        <View
+            android:layout_width="@dimen/app_thin_line_size"
+            android:layout_height="match_parent"
+            android:background="@color/colccc" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/outdtc_item_title_qty" />
+
+        <View
+            android:layout_width="@dimen/app_thin_line_size"
+            android:layout_height="match_parent"
+            android:background="@color/colccc" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/outline_dlg_soprice" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/act_outdtc_line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_thin_line_size"
+        android:background="@color/colccc" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/layout_loading"
+            android:visibility="gone" >
+        </include>
+
+        <TextView
+            android:id="@+id/frag_out_createdtc_transline_list_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/list_nodata"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/frag_out_createdtc_transline_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/colccc"
+            android:dividerHeight="@dimen/sepline_height" >
+        </ListView>
+
+        <View
+            android:id="@+id/act_outdtc_line3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_thin_line_size"
+            android:layout_below="@+id/frag_out_createdtc_transline_list"
+            android:background="@color/colccc" />
+    </RelativeLayout>
+    
+</LinearLayout>

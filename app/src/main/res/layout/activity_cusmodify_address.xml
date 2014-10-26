@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/act_cusmodify_address_btn_layout"
+        android:layout_alignParentTop="true"
+        android:background="@color/content_bg"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp" >
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_province" />
+
+            <Spinner
+                android:id="@+id/act_cusmodify_province"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </Spinner>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_city" />
+
+            <Spinner
+                android:id="@+id/act_cusmodify_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </Spinner>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_area" />
+
+            <Spinner
+                android:id="@+id/act_cusmodify_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </Spinner>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_addresstype" />
+
+            <Spinner
+                android:id="@+id/act_cusmodify_addresstype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </Spinner>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_address" />
+
+            <EditText
+                android:id="@+id/act_cusmodify_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" >
+            </EditText>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_postcode" />
+
+            <EditText
+                android:id="@+id/act_cusmodify_postcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" >
+            </EditText>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_contactname" />
+
+            <EditText
+                android:id="@+id/act_cusmodify_contactname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" >
+            </EditText>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_mtel" />
+
+            <EditText
+                android:id="@+id/act_cusmodify_mtel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" >
+            </EditText>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_tel" />
+
+            <EditText
+                android:id="@+id/act_cusmodify_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" >
+            </EditText>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_fax" />
+
+            <EditText
+                android:id="@+id/act_cusmodify_fax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" >
+            </EditText>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_email" />
+
+            <EditText
+                android:id="@+id/act_cusmodify_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" >
+            </EditText>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_remarks" />
+
+            <EditText
+                android:id="@+id/act_cusmodify_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" >
+            </EditText>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_isdefault" />
+
+            <Spinner
+                android:id="@+id/act_cusmodify_isdefault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </Spinner>
+
+            <Button
+                android:id="@+id/act_cusmodify_btn_getgps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cusmodify_get_location" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_lng" />
+
+            <EditText
+                android:id="@+id/act_cusmodify_lng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="text" >
+            </EditText>
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_address_lat" />
+
+            <EditText
+                android:id="@+id/act_cusmodify_lat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="text" >
+            </EditText>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/act_cusmodify_address_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/coleee"
+        android:orientation="horizontal"
+        android:padding="2dp" >
+
+        <Button
+            android:id="@+id/act_cusmodify_address_btn_submit"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_save" />
+
+        <Button
+            android:id="@+id/act_cusmodify_address_btn_reset"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_reset" />
+    </LinearLayout>
+
+    <include
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</RelativeLayout>

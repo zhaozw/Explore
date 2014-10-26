@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:paddingTop="10dp">
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_dept_cusdept" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_spi_cusdept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_dept_amountmoney" />
+
+        <EditText
+            android:id="@+id/frag_cusmodify_edt_amountmoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_dept_katype" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_spi_katype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_dept_cusarea" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_spi_cusarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_dept_dztype" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_spi_dztype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_dept_zqtype" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_spi_zqtype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_dept_zqday" />
+
+        <LinearLayout
+            android:id="@+id/frag_cusmodif_zqgdr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cusmodify_title_dept_zqday1" />
+
+            <EditText
+                android:id="@+id/frag_cusmodify_edt_zqday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cusmodify_title_dept_zqday2" />
+
+            <EditText
+                android:id="@+id/frag_cusmodify_edt_zqday_zqmonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cusmodify_title_dept_zqday3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/frag_cusmodif_zqgdt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" >
+
+            <EditText
+                android:id="@+id/frag_cusmodify_edt_gdday"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cusmodify_title_dept_gdday" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_dept_isvat" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_spi_isvat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        
+        <LinearLayout
+            android:id="@+id/frag_cusmodif_vatto_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+            	android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_dept_vatto" />
+
+            <Spinner
+                android:id="@+id/frag_cusmodify_spi_vatto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            
+        </LinearLayout>
+
+        <TextView
+            style="@style/ProductModifyItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_modify_item_height"
+            android:text="@string/cusmodify_title_dept_isdh" />
+
+        <Spinner
+            android:id="@+id/frag_cusmodify_spi_isdh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        
+        <LinearLayout
+            android:id="@+id/frag_cusmodif_dhrate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" >
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+            	android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/cusmodify_title_dept_dhrate" />
+
+            <EditText
+                android:id="@+id/frag_cusmodify_edt_dhrate"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

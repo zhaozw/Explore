@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        style="@style/ProductModifyItemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/product_modify_item_height"
+        android:text="@string/cusmodify_title_namecn" />
+
+    <EditText
+        android:id="@+id/act_cusmodifypre_namecn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" >
+    </EditText>
+
+    <TextView
+        style="@style/ProductModifyItemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/product_modify_item_height"
+        android:text="@string/cusmodify_title_namecns" />
+
+    <EditText
+        android:id="@+id/act_cusmodifypre_namecns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" >
+    </EditText>
+
+    <TextView
+        style="@style/ProductModifyItemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/product_modify_item_height"
+        android:text="@string/cusmodify_title_nameen" />
+
+    <EditText
+        android:id="@+id/act_cusmodifypre_nameen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" >
+    </EditText>
+
+    <TextView
+        style="@style/ProductModifyItemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/product_modify_item_height"
+        android:text="@string/cusmodify_title_nameens" />
+
+    <EditText
+        android:id="@+id/act_cusmodifypre_nameens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" >
+    </EditText>
+
+    <TextView
+        style="@style/ProductModifyItemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/product_modify_item_height"
+        android:text="@string/cusmodify_title_companycode" />
+
+    <EditText
+        android:id="@+id/act_cusmodifypre_companycode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" >
+    </EditText>
+
+    <Button
+        android:id="@+id/act_cusmodifypre_btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_next_step" />
+
+</LinearLayout>

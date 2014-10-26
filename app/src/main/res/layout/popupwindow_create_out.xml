@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/out_popwindow_width"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:paddingRight="3dp"
+    android:paddingTop="2dp" >
+
+    <LinearLayout
+        android:layout_width="@dimen/out_popwindow_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popwindow_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/app_thin_line_size" >
+
+        <Button
+            android:id="@+id/popwin_btn_sal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/popwin_btn_height"
+            android:background="@drawable/popwindow_btn1st_bg"
+            android:text="@string/outsal"
+            android:textColor="@color/popwin_text"
+            android:textSize="@dimen/fs_popwin" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_thin_line_size"
+            android:background="@color/popwin_line2" />
+
+        <Button
+            android:id="@+id/popwin_btn_dtc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/popwin_btn_height"
+            android:background="@drawable/button_popwindow_bg"
+            android:text="@string/outdtc"
+            android:textColor="@color/popwin_text"
+            android:textSize="@dimen/fs_popwin" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_thin_line_size"
+            android:background="@color/popwin_line2" />
+
+        <Button
+            android:id="@+id/popwin_btn_ttc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/popwin_btn_height"
+            android:background="@drawable/popwindow_btnlast_bg"
+            android:text="@string/outttc"
+            android:textColor="@color/popwin_text"
+            android:textSize="@dimen/fs_popwin" />
+    </LinearLayout>
+
+</LinearLayout>

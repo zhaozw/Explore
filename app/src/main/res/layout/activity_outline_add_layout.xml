@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg">
+
+    <LinearLayout
+        android:id="@+id/act_outline_add_keyword_layout"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/act_outline_add_edt_procond"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_weight="3"
+            android:hint="@string/outinfo_detail_search_hint" />
+
+        <Button
+            android:id="@+id/act_outline_add_btn_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/search_text" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/act_outline_add_exlist_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_thin_line_size"
+        android:layout_below="@+id/act_outline_add_keyword_layout"
+        android:background="@color/out_exlist_group_divider" />
+
+    <ListView
+        android:id="@+id/act_outline_add_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/act_outline_add_exlist_line"
+        android:divider="@color/out_exlist_group_divider"
+        android:dividerHeight="@dimen/app_thin_line_size"
+        android:listSelector="@drawable/list_without_selected_style" >
+    </ListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_thin_line_size"
+        android:layout_below="@+id/act_outline_add_product_list"
+        android:background="@color/out_exlist_group_divider" />
+
+    <include
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_loading"
+        android:visibility="gone" >
+    </include>
+
+</RelativeLayout>

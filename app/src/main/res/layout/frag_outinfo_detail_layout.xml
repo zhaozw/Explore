@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg" >
+
+    <ImageButton
+        android:id="@+id/frag_btn_outinfo_add_outline"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_height="@dimen/search_button_height"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button_settings_bg"
+        android:src="@drawable/content_add_icon"
+        android:contentDescription="@string/outinfo_add_outline"
+        android:text="@string/outinfo_add_outline" >
+    </ImageButton>
+
+    <TextView
+        android:id="@+id/frag_outinfo_detail_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frag_btn_outinfo_add_outline"
+        android:paddingLeft="10dp"
+        android:text="@string/list_nodata"
+        android:visibility="gone" >
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/frag_outinfo_detail_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frag_btn_outinfo_add_outline"
+        android:orientation="vertical" 
+        android:visibility="gone" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_thin_line_size"
+            android:background="@color/out_exlist_group_divider" />
+
+        <ExpandableListView
+            android:id="@+id/frag_outinfo_detail_exlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:childDivider="@color/out_exlist_child_divider"
+            android:divider="@color/out_exlist_group_divider"
+            android:dividerHeight="@dimen/app_thin_line_size"
+            android:listSelector="@drawable/list_without_selected_style" >
+        </ExpandableListView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_thin_line_size"
+            android:background="@color/out_exlist_group_divider" />
+    </LinearLayout>
+
+    <include
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/act_outpro_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/content_bg" >
+
+        <Button
+            android:id="@+id/act_outpro_btn_addpro"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_margin="3dp"
+            android:background="@drawable/search_setcon_btn_bg"
+            android:text="@string/outinfo_detail_addproduct"
+            android:textColor="@color/white" />
+
+        <View
+            android:id="@+id/act_outpro_product_exlist_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_thin_line_size"
+            android:layout_below="@+id/act_outpro_btn_addpro"
+            android:background="@color/out_exlist_group_divider" />
+
+        <ExpandableListView
+            android:id="@+id/act_outpro_product_exlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/act_outpro_product_exlist_line"
+            android:childDivider="@color/out_exlist_child_divider"
+            android:divider="@color/out_exlist_group_divider"
+            android:dividerHeight="@dimen/app_thin_line_size"
+            android:listSelector="@drawable/list_without_selected_style" >
+        </ExpandableListView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_thin_line_size"
+            android:layout_below="@+id/act_outpro_product_exlist"
+            android:background="@color/out_exlist_group_divider" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/act_outpro_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/content_bg"
+        android:paddingTop="2dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/act_outpro_showcon_btn"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_margin="3dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/search_setcon_btn_bg"
+            android:text="@string/show_condition"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/act_outpro_search_condition_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/act_outpro_showcon_btn"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/act_outpro_edt_procond"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="@string/outinfo_detail_search_hint" />
+
+            <Button
+                android:id="@+id/act_outpro_btn_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/search_text" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/act_outpro_proresult_exlist_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_thin_line_size"
+            android:layout_below="@+id/act_outpro_search_condition_layout"
+            android:background="@color/out_exlist_group_divider" />
+
+        <ExpandableListView
+            android:id="@+id/act_outpro_proresult_exlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/act_outpro_proresult_exlist_line"
+            android:childDivider="@color/out_exlist_child_divider"
+            android:divider="@color/out_exlist_group_divider"
+            android:dividerHeight="@dimen/app_thin_line_size"
+            android:listSelector="@drawable/list_without_selected_style" >
+        </ExpandableListView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_thin_line_size"
+            android:layout_below="@+id/act_outpro_proresult_exlist"
+            android:background="@color/out_exlist_group_divider" />
+        
+        <include
+            layout="@layout/layout_loading"
+            android:visibility="gone" >
+        </include>
+        
+    </RelativeLayout>
+
+</LinearLayout>

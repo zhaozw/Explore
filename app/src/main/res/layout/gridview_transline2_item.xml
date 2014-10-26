@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gridview_item_transportline2"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/gridview_tv_title_loc"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:text="@string/transport_loc"
+        android:textColor="@color/text_c"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/gridview_tv_item_loc"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@+id/gridview_tv_title_loc"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:text="@string/app_text"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/gridview_tv_item_info1"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/gridview_tv_item_info1_label"
+        android:gravity="center_vertical"
+        android:text="@string/app_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/gridview_tv_item_info1_label"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:text="@string/transport_loc_product_count"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/text_c"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/gridview_tv_item_info2"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/gridview_tv_item_loc"
+        android:layout_toLeftOf="@+id/gridview_tv_item_prosum1"
+        android:gravity="center_vertical"
+        android:text="@string/app_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/gridview_tv_item_prosum1"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/gridview_tv_item_loc"
+        android:gravity="center_vertical"
+        android:text="@string/transport_loc_product_sum2"
+        android:textColor="@color/text_c"
+        android:textSize="12sp" />
+
+</RelativeLayout>

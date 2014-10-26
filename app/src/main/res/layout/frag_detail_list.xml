@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.explore.android.mobile.view.PullToRefreshView
+        android:id="@+id/frag_search_pullrefresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+        <ListView
+            android:id="@+id/frag_detail_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/white"
+            android:dividerHeight="@dimen/sepline_height"
+            android:fastScrollEnabled="true" >
+        </ListView>
+        <TextView 
+           	android:id="@+id/frag_detail_list_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/notice_refreshview_data_empty"/>
+    </com.explore.android.mobile.view.PullToRefreshView>
+    
+    <include
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_loading"
+        android:visibility="gone" >
+    </include>
+    
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_page_style" >
+
+        <RelativeLayout
+            android:id="@+id/frag_menu_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/menu_page_top_style" >
+
+            <ImageButton
+                android:id="@+id/frag_menu_home_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/frag_main_menu_home_button"
+                android:contentDescription="@string/main_menu_home"
+                android:src="@drawable/menu_home_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shadow_bottom" />
+        </RelativeLayout>
+
+        <ExpandableListView
+            android:id="@+id/frag_menu_exlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frag_menu_topbar"
+            android:childDivider="@color/menu_divider"
+            android:divider="@color/menu_divider"
+            android:dividerHeight="@dimen/menu_expand_line_height" >
+        </ExpandableListView>
+    </RelativeLayout>
+
+</LinearLayout>

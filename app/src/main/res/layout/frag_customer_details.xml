@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg" >
+
+    <TextView
+        android:id="@+id/frag_customer_tv_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_text"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/frag_customer_detail_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/colaaa"
+        android:listSelector="@color/content_bg"
+        android:dividerHeight="@dimen/app_thin_line_size" >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RadioGroup
+        android:id="@+id/act_rgroud_dtccreate_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/act_out_ctratedtc_btn_transinfo"
+            style="@style/RadioButtonForTab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radiobtn_outdetail_tab_bg"
+            android:checked="true"
+            android:text="@string/outdtc_tab_transportinfo"
+            android:textColor="@color/text_c"
+            android:textSize="@dimen/fs_top_tab" />
+
+        <View
+            android:layout_width="@dimen/button_border_size"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <RadioButton
+            android:id="@+id/act_out_ctratedtc_btn_transline"
+            style="@style/RadioButtonForTab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radiobtn_outdetail_tab_bg"
+            android:text="@string/outdtc_tab_transportline"
+            android:textColor="@color/text_c"
+            android:textSize="@dimen/fs_top_tab" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/act_createdtc_detail_virepager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/act_createdtc_detail_action_layout"
+        android:layout_below="@+id/act_rgroud_dtccreate_detail" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/act_createdtc_detail_action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="1dp" >
+
+        <Button
+            android:id="@+id/act_createdtc_detail_btn_save"
+            style="@style/BottomActionButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/bottom_action_btn_height"
+            android:layout_weight="1"
+            android:text="@string/app_save" />
+
+        <View
+            android:layout_width="@dimen/app_thin_line_size"
+            android:layout_height="@dimen/bottom_action_btn_height"
+            android:background="@color/white2" />
+
+        <Button
+            android:id="@+id/act_createdtc_detail_btn_back"
+            style="@style/BottomActionButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/bottom_action_btn_height"
+            android:layout_weight="1"
+            android:text="@string/app_back" >
+        </Button>
+    </LinearLayout>
+
+    <include
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</RelativeLayout>

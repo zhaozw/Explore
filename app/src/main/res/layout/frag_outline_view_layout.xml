@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg" >
+
+    <View
+        android:id="@+id/frag_outline_view_exlist_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_thin_line_size"
+        android:background="@color/out_exlist_group_divider" />
+
+    <ExpandableListView
+        android:id="@+id/frag_outline_view_exlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frag_outline_view_exlist_line"
+        android:childDivider="@color/out_exlist_child_divider"
+        android:divider="@color/out_exlist_group_divider"
+        android:dividerHeight="@dimen/app_thin_line_size"
+        android:listSelector="@drawable/list_without_selected_style" >
+    </ExpandableListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_thin_line_size"
+        android:layout_below="@+id/frag_outline_view_exlist"
+        android:background="@color/out_exlist_group_divider" />
+
+    <include
+        layout="@layout/layout_loading"
+        android:visibility="gone" >
+    </include>
+
+</RelativeLayout>

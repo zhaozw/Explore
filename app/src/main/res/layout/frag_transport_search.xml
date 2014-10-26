@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/frag_transport_condition_scv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+            
+            <EditText
+                android:id="@+id/frag_edt_transsearch_trascode1"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_trans_transcode1"
+                android:inputType="text" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/frag_edt_transsearch_trascode2"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_trans_transcode2"
+                android:inputType="text" >
+            </EditText>
+
+            <Spinner
+                android:id="@+id/frag_spi_transsearch_cusdept"
+                style="@style/SearchConditionSpinner" />
+            
+            <Spinner
+                android:id="@+id/frag_spi_transsearch_warehouse"
+                style="@style/SearchConditionSpinner" />
+            
+            <Spinner
+                android:id="@+id/frag_spi_transsearch_warehouseto"
+                style="@style/SearchConditionSpinner" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2dp" >
+
+                <EditText
+                    android:id="@+id/frag_edt_transsearch_shipto"
+                    style="@style/SearchConditionEditText2"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:hint="@string/out_shipto"
+                    android:inputType="text" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/frag_btn_transsearch_shipto"
+                    style="@style/SearchConditionButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_choose" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2dp" >
+
+                <EditText
+                    android:id="@+id/frag_edt_transsearch_vatto"
+                    style="@style/SearchConditionEditText2"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:hint="@string/out_vatto"
+                    android:inputType="text" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/frag_btn_transsearch_vatto"
+                    style="@style/SearchConditionButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_choose" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="2dp" >
+
+                <EditText
+                    android:id="@+id/frag_edt_transsearch_shipfrom"
+                    style="@style/SearchConditionEditText2"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:hint="@string/out_shipfrom"
+                    android:inputType="text" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/frag_btn_transsearch_shipfrom"
+                    style="@style/SearchConditionButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_choose" />
+            </LinearLayout>
+            
+            <Spinner
+                android:id="@+id/frag_spi_transsearch_project"
+                style="@style/SearchConditionSpinner" />
+            
+            <Spinner
+                android:id="@+id/frag_spi_transsearch_vendor"
+                style="@style/SearchConditionSpinner" />
+            
+            <Spinner
+                android:id="@+id/frag_spi_transsearch_sts"
+                style="@style/SearchConditionSpinner" />
+            
+            <Spinner
+                android:id="@+id/frag_spi_transsearch_isdd"
+                style="@style/SearchConditionSpinner" />
+            
+            <Spinner
+                android:id="@+id/frag_spi_transsearch_outtype"
+                style="@style/SearchConditionSpinner" />
+            
+            <EditText
+                android:id="@+id/frag_edt_transsearch_outcode1"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_trans_outcode1"
+                android:inputType="text" >
+            </EditText>
+            
+            <EditText
+                android:id="@+id/frag_edt_transsearch_outcode2"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_trans_outcode2"
+                android:inputType="text" >
+            </EditText>
+            
+            <EditText
+                android:id="@+id/frag_edt_transsearch_remarks"
+                style="@style/SearchConditionEditText"
+                android:hint="@string/search_trans_remarks"
+                android:inputType="text" >
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="2dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/frag_edt_transsearch_transtime_start"
+                    style="@style/SearchConditionEditText2"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:hint="@string/search_trans_transtime_start"
+                    android:inputType="date" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/frag_btn_transsearch_transtime_start"
+                    style="@style/SearchConditionButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_choose" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="2dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/frag_edt_transsearch_transtime_end"
+                    style="@style/SearchConditionEditText2"
+                    android:layout_weight="3"
+                    android:enabled="false"
+                    android:hint="@string/search_trans_transtime_end"
+                    android:inputType="date" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/frag_btn_transsearch_transtime_end"
+                    style="@style/SearchConditionButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_choose" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/frag_tranportsearch_btn"
+                    style="@style/SearchPageButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_text" >
+                </Button>
+
+                <Button
+                    android:id="@+id/frag_tranportsearch_resetbtn"
+                    style="@style/SearchPageButton"
+                    android:layout_weight="1"
+                    android:text="@string/search_reset" >
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    
+    <ViewStub
+        android:id="@+id/frag_tranportsearch_result_stub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/layout_search_result" />
+
+</LinearLayout>

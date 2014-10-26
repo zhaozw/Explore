@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="white2">#fafafa</color>
+    <color name="black">#000000</color>
+    <color name="colfefe">#fefefe</color>
+    <color name="colaaa">#aaaaaa</color>
+    <color name="colccc">#cccccc</color>
+    <color name="col999">#999999</color>
+    <color name="cola5">#a5a5a5</color>
+    <color name="col666">#666666</color>
+    <color name="col333">#333333</color>
+    <color name="coleee">#eeeeee</color>
+    <color name="content_bg">#f8f8f8</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue1">#33b5e5</color>
+    <color name="blue3">#587390</color>
+    <color name="blue4">#4c8fc3</color>
+    <color name="blue5">#81939e</color>
+    <color name="blue8">#d6dfe3</color>
+    <color name="blue9">#cadbe2</color>
+    <color name="fc_menu_item">#888888</color>
+    <color name="fs_rabtn_ch">#efc51b</color>
+    <color name="fs_rabtn_unch">#3a393e</color>
+    <color name="gray1">#3a393e</color>
+    <color name="gray2">#555555</color>
+    <color name="yellow1">#efc51b</color>
+    <color name="yellow2">#f1c40f</color>
+    <color name="yellow3">#fdb812</color>
+    <color name="yellow4">#ffbb33</color>
+    <color name="yellow5">#fdd354</color>
+    <color name="search_list_press">#dee8ec</color>
+    <color name="register_layout_border">#cfcdc6</color>
+    <!-- 2792cf f2a31a f6a71d -->
+    <color name="navigation_home_bg">#f1c40f</color>
+    <color name="navigation_home_selected_bg">#e5960b</color>
+    
+    <!-- Gridview -->
+    <color name="gridview_item_selected">#c6d3de</color>
+    <color name="gridview_item_unselected">#e5e5e5</color>
+    
+    <!-- ActionBar -->
+    <color name="c_actionbar_title_default">#fefefe</color>
+    <color name="c_actionbar_backgroud_soild">#272c2f</color>
+    <color name="c_actionbar_tab_backgroud">#f1c40f</color>
+    <color name="c_actionbar_tab_title">#fefefe</color>
+    <!-- c8d2d9 -->
+    <color name="c_actionbar_tab_stacked">#f1c40f</color>
+    
+    <!-- Top PopWindow -->
+    <color name="popwin_bgc">#272c2f</color>
+    <color name="popwin_border">#849caa</color>
+    <color name="popwin_btn_unselected">#272c2f</color>
+    <color name="popwin_btn_selected">#a0b3bf</color>
+    <color name="popwin_line1">#8ba5b9</color>
+    <color name="popwin_line2">#a0b3bf</color>
+    <color name="popwin_text">#fefefe</color>
+    
+    <!-- Dialog -->
+    <color name="dlg_top_start_c">#969595</color>
+    <color name="dlg_top_end_c">#b7b6b6</color>
+    <color name="dlg_title_c">#fefefe</color>
+    <color name="dlg_message_c">#888888</color>
+    
+    <color name="bottom_action_btn">#bfc8ce</color>
+    <color name="bottom_action_btn_press">#8da5b6</color>
+    
+    <color name="outdetail_tab_selected_start">#f1f1f1</color>
+    <color name="outdetail_tab_selected_end">#f8f8f8</color>
+    <color name="outdetail_tab_unselected_start">#f8f8f8</color>
+    <color name="outdetail_tab_unselected_end">#e5e5e5</color>
+    
+    <color name="menu_item_p1">#eeeeee</color>
+    <color name="menu_item_p2">#b7bac4</color>
+    <color name="menu_item_c1">#f5f5f5</color>
+    <color name="menu_item_c2">#606974</color>
+    <color name="menu_divider">#cecece</color>
+    <color name="menu_child_divider">#e5e5e5</color>
+    <color name="menu_top_bg">#ced6dc</color>
+    
+    <color name="out_exlist_child_divider">#e1e1e1</color>
+    <color name="out_exlist_child_background">#fefefe</color>
+    <color name="out_exlist_child_title">#f5f5f5</color>
+    <color name="out_exlist_group_divider">#bdbdbd</color>
+    <color name="out_exlist_group_selected">#f2f2f2</color>
+    <color name="out_exlist_group_unselected">#fefefe</color>
+    
+    <color name="home_title_c1">#66747e</color>
+    <color name="home_title_c2">#cedee1</color>
+    <!--  e99d19 f2a31a -->
+    <color name="home_datebar_c">#f1c40f</color>
+    <color name="home_shadow_c1">#b2c1c4</color>
+    <color name="home_shadow_c2">#ffffff</color>
+    <color name="home_shadow_line_c">#afbcbf</color>
+    <color name="home_content_c">#f5f5f5</color>
+    <color name="home_news_line_c">#eaeaea</color>
+    
+    <color name="text_c">#888888</color>
+    <color name="list_text">#888888</color>
+    <color name="list_title">#aaaaaa</color>
+    <color name="list_title_bg">#f1f1f1</color>
+    <color name="search_page_bgc">#f5f5f5</color>
+    <color name="search_con_btn_c1">#cad7d8</color>
+    <color name="search_con_btn_cs1">#bbc9ca</color>
+    <color name="search_con_btn_c2">#ffbb33</color>
+    <color name="search_con_btn_cs2">#ebae35</color>
+    <color name="search_res_line_c1">#dbdbdb</color>
+    <color name="search_res_line_c2">#ffffff</color>
+    
+    <color name="dlg_btn_selected">#9db9d6</color>
+    <color name="dlg_btn_unselected">#bbbbbb</color>
+    
+    <color name="default_btn_selected">#6f8da5</color>
+    <color name="default_btn_unselected">#b2c4d2</color>
+    
+    <color name="settings_btn_selected">#9db9d6</color>
+    <color name="settings_btn_unselected">#cccccc</color>
+    
+    <color name="default_imgbtn_selected">#dadada</color>
+    <color name="default_imgbtn_unselected">#00000000</color>
+    
+    <color name="search_more_btn_c1">#f1f1f1</color>
+    <color name="search_more_btn_c2">#e5e5e5</color>
+    <color name="search_more_btn_cs1">#e1e1e1</color>
+    <color name="search_more_btn_cs2">#e6e6e6</color>
+    
+    <color name="outdetail_btn_unchecked">#e5e5e5</color>
+    <color name="outdetail_btn_checked">#f5f5f5</color>
+    
+    <color name="spinner_item_bg">#eef3f6</color>
+    <color name="spinner_item_text">#5f6d79</color>
+    
+    <color name="nodata_layout_btn_bg_sel">#136adf</color>
+    <color name="nodata_layout_btn_bg_unsel">#7c9ecd</color>
+    
+    <color name="exlist_outline_modify_btn_sel">#98bcce</color>
+    <color name="exlist_outline_modify_btn_unsel">#00000000</color>
+    <color name="exlist_outline_modify_title_text">#2274da</color>
+    
+    <color name="audit_sepline_color">#E0E0E0</color>
+
+    <!-- Add for qrcode -->
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+</resources>

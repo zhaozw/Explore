@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fefefe" >
+
+    <LinearLayout
+        android:id="@+id/fr_sche_week_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/yellow1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" >
+
+        <TextView
+            style="@style/FragScheduleWeekBarText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/week_mon" >
+        </TextView>
+
+        <TextView
+            style="@style/FragScheduleWeekBarText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/week_tue" >
+        </TextView>
+
+        <TextView
+            style="@style/FragScheduleWeekBarText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/week_wed" >
+        </TextView>
+
+        <TextView
+            style="@style/FragScheduleWeekBarText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/week_thu" >
+        </TextView>
+
+        <TextView
+            style="@style/FragScheduleWeekBarText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/week_fri" >
+        </TextView>
+
+        <TextView
+            style="@style/FragScheduleWeekBarText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/week_sat" >
+        </TextView>
+
+        <TextView
+            style="@style/FragScheduleWeekBarText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/week_sun" >
+        </TextView>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/frag_schedule_daygroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fr_sche_week_layout"
+        android:background="@color/gray2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" >
+
+        <RadioButton
+            android:id="@+id/frag_schedule_weekdate1"
+            style="@style/FragScheduleDayButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_text" />
+
+        <RadioButton
+            android:id="@+id/frag_schedule_weekdate2"
+            style="@style/FragScheduleDayButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_text" />
+
+        <RadioButton
+            android:id="@+id/frag_schedule_weekdate3"
+            style="@style/FragScheduleDayButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_text" />
+
+        <RadioButton
+            android:id="@+id/frag_schedule_weekdate4"
+            style="@style/FragScheduleDayButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_text" />
+
+        <RadioButton
+            android:id="@+id/frag_schedule_weekdate5"
+            style="@style/FragScheduleDayButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_text" />
+
+        <RadioButton
+            android:id="@+id/frag_schedule_weekdate6"
+            style="@style/FragScheduleDayButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_text" />
+
+        <RadioButton
+            android:id="@+id/frag_schedule_weekdate7"
+            style="@style/FragScheduleDayButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_text" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/fr_sche_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frag_schedule_daygroup" >
+
+        <ListView
+            android:id="@+id/frag_schedule_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+
+        <include
+            layout="@layout/layout_loading"
+            android:visibility="gone" >
+        </include>
+    </RelativeLayout>
+
+</RelativeLayout>

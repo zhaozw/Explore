@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/act_add_pro_detail_btn_layout"
+        android:layout_alignParentTop="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/act_add_prodetail_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_cusdept" />
+
+            <Spinner
+                android:id="@+id/act_add_product_cusdept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_project" />
+
+            <Spinner
+                android:id="@+id/act_add_product_project"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_partno" />
+
+            <EditText
+                android:id="@+id/act_add_product_partno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_npartno" />
+
+            <EditText
+                android:id="@+id/act_add_product_npartno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_name" />
+
+            <EditText
+                android:id="@+id/act_add_product_proname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_costprice" />
+
+            <EditText
+                android:id="@+id/act_add_product_costprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_baseprice" />
+
+            <EditText
+                android:id="@+id/act_add_product_baseprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_vatrate" />
+
+            <EditText
+                android:id="@+id/act_add_product_vatrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_model" />
+
+            <EditText
+                android:id="@+id/act_add_product_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_othermodel" />
+
+            <EditText
+                android:id="@+id/act_add_product_othermodel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_otherrate" />
+
+            <EditText
+                android:id="@+id/act_add_product_otherrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_unitstr" />
+
+            <EditText
+                android:id="@+id/act_add_product_unitstr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_unitratestr" />
+
+            <EditText
+                android:id="@+id/act_add_product_unitratestr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_pounit" />
+
+            <EditText
+                android:id="@+id/act_add_product_pounit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_sounit" />
+
+            <EditText
+                android:id="@+id/act_add_product_sounit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_overday" />
+
+            <EditText
+                android:id="@+id/act_add_product_overday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_freshday" />
+
+            <EditText
+                android:id="@+id/act_add_product_freshday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_length" />
+
+            <EditText
+                android:id="@+id/act_add_product_length"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_width" />
+
+            <EditText
+                android:id="@+id/act_add_product_width"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_height" />
+
+            <EditText
+                android:id="@+id/act_add_product_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_gweight" />
+
+            <EditText
+                android:id="@+id/act_add_product_gweight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_nweight" />
+
+            <EditText
+                android:id="@+id/act_add_product_nweight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/ProductModifyItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_modify_item_height"
+                android:text="@string/product_add_qz" />
+
+            <EditText
+                android:id="@+id/act_add_product_qz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+            <LinearLayout
+                android:id="@+id/act_add_product_isb2c_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/ProductModifyItemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/product_modify_item_height"
+                    android:text="@string/product_add_isb2C" />
+
+                <Spinner
+                    android:id="@+id/act_add_product_isb2C"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/act_add_product_b2cid_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/ProductModifyItemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/product_modify_item_height"
+                    android:text="@string/product_add_relationproductid" />
+
+                <EditText
+                    android:id="@+id/act_add_product_relationproductid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/act_add_pro_detail_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/coleee"
+        android:orientation="horizontal"
+        android:padding="2dp" >
+
+        <Button
+            android:id="@+id/act_add_product_btn_submit"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_save" />
+
+        <Button
+            android:id="@+id/act_add_product_btn_reset"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_reset" />
+    </LinearLayout>
+
+    <include
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</RelativeLayout>

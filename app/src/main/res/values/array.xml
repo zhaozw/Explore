@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="ex_main_menu">
+        <item>采购</item>
+        <item>销售</item>
+        <item>物流</item>
+        <item>财务</item>
+        <item>行政办公</item>
+        <item>人力资源</item>
+        <item>IT服务</item>
+        <item>配置</item>
+        <item>个人控制台</item>
+    </string-array>
+    
+</resources>

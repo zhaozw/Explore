@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:id="@+id/settings_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            style="@style/SettingsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/remlogin_settings_title"
+                style="@style/SettingsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/setup_save_login" >
+            </TextView>
+
+            <CheckBox
+                android:id="@+id/cbox_settings_remlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sepline_height"
+            android:background="@color/home_news_line_c" />
+
+        <RelativeLayout
+            style="@style/SettingsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/keeplogin_setting_title"
+                style="@style/SettingsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/setup_keep_login" >
+            </TextView>
+
+            <CheckBox
+                android:id="@+id/cbox_settings_keeplogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sepline_height"
+            android:background="@color/home_news_line_c" />
+
+        <RelativeLayout
+            style="@style/SettingsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_receive_p2pinfos"
+                style="@style/SettingsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/setup_receive_p2pinfo" >
+            </TextView>
+
+            <CheckBox
+                android:id="@+id/cbox_receive_p2pinfos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sepline_height"
+            android:background="@color/home_news_line_c" />
+
+        <Button
+            android:id="@+id/btn_settings_clear_cache"
+            style="@style/SettingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_button_height"
+            android:text="@string/setup_clear_cache" />
+
+        <Button
+            android:id="@+id/btn_settings_logout"
+            style="@style/SettingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_button_height"
+            android:text="@string/setup_logout" />
+    </LinearLayout>
+
+</ScrollView>

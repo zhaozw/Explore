@@ -1,0 +1,186 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="TextStyle">
+        <item name="android:textColor">#333333</item>
+    </style>
+    
+    <!-- 联系人详情页面控件样式 -->
+    <style name="ContactItemTitle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#33b5e5</item>
+        <item name="android:background">@drawable/tab_contact_item_bg</item>
+    </style>
+    
+    <style name="ContactItemText">
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#888888</item>
+    </style>
+    
+    <style name="ContactMsgDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+		<item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    
+    <style name="AuditDetailTextView">
+        <item name="android:textColor">#6A6A6A</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    
+    <style name="AuditDetailActionLayout">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+    </style>
+    
+    <style name="FragScheduleWeekBarText">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colfefe</item>
+    </style>
+    
+    <style name="FragScheduleDayButton">
+        <item name="android:textColor">@color/colfefe</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:gravity">center_horizontal</item>  
+        <item name="android:background">@drawable/schedule_weekday_rabtn</item>
+        <!--<item name="android:paddingTop">@dimen/bottom_tab_padding_up</item> -->
+        <item name="android:button">@null</item>  
+        <!-- <item name="android:singleLine">true</item> -->
+        <!-- <item name="android:drawablePadding">@dimen/bottom_tab_padding_drawable</item> -->
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    
+    <style name="SearchPageButton">
+        <item name="android:background">@drawable/search_page_button</item>
+        <item name="android:layout_height">@dimen/search_button_height</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_margin">3dp</item>
+    </style>
+    
+    <style name="BottomActionButton">
+        <item name="android:background">@drawable/button_action_bottom</item>
+        <item name="android:textColor">@color/white2</item>
+        <item name="android:textSize">@dimen/fs_bottom_action</item>
+    </style>
+    
+    <style name="SettingsSection">
+        <item name="android:paddingTop">@dimen/settings_padding_v</item>
+        <item name="android:paddingBottom">@dimen/settings_padding_v</item>
+        <item name="android:paddingLeft">@dimen/settings_padding_h</item>
+        <item name="android:paddingRight">@dimen/settings_padding_h</item>
+    </style>
+    
+    <style name="SettingsTitle">
+        <item name="android:textColor">@color/col666</item>
+        <item name="android:textSize">@dimen/fs_setting_title</item>
+    </style>
+    
+    <style name="SettingsTitle2">
+        <item name="android:textColor">@color/colaaa</item>
+        <item name="android:textSize">@dimen/fs_setting_title2</item>
+        <item name="android:paddingLeft">@dimen/settings_padding_v</item>
+    </style>
+    
+    <style name="SettingsButton">
+        <item name="android:layout_marginTop">@dimen/settings_padding_v</item>
+        <item name="android:layout_marginBottom">@dimen/settings_padding_v</item>
+        <item name="android:layout_marginLeft">@dimen/settings_padding_h</item>
+        <item name="android:layout_marginRight">@dimen/settings_padding_h</item>
+        <item name="android:background">@drawable/button_settings_bg</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="ResultListTitleText">
+        <item name="android:textColor">@color/list_text</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingLeft">@dimen/list_padding_lr_side</item>
+    </style>
+    
+    <style name="ExListContentText">
+        <item name="android:paddingRight">@dimen/list_padding_lr_side</item>
+        <item name="android:paddingLeft">@dimen/list_padding_lr_side</item>
+        <item name="android:textColor">@color/list_text</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <style name="RadioButtonForTab">
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+    </style>
+    
+    <style name="SearchConditionEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/search_con_edittext_height</item>
+        <item name="android:textSize">@dimen/fs_search_text</item>
+        <item name="android:textColor">@color/text_c</item>
+    </style>
+    
+    <style name="SearchConditionEditText2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/search_con_edittext_height</item>
+        <item name="android:textSize">@dimen/fs_search_text</item>
+        <item name="android:textColor">@color/text_c</item>
+    </style>
+    
+    <style name="SearchConditionSpinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/search_con_spinner_height</item>
+        <item name="android:textSize">@dimen/fs_search_text</item>
+        <item name="android:textColor">@color/text_c</item>
+    </style>
+    
+    <style name="SearchConditionButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/search_con_button_height</item>
+        <item name="android:background">@drawable/button_default_bg</item>
+        <item name="android:textSize">@dimen/fs_search_text</item>
+        <item name="android:textColor">@color/white2</item>
+    </style>
+    
+    <style name="DefaultImageButton">
+        <item name="android:background">@drawable/imgbtn_default_bg</item>
+    </style>
+    
+    <style name="ProductModifyItemTitle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:background">@color/white2</item>
+    </style>
+    
+</resources>

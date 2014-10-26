@@ -1,0 +1,87 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="navigation_drawer_width">280dp</dimen>
+    <dimen name="navigation_home_height">58dp</dimen>
+    <dimen name="navigation_home_padding">10dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="app_thin_line_size">0.5dp</dimen>
+    <dimen name="app_bold_line_size">1dp</dimen>
+    <dimen name="act_init_item_size">42dp</dimen>
+    <dimen name="act_init_progressbar_size">22dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="outline_slidingmenu_offset">50dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="bottom_action_btn_height">40dp</dimen>
+    <dimen name="topbar_height">42dp</dimen>
+    <dimen name="button_height">40dp</dimen>
+    <dimen name="search_button_height">42dp</dimen>
+    <dimen name="sepline_height">0.5dp</dimen>
+    <dimen name="menu_expand_line_height">0.5dp</dimen>
+    <dimen name="button_border_size">0.5dp</dimen>
+    <dimen name="menu_item_height">42dp</dimen>
+    <dimen name="menu_item_icon_padding">10dp</dimen>
+    <dimen name="menu_parent_item_padding">8dp</dimen>
+    <dimen name="menu_child_item_padding">15dp</dimen>
+    <dimen name="settings_padding_h">5dp</dimen>
+    <dimen name="settings_padding_v">3dp</dimen>
+    <dimen name="list_padding_lr_side">5dp</dimen>
+    <dimen name="list_title_width">60dp</dimen>
+    <dimen name="aysn_list_padding_v">10dp</dimen>
+    <dimen name="aysn_list_padding_h">5dp</dimen>
+    <dimen name="exlist_child_item_height">28dp</dimen>
+    <dimen name="exlist_group_item_height">43dp</dimen>
+    <dimen name="exlist_text_padding">5dp</dimen>
+    <dimen name="exlist_button_corner">0dp</dimen>
+    <dimen name="list_outdtc_item_height">42dp</dimen>
+    <dimen name="list_outdtc_title_height">45dp</dimen>
+    <dimen name="text_list_item_padding">5dp</dimen>
+    <dimen name="dlg_item_height">32dp</dimen>
+    <dimen name="dlg_button_height">40dp</dimen>
+    <dimen name="search_con_edittext_height">42dp</dimen>
+    <dimen name="search_con_spinner_height">42dp</dimen>
+    <dimen name="search_con_button_height">38dp</dimen>
+    <dimen name="search_con_button_width">70dp</dimen>
+    <dimen name="popwin_btn_height">42dp</dimen>
+    <dimen name="spinner_dropdown_height">36dp</dimen>
+    <dimen name="default_list_item_height">36dp</dimen>
+    <dimen name="settings_button_height">42dp</dimen>
+    <dimen name="nodata_layout_btn_height">36dp</dimen>
+    <dimen name="nodata_layout_margin">10dp</dimen>
+    <dimen name="nodata_layout_corner">0dp</dimen>
+    <dimen name="outline_modify_layout_height">48dp</dimen>
+    <dimen name="outline_modify_text_height">24dp</dimen>
+    <dimen name="outline_modify_btn_height">48dp</dimen>
+    <dimen name="outline_modify_btn_width">50dp</dimen>
+    <dimen name="out_popwindow_width">120dp</dimen>
+    <dimen name="product_modify_item_height">28dp</dimen>
+    <dimen name="data_loaderbar_height">48dp</dimen>
+    <dimen name="data_processbar_size">36dp</dimen>
+    <dimen name="actionbar_divderpadding">7dp</dimen>
+    
+    <!-- TextSize "fs" means font size -->
+    <dimen name="explore_actionbar_text_size">18sp</dimen>
+    <dimen name="fs_init_title">12sp</dimen>
+    <dimen name="fs_popwin">12sp</dimen>
+    <dimen name="fs_loading_msg">14sp</dimen>
+    <dimen name="fs_list_title">12sp</dimen>
+    <dimen name="fs_setting_title">16sp</dimen>
+    <dimen name="fs_setting_title2">14sp</dimen>
+    <dimen name="fs_search_text">16sp</dimen>
+    <dimen name="fs_bottom_action">14sp</dimen>
+    <dimen name="fs_top_tab">14sp</dimen>
+    <dimen name="fs_dlg_edt">14sp</dimen>
+    <dimen name="fs_dlg_btn">14sp</dimen>
+    <dimen name="fs_menu_parent">16sp</dimen>
+    <dimen name="fs_menu_child">14sp</dimen>
+    <integer name="num_cols">1</integer>
+    
+    <!-- add by third package -->
+    <!-- Preference fragment padding, bottom -->
+    <dimen name="preference_fragment_padding_bottom">0dp</dimen>
+    <!-- Preference fragment padding, sides -->
+    <dimen name="preference_fragment_padding_side">5dp</dimen>
+    <integer name="preference_fragment_scrollbarStyle">0x02000000</integer> <!-- outsideOverlay -->
+
+</resources>

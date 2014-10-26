@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg" >
+
+    <RelativeLayout
+        android:id="@+id/frag_home_date_bar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/home_datebar_c"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/frag_home_date_bar_icon"
+            android:layout_width="26dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/test_text"
+            android:src="@drawable/schedule_calendar_icon" />
+
+        <TextView
+            android:id="@+id/frag_home_tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/frag_home_date_bar_icon"
+            android:text="@string/app_date_text"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/frag_home_tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/app_username_text"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frag_home_date_bar"
+        android:background="@color/home_content_c" >
+
+        <TextView
+            android:id="@+id/frag_home_content_list_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/list_nodata"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/frag_home_content_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/white"
+            android:dividerHeight="@dimen/sepline_height"
+            android:fastScrollEnabled="true" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

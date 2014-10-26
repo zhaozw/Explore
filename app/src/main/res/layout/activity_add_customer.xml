@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RadioGroup
+        android:id="@+id/act_rgroud_cusadd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/act_cusadd_btn_address"
+            style="@style/RadioButtonForTab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radiobtn_outdetail_tab_bg"
+            android:checked="true"
+            android:text="@string/cusmodify_tab_title_address"
+            android:textColor="@color/text_c"
+            android:textSize="@dimen/fs_top_tab" />
+
+        <View
+            android:layout_width="@dimen/button_border_size"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <RadioButton
+            android:id="@+id/act_cusadd_btn_dept"
+            style="@style/RadioButtonForTab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radiobtn_outdetail_tab_bg"
+            android:text="@string/cusmodify_tab_title_dept"
+            android:textColor="@color/text_c"
+            android:textSize="@dimen/fs_top_tab" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/act_cusadd_view_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/act_cusadd_action_layout"
+        android:layout_below="@+id/act_rgroud_cusadd" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/act_cusadd_action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/coleee"
+        android:orientation="horizontal"
+        android:padding="2dp" >
+
+        <Button
+            android:id="@+id/act_btn_cusadd_submit"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_save" />
+
+        <Button
+            android:id="@+id/act_btn_cusadd_reset"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_reset" />
+    </LinearLayout>
+
+    <include
+        android:layout_alignParentTop="true"
+        layout="@layout/layout_loading"
+        android:visibility="gone" />
+
+</RelativeLayout>
