@@ -84,32 +84,45 @@ public class OutLineAddAdapter extends BaseAdapter{
 	@Override
 	public View getView(int position, View view, ViewGroup arg2) {
 		final int index = position;
-		view = inflater.inflate(R.layout.list_outline_add_item, null);
-		
-		TextView tv_outlineInfo = (TextView) view.findViewById(R.id.list_outline_add_product);
-		ImageButton btn_operation = (ImageButton) view.findViewById(R.id.list_outline_add_btn);
+        ViewHolder holder;
+        if (view == null) {
+            view = inflater.inflate(R.layout.list_outline_add_item, null);
+            holder = new ViewHolder();
+            holder.outLineInfo = (TextView) view.findViewById(R.id.list_outline_add_product);
+            holder.outLineOpration = (ImageButton) view.findViewById(R.id.list_outline_add_btn);
+            view.setTag(holder);
+        } else {
+            holder = (ViewHolder) view.getTag();
+        }
 
         if (isProductExist(proList.get(position).getProductId())) {
-            btn_operation.setOnClickListener(new OnClickListener() {
+            holder.outLineOpration.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(context, R.string.outline_product_repeat, Toast.LENGTH_SHORT).show();
                 }
             });
-            tv_outlineInfo.setText(context.getString(R.string.outline_product_exists)
+            holder.outLineInfo.setText(context.getString(R.string.outline_product_exists) + "\n"
                     + proList.get(position).getProductInfo());
+            holder.outLineInfo.setTextColor(context.getResources().getColor(R.color.blue4));
         } else {
-            btn_operation.setOnClickListener(new OnClickListener() {
+            holder.outLineOpration.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View arg0) {
                     createDialog(index);
                 }
             });
-            tv_outlineInfo.setText(proList.get(position).getProductInfo());
+            holder.outLineInfo.setText(proList.get(position).getProductInfo());
+            holder.outLineInfo.setTextColor(context.getResources().getColor(R.color.contents_text));
         }
 		
 		return view;
 	}
+
+    private static class ViewHolder {
+        TextView outLineInfo;
+        ImageButton outLineOpration;
+    }
 	
 	private CustomDialog dialog;
 	private void createDialog(final int index){
@@ -329,8 +342,8 @@ public class OutLineAddAdapter extends BaseAdapter{
             if (OutDetailOutLineFragment.productIdInList.get(i).equals(productId)) {
                 flag = true;
                 break;
-
             }
+            i++;
         }
         return flag;
     }

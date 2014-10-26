@@ -16,6 +16,7 @@ import android.support.v7.app.ActionBar.Tab;
 import android.support.v7.app.ActionBar.TabListener;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.explore.android.R;
@@ -25,6 +26,11 @@ public class TransportDetailActivity extends ActionBarActivity {
 	
 	private static final int TAB_ITEM_NUMS = 3;
 	private static final int CACHE_PAGE_LIMIT = 2;
+
+    private static final int RESPONSE_INFO = 4;
+    private static final int RESPONSE_LINE1 = 5;
+    private static final int RESPONSE_LINE2 = 6;
+
 	
 	private ViewPager viewPager;
 	private ActionBar actionBar;
@@ -121,8 +127,23 @@ public class TransportDetailActivity extends ActionBarActivity {
         }
 		return super.onOptionsItemSelected(item);
 	}
+
+    public void handlerResponse(String response, int what) {
+        if( RESPONSE_INFO == what ){
+
+        } else if (RESPONSE_LINE1 == what) {
+
+        } else if (RESPONSE_LINE2 == what) {
+
+        }
+    }
+
+    private void loadTransportInfo() {
+
+    }
+
+
 	
-	@SuppressLint("HandlerLeak")
 	private Handler mHandler = new Handler(){
 		@Override
 		public void handleMessage(Message msg) {
@@ -132,5 +153,5 @@ public class TransportDetailActivity extends ActionBarActivity {
 		}
 		
 	};
-	
+
 }

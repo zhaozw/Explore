@@ -4,12 +4,16 @@
     android:layout_height="wrap_content"
     android:descendantFocusability="blocksDescendants"
     android:id="@+id/exlist_withbtn_layout"
+    android:padding="8dp"
     android:orientation="horizontal" >
 
     <TextView
         android:id="@+id/list_outline_add_product"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/exlist_group_item_height"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/contents_text"
         android:layout_toLeftOf="@+id/list_outline_add_btn_layout"
         android:gravity="center_vertical"
         android:paddingLeft="6dp"

@@ -31,6 +31,8 @@ import com.explore.android.mobile.view.PullToRefreshView.PullMode;
 
 public class TransportInfoFragment extends BaseHttpFragment implements OnHeaderRefreshListener{
 
+    private static final int TRANSPORT_INFO = 1;
+
 	private String transportId;
 	private ListView listView;
 	private RelativeLayout loading;
@@ -79,6 +81,8 @@ public class TransportInfoFragment extends BaseHttpFragment implements OnHeaderR
 
 	@Override
 	public void handlerResponse(String response, int what) {
+        if (TRANSPORT_INFO == what) {
+        }
 	}
 
 	@Override
@@ -91,7 +95,7 @@ public class TransportInfoFragment extends BaseHttpFragment implements OnHeaderR
 		return;
 	}
 
-	private void loadTransportInfo() {
+	private void loadTransportInfo2() {
 		loading.setVisibility(View.VISIBLE);
 		TransportDetailRequest request = new TransportDetailRequest();
 		request.setUserId(getPreferences().getUserId());
@@ -117,6 +121,15 @@ public class TransportInfoFragment extends BaseHttpFragment implements OnHeaderR
 		});
 		volley.httpRequest(getPreferences().getHttpUrl(), RequestConstants.TRANSPORT_DETAIL, request.toJsonString());
 	}
+
+    private void loadTransportInfo() {
+        loading.setVisibility(View.VISIBLE);
+        TransportDetailRequest request = new TransportDetailRequest();
+        request.setUserId(getPreferences().getUserId());
+        request.setToken(getPreferences().getTokenLast8());
+        request.setTransportId(transportId);
+        asynDataRequest(RequestConstants.STOCK_DETAIL, request.toJsonString(), TRANSPORT_INFO);
+    }
 
 	private void bindTransportDetail(JSONObject jsonObject) {
 		try {

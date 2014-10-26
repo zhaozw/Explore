@@ -112,6 +112,7 @@ public class WelcomeActivity extends Activity{
 		if("".equals(preferences.getHttpUrl())){
 			preferences.setHttpUrl(PreferencesConstant.HTTPESB);
 		}
+        preferences.setIsSavaLoginInfo(true);
 		GlobalData.loadNavigationList(this);
 	}
 	

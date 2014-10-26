@@ -141,6 +141,8 @@ public class AuditDetailActivity extends BaseHttpActivity{
 			nodata_text.setVisibility(View.VISIBLE);
 			audit_scroll.setVisibility(View.GONE);
 		}
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	@Override

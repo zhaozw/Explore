@@ -84,7 +84,7 @@ public class StockDetailActivity extends BaseHttpActivity{
 		request.setUserId(getPreferences().getUserId());
 		request.setToken(getPreferences().getTokenLast8());
 		request.setStockLineId(stockLineId);
-		asynDataRequest(RequestConstants.STOCK_DETAIL, request.toJsonString(), REQUEST_DETAIL);
+        asynDataRequest(RequestConstants.STOCK_DETAIL, request.toJsonString(), REQUEST_DETAIL);
 	}
 	
 	private boolean bindStockDetailData(String resStr){

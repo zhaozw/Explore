@@ -71,7 +71,8 @@ public class VolleyJsonRequest extends Request<JSONObject> {
 	public Map<String, String> getHeaders() throws AuthFailureError {
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("Content-Type", "application/x-www-form-urlencoded");
-		return params;
+        params.put("Charset", "UTF-8");
+        return params;
 	}
 
 	/**

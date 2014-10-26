@@ -75,12 +75,12 @@ public class LoginActivity extends Activity {
 		// 调整控件尺寸
 		WindowManager windowManager = getWindowManager();
 		Display display = windowManager.getDefaultDisplay();
-        int screemWidth = display.getWidth();
+        int screenWidth = display.getWidth();
         ((TextView) findViewById(R.id.login_info)).setText(getResources().getString(R.string.login_info));
-		edt_username.setWidth((int) (screemWidth * 0.75));
-		edt_password.setWidth((int) (screemWidth * 0.75));
-		btn_login.setWidth((int) (screemWidth * 0.75));
-		btn_test.setWidth((int) (screemWidth * 0.75));
+		edt_username.setWidth((int) (screenWidth * 0.75));
+		edt_password.setWidth((int) (screenWidth * 0.75));
+		btn_login.setWidth((int) (screenWidth * 0.75));
+		btn_test.setWidth((int) (screenWidth * 0.75));
 	}
 
 	private void initValues(){

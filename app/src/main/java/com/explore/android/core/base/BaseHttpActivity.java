@@ -148,7 +148,6 @@ public abstract class BaseHttpActivity extends Activity implements ExHttpRequest
 	
 	/**
 	 * 初始化控件
-	 * @param view
 	 */
 	public abstract void initViews();
 
