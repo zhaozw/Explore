@@ -201,13 +201,7 @@ public class HttpConn {
 		
 		try {
 			this.reqParaStr = URLEncoder.encode("DATA", ENCODETYPE)+"="+URLEncoder.encode(Base64Coder.encode(reqParaStr),ENCODETYPE);
-//			this.reqParaStr = "DATA:"+Base64Coder.encode(reqParaStr);
-//			String str = Base64Coder.encode(reqParaStr);
-//			Log.e(null, "reqParaStr:" + this.reqParaStr);
-//			Log.e(null, "reqParaStr decode:" + Base64Coder.decode(str));
-//			String str = Base64Coder.encode(reqParaStr);
-//			Log.e(null, "reqParaStr:" + Base64Coder.decode(str));
-			
+
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		} catch (Exception e) {	
