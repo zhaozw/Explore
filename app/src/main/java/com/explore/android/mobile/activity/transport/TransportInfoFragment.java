@@ -95,7 +95,7 @@ public class TransportInfoFragment extends BaseHttpFragment implements OnHeaderR
 		return;
 	}
 
-	private void loadTransportInfo2() {
+	private void loadTransportInfo() {
 		loading.setVisibility(View.VISIBLE);
 		TransportDetailRequest request = new TransportDetailRequest();
 		request.setUserId(getPreferences().getUserId());
@@ -122,7 +122,7 @@ public class TransportInfoFragment extends BaseHttpFragment implements OnHeaderR
 		volley.httpRequest(getPreferences().getHttpUrl(), RequestConstants.TRANSPORT_DETAIL, request.toJsonString());
 	}
 
-    private void loadTransportInfo() {
+    private void loadTransportInfo2() {
         loading.setVisibility(View.VISIBLE);
         TransportDetailRequest request = new TransportDetailRequest();
         request.setUserId(getPreferences().getUserId());

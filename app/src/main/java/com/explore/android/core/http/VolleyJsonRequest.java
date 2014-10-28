@@ -28,7 +28,7 @@ public class VolleyJsonRequest extends Request<JSONObject> {
 
     /** Content type for request. */
     private static final String PROTOCOL_CONTENT_TYPE =
-        String.format("application/json; charset=%s", PROTOCOL_CHARSET);
+        String.format("application/x-www-form-urlencoded; charset=%s", PROTOCOL_CHARSET);
 	
     // 向服务器端发送的数据
 	private Map<String, String> requestMap;
