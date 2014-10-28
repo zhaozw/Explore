@@ -226,6 +226,7 @@ public class HttpConn {
 				}
 			}
 			this.reqParaStr = buffer.toString();
+            Log.e("lcr","setReqParaStr");
 			
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
