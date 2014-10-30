@@ -28,6 +28,7 @@ import org.apache.http.util.EntityUtils;
 import android.util.Log;
 
 import com.explore.android.core.util.Base64Coder;
+import com.explore.android.mobile.constants.AppStatus;
 import com.explore.android.mobile.constants.ErrorConstants;
 import com.explore.android.mobile.constants.HttpConstant;
 
@@ -58,12 +59,13 @@ public class HttpConn {
 
 	public int execute() {
 
-		StringBuffer responseMessage = null;
+		StringBuffer responseMessage;
 		int responseCode = -1;
 
 		try {
-
-			Log.e(TAG, "Request Url:"+getReqURLStr());
+            if (AppStatus.IS_DEBUG_MODE) {
+                Log.e(TAG, "Request Url:" + getReqURLStr());
+            }
 			
 			URL postUrl = new URL(getReqURLStr());
 			httpUrlConnection = (HttpURLConnection) postUrl.openConnection();
@@ -220,8 +222,7 @@ public class HttpConn {
 				}
 			}
 			this.reqParaStr = buffer.toString();
-            Log.e("lcr","setReqParaStr");
-			
+
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		} catch (Exception e) {	
@@ -248,7 +249,7 @@ public class HttpConn {
 	public String getExecResultStr() {
 		if(execResultStr != null && !("").equals(execResultStr)){
 			try {
-				Log.e(TAG, "Response:" + Base64Coder.decode(execResultStr));
+
 				return Base64Coder.decode(execResultStr);
 			} catch (Exception e) {
 				return ErrorConstants.DECODE_ERROR;

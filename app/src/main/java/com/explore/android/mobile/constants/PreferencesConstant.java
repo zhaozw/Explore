@@ -58,4 +58,6 @@ public class PreferencesConstant {
 	
 	public static final String HTTPESB = "explore.imwork.net:6666/exploreesb"; // 默认正式地址
 
+    public static final String HTTPESB_DEBUG = "explore.imwork.net:7002/exploreesb"; // 默认正式地址
+
 }

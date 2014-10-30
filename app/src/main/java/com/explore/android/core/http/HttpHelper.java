@@ -7,6 +7,7 @@ import java.util.List;
 import android.util.Log;
 
 import com.explore.android.core.model.ExResponse;
+import com.explore.android.mobile.constants.AppStatus;
 import com.explore.android.mobile.constants.RequestConstants;
 
 public class HttpHelper {
@@ -26,14 +27,18 @@ public class HttpHelper {
 				} else {
 					dataName = RequestConstants.REQDATA + i;
 				}
-				Log.e("HttpHelper", "Request:" + dataName + "=" + data.get(dataName));
+                if (AppStatus.IS_DEBUG_MODE) {
+                    Log.e("HttpHelper", "Request:" + dataName + "=" + data.get(dataName));
+                }
 				requests.add(data.get(dataName));
 			}
 			conn.setReqParaStr(requests);
 			
 		} else {
 			conn.setReqParaStr(data.get(RequestConstants.REQDATA));
-			Log.e("HttpHelper", "Request:" + data.get(RequestConstants.REQDATA));
+            if (AppStatus.IS_DEBUG_MODE) {
+                Log.e("HttpHelper", "Request:" + data.get(RequestConstants.REQDATA));
+            }
 		}
 		
 		response.setResCode(conn.execute());
@@ -47,7 +52,9 @@ public class HttpHelper {
 	}
 	
 	public static ExResponse asynData(HashMap<String, String> data){
-		Log.e("HttpHelper", "Request:" + data.get(RequestConstants.REQDATA));
+        if (AppStatus.IS_DEBUG_MODE) {
+            Log.e("HttpHelper", "Request:" + data.get(RequestConstants.REQDATA));
+        }
 		ExResponse response = new ExResponse();
 		HttpConn conn = HttpConn.getInstance();
 		conn.setReqURLStr(getUrl(data.get(RequestConstants.REQURL),data.get(RequestConstants.REQNAME)));

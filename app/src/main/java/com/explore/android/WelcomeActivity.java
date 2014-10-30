@@ -1,5 +1,6 @@
 package com.explore.android;
 
+import java.security.PrivilegedExceptionAction;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -109,9 +110,16 @@ public class WelcomeActivity extends Activity{
 	}
 	
 	private void appInit() {
+        /*
 		if("".equals(preferences.getHttpUrl())){
 			preferences.setHttpUrl(PreferencesConstant.HTTPESB);
 		}
+		*/
+        if (AppStatus.IS_DEBUG_MODE) {
+            preferences.setHttpUrl(PreferencesConstant.HTTPESB_DEBUG);
+        } else {
+            preferences.setHttpUrl(PreferencesConstant.HTTPESB);
+        }
         preferences.setIsSavaLoginInfo(true);
 		GlobalData.loadNavigationList(this);
 	}
