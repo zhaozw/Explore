@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="login_btn">#587390</color>
+    <color name="login_title">#aaaaaa</color>
+    <color name="login_btn_pressed">#ffbb33</color>
+    <color name="login_edt_bg">#81939e</color>
+    <color name="login_edt_bg_focus">#fdb812</color>
+    <color name="login_edt_shadow">#333333</color>
+    <color name="register_btn_pressed">#33ffffff</color>
+    <color name="register_btn_border">#E0E0E0</color>
+
+    <color name="circle_btn">#587390</color>
+    <color name="circle_btn_press">#42c2fd</color>
+
+
+</resources>

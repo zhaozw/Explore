@@ -33,8 +33,8 @@ import com.explore.android.mobile.model.Permission;
 
 public class WelcomeActivity extends Activity{
 
-	private static final String TAG = WelcomeActivity.class.getName();
-	private static final Logger logger = LoggerFactory.getLogger(TAG);
+    private static final String TAG = WelcomeActivity.class.getName();
+    private static final Logger logger = LoggerFactory.getLogger(TAG);
 	
 	private SharePreferencesManager preferences;
 	
@@ -48,7 +48,7 @@ public class WelcomeActivity extends Activity{
 		}
 		
 		AppStatus.HOME_ACT_RUNNING = false;
-		PropertyConfigurator.getConfigurator(this).configure();
+        PropertyConfigurator.getConfigurator(this).configure();
 		
 		preferences = SharePreferencesManager.getInstance(this);
 		loadImeiAndImsi();
@@ -125,7 +125,7 @@ public class WelcomeActivity extends Activity{
 	}
 	
 	private void loadImeiAndImsi(){
-		TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         preferences.setDeviceIMEI(telephonyManager.getDeviceId());
         if(telephonyManager.getSubscriberId() == null){
             Toast.makeText(this, getString(R.string.error_empty_imsi), Toast.LENGTH_SHORT).show();

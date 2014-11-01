@@ -18,14 +18,14 @@ import com.explore.android.core.util.Base64Coder;
 public class VolleyHelper {
 
 	private static final String TAG = "VolleyHelper";
-	public static RequestQueue mRequestQueue = null;
+    public static RequestQueue mRequestQueue = null;
 	private Listener<JSONObject> responseListener;
 	private ErrorListener errorListener;
 	private Context context;
 
 	public VolleyHelper(Context context) {
 		if (mRequestQueue == null) {
-			mRequestQueue = Volley.newRequestQueue(context);
+            mRequestQueue = Volley.newRequestQueue(context);
 		}
 		this.context = context;
 	}
