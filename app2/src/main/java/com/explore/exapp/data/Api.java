@@ -5,6 +5,21 @@ package com.explore.exapp.data;
  */
 public class Api {
 
+    public static String getUrl(String requestName) {
+        if (AppStatus.IS_DEBUG) {
+            return "http://" + HTTPESB_DEBUG + "/" + requestName;
+        } else {
+            return "http://" + HTTPESB + "/" + requestName;
+        }
+    }
+
+    public static final String HTTPESB = "explore.imwork.net:6666/exploreesb"; // 默认正式地址
+
+    public static final String HTTPESB_DEBUG = "explore.imwork.net:7002/exploreesb"; // 默认正式地址
+
+    //================================
+    // 基础接口 COMMON
+    //================================
     public static final String LOGIN = "login.do?command=android";// 服务器请求URL常量：登录请求
 
     public static final String ADRESSBOOK = "addressbook.do?command=android";// 服务器请求URL常量：获取联系人列表请求
@@ -12,7 +27,6 @@ public class Api {
     public static final String REGISTER = "register.do?command=android";// 服务器请求URL常量：注册设备请求
 
     public static final String SYNC = "sync.do?command=android";// 服务器请求URL常量：同步数据请求
-
 
     public static final String TEST_CONNECTION = "default.do?command=android";// 服务器请求URL常量：测试服务器连接请求
 

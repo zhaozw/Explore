@@ -250,6 +250,11 @@ public class HttpConn {
 		if(execResultStr != null && !("").equals(execResultStr)){
 			try {
 
+                if (AppStatus.IS_DEBUG_MODE) {
+                    Log.e("HttpHelper", "Response:" + Base64Coder.decode(execResultStr));
+
+                }
+
 				return Base64Coder.decode(execResultStr);
 			} catch (Exception e) {
 				return ErrorConstants.DECODE_ERROR;

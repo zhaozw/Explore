@@ -6,6 +6,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.explore.exapp.R;
 import com.explore.exapp.base.MyApplication;
+import com.google.gson.JsonObject;
 
 import java.util.HashMap;
 
@@ -23,7 +24,7 @@ public class HttpUtil {
         private Context mContext;
         private String url;
         private HashMap<String, String> parameters;
-        private Response.Listener completeListener;
+        private Response.Listener<JsonObject> completeListener;
         private Response.ErrorListener errorListener;
 
         public Builder(Context context) {
@@ -38,6 +39,11 @@ public class HttpUtil {
         public Builder setParaMeters(String name, String value) {
             if (parameters == null) {
                 parameters = new HashMap<String, String>();
+            }
+            try {
+                value = Base64Coder.encode(value);
+            } catch (Exception e) {
+                LogUtil.error(e);
             }
             parameters.put(name, value);
             return this;

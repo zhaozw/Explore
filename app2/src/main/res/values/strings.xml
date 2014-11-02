@@ -22,4 +22,5 @@
 
     <!-- Phone status error message -->
     <string name="phone_error_no_imsi">无法获取SIM卡信息</string>
+    <string name="phone_error_imsi_info">手机状态获取失败</string>
 </resources>

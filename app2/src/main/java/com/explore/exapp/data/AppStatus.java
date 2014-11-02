@@ -13,6 +13,7 @@ import java.util.HashMap;
  */
 public class AppStatus {
 
+    public static boolean IS_DEBUG = true;
 
     public static final HashMap<String, String> imeiImsiMap = new HashMap<String, String>();
     public static HashMap<String, String> getImeiImstInfo(Context context) {
@@ -30,23 +31,5 @@ public class AppStatus {
         }
         return imeiImsiMap;
     }
-
-    public static final HashMap<String, String> imeiImsiRequestMap = new HashMap<String, String>();
-    public static HashMap<String, String> getImeiImstInfoForRequest(Context context) {
-        if (imeiImsiRequestMap.size() == 0) {
-            HashMap<String, String> map = new HashMap<String, String>();
-            TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-            map.put("IMEI", telephonyManager.getDeviceId());
-            if (telephonyManager.getSubscriberId() == null) {
-                ToastUtil.showToast(context, R.string.phone_error_no_imsi);
-                map.put("IMSI", "");
-            } else {
-                map.put("IMSI", telephonyManager.getSubscriberId());
-            }
-            imeiImsiRequestMap.putAll(map);
-        }
-        return imeiImsiRequestMap;
-    }
-
 
 }

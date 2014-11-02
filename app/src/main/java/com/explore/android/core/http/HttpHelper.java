@@ -16,7 +16,7 @@ public class HttpHelper {
 		ExResponse response = new ExResponse();
 		HttpConn conn = HttpConn.getInstance();
 		conn.setReqURLStr(getUrl(data.get(RequestConstants.REQURL),data.get(RequestConstants.REQNAME)));
-		conn.setReqTimeOut(6000);
+		conn.setReqTimeOut(9000);
 		if(data.size() > 3){
 			int length = data.size() - 2;
 			List<String> requests = new ArrayList<String>();
