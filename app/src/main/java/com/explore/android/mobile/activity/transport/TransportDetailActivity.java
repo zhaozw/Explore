@@ -35,7 +35,7 @@ public class TransportDetailActivity extends ActionBarActivity {
 	private ViewPager viewPager;
 	private ActionBar actionBar;
 
-	private Fragment[] fragments;
+    private Fragment[] fragments;
 	private SectionPagerAdapter adapter;
 	String transportId;
 	

@@ -40,6 +40,35 @@ public class DialogUtil {
 		
 		dialog.show();
 	}
+
+    public static void createMessageDialog(Context context, int title
+            ,int button1, int button2, String msg, OnClickListener positiveListener) {
+        CustomDialog dialog;
+        CustomDialog.Builder builder = new CustomDialog.Builder(context);
+
+        builder.setTitle(title);
+        builder.setMessage(msg);
+
+        builder.setPositiveButton(button1, positiveListener);
+        builder.setNegativeButton(button2, new OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog = builder.create();
+        WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = windowManager.getDefaultDisplay();
+        int dlg_width = (int) (display.getWidth() * 0.8);
+        Window dlg_window = dialog.getWindow();
+        WindowManager.LayoutParams lp = dlg_window.getAttributes();
+        lp.width = dlg_width;
+        dlg_window.setAttributes(lp);
+        dialog.setCanceledOnTouchOutside(false);
+
+        dialog.show();
+    }
 	
 	public static ProgressDialog progressDialog;
 	public static void createProgressDialog(Context context, int title, int msg){

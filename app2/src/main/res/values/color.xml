@@ -5,6 +5,8 @@
     <color name="black">#000000</color>
     <color name="transparent">#00FFFFFF</color>
 
+    <color name="loading_layout_bg">#666666</color>
+
     <color name="login_btn">#587390</color>
     <color name="login_title">#aaaaaa</color>
     <color name="login_btn_pressed">#ffbb33</color>
@@ -17,5 +19,12 @@
     <color name="circle_btn">#587390</color>
     <color name="circle_btn_press">#42c2fd</color>
 
+    <!-- Add for guide page -->
+    <color name="guide_login_btn">#0077bb</color>
+    <color name="guide_login_btn_pressed">#0066aa</color>
+    <color name="guide_register_btn">#44bb00</color>
+    <color name="guide_register_btn_pressed">#33aa00</color>
 
+    <color name="guide_pages_title">#666666</color>
+    <color name="guide_pages_sub_title">#999999</color>
 </resources>

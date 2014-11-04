@@ -9,8 +9,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.explore.exapp.activity.LoginActivity;
+import com.explore.exapp.activity.guide.GuideActivity;
 import com.explore.exapp.base.component.CircleButton;
 import com.explore.exapp.base.util.LogUtil;
+import com.explore.exapp.data.AppPreferences;
 import com.google.code.microlog4android.config.PropertyConfigurator;
 
 
@@ -31,6 +33,12 @@ public class MainActivity extends Activity implements View.OnClickListener{
         text.setText("Welcome");
         circleButton = (CircleButton) findViewById(R.id.main_circle_btn);
         circleButton.setOnClickListener(this);
+
+        initPreferences();
+    }
+
+    public void initPreferences() {
+        AppPreferences.prfs(this).edit().putBoolean(AppPreferences.Config.KEEP_LOGIN, true).commit();
     }
 
     @Override
@@ -51,7 +59,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         if (view == circleButton) {
-            Intent intent = new Intent(this, LoginActivity.class);
+            Intent intent = new Intent(this, GuideActivity.class);
             startActivity(intent);
         }
     }

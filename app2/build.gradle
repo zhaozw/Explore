@@ -26,4 +26,5 @@ dependencies {
     compile 'com.github.erd:android-volley:1.0.0'
     compile files('libs/microlog4android-1.1.jar')
     compile files('libs/commons-codec-1.7.jar')
+    compile 'com.android.support:support-v4:21.0.0'
 }

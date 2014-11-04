@@ -1,7 +1,16 @@
 package com.explore.exapp.activity;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -47,9 +56,68 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     public void onClick(View view) {
         if (view == buttonLogin) {
             login();
+            if (buttonLogin.getText().equals(getString(R.string.login))) {
+                login();
+            } else if (buttonLogin.getText().equals(getString(R.string.login_register))){
+                register();
+            }
         } else if (view == buttonRegister) {
-
+            setButtonMode();
         }
+    }
+
+    private void setButtonMode() {
+        buttonLogin.setClickable(false);
+        final Animation anim1 = AnimationUtils.loadAnimation(this, R.anim.login_button_hide);
+        final Animation anim2 = AnimationUtils.loadAnimation(this, R.anim.login_button_show);
+
+        anim1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                if (buttonLogin.getText().equals(getString(R.string.login))) {
+                    buttonLogin.setText(R.string.login_register);
+                    buttonRegister.setText(R.string.login);
+                    Drawable img = getResources().getDrawable(R.drawable.arrow_left);
+                    img.setBounds(0, 0, img.getIntrinsicWidth(), img.getIntrinsicHeight());
+                    buttonRegister.setCompoundDrawables(img, null, null, null);
+                    buttonRegister.setCompoundDrawablePadding(5);
+                } else if (buttonLogin.getText().equals(getString(R.string.login_register))){
+                    buttonLogin.setText(R.string.login);
+                    buttonRegister.setText(R.string.login_register);
+                    Drawable img = getResources().getDrawable(R.drawable.arrow_right);
+                    img.setBounds(0, 0, img.getIntrinsicWidth(), img.getIntrinsicHeight());
+                    buttonRegister.setCompoundDrawables(null, null, img, null);
+                    buttonRegister.setCompoundDrawablePadding(5);
+                }
+                buttonLogin.startAnimation(anim2);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+        });
+
+        anim2.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                buttonLogin.setClickable(true);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        buttonLogin.startAnimation(anim1);
     }
 
     public void login() {
@@ -74,11 +142,18 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                 .setCompleteListener(new Response.Listener() {
                     @Override
                     public void onResponse(Object o) {
-                        Gson gson2 = new Gson();
-                        ToastUtil.showToast(LoginActivity.this, gson2.toJson(o));
-                        gson2.toJson(o);
+                        ToastUtil.showToast(LoginActivity.this, gson.toJson(o));
+                        gson.toJson(o);
                     }
                 })
                 .execute();
+    }
+
+    public void register() {
+        ToastUtil.showToast(this, "Register");
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("USERNAME", edtUserName.getText().toString().trim());
+        map.put("PASSWORD", edtPassword.getText().toString().trim());
+        map.putAll(AppStatus.getImeiImstInfo(this));
     }
 }

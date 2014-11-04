@@ -114,12 +114,14 @@ public class WelcomeActivity extends Activity{
 		if("".equals(preferences.getHttpUrl())){
 			preferences.setHttpUrl(PreferencesConstant.HTTPESB);
 		}
-		*/
+
         if (AppStatus.IS_DEBUG_MODE) {
             preferences.setHttpUrl(PreferencesConstant.HTTPESB_DEBUG);
         } else {
             preferences.setHttpUrl(PreferencesConstant.HTTPESB);
         }
+        */
+        preferences.setHttpUrl(PreferencesConstant.HTTPESB);
         preferences.setIsSavaLoginInfo(true);
 		GlobalData.loadNavigationList(this);
 	}

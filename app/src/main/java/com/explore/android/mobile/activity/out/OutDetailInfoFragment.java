@@ -512,12 +512,10 @@ public class OutDetailInfoFragment extends BaseHttpFragment{
 	private void handlerCommitResult(String response) {
 		try {
 			JSONObject json = new JSONObject(response);
-			if(ResponseConstant.OK.equals(json.get(ResponseConstant.STATUS))){
+            if(ResponseConstant.OK.equals(json.get(ResponseConstant.STATUS))){
 				showToast(R.string.app_action_success);
 				getActivity().setResult(1);
 				getActivity().finish();
-			} else {
-				showToast(R.string.app_action_failed);
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();

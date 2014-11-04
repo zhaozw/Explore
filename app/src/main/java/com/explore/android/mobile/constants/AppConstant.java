@@ -19,7 +19,7 @@ public class AppConstant {
 
 	public static final String APP_PACKAGE_NAME = "com.explore.android";
 
-	public static final String APP_SP_FILE_NAME = "conf";
+    public static final String APP_SP_FILE_NAME = "conf";
 
 	public static final boolean DEBUG_STATU = true;
 

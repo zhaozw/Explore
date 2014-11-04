@@ -1,6 +1,7 @@
 package com.explore.android.core.base;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -13,6 +14,11 @@ import com.explore.android.core.model.ExResponse;
 import com.explore.android.mobile.common.Common;
 import com.explore.android.mobile.common.SharePreferencesManager;
 import com.explore.android.mobile.constants.ErrorConstants;
+import com.explore.android.mobile.constants.ResponseConstant;
+import com.explore.android.mobile.view.DialogUtil;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public abstract class BaseHttpActivity extends Activity implements ExHttpRequest{
 
@@ -68,6 +74,25 @@ public abstract class BaseHttpActivity extends Activity implements ExHttpRequest
 						}
 					} else {
 						responseData = response.getResMessage();
+                        JSONObject json = null;
+                        try {
+                            json = new JSONObject(response.getResMessage());
+                            if(json.has(ResponseConstant.STATUS)
+                                    && ResponseConstant.USEREXCEPTION.equals(json.get(ResponseConstant.STATUS))){
+                                String msg = json.getString(ResponseConstant.EXCEPTIONLIST);
+                                DialogUtil.createMessageDialog(BaseHttpActivity.this, R.string.app_user_action_failed,
+                                        R.string.app_user_action_know, R.string.dialog_cancel,
+                                        msg, new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+                                                dialogInterface.dismiss();
+                                            }
+                                        });
+                                return;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
 						handlerResponse(response.getResMessage(), what);
 					}
 				}
@@ -101,6 +126,25 @@ public abstract class BaseHttpActivity extends Activity implements ExHttpRequest
 							showToast(R.string.msg_server_nores);
 						}
 					} else {
+                        JSONObject json = null;
+                        try {
+                            json = new JSONObject(response.getResMessage());
+                            if(json.has(ResponseConstant.STATUS)
+                                    && ResponseConstant.USEREXCEPTION.equals(json.get(ResponseConstant.STATUS))){
+                                String msg = json.getString(ResponseConstant.EXCEPTIONLIST);
+                                DialogUtil.createMessageDialog(BaseHttpActivity.this, R.string.app_user_action_failed,
+                                        R.string.app_user_action_know, R.string.dialog_cancel,
+                                        msg, new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+                                                dialogInterface.dismiss();
+                                            }
+                                        });
+                                return;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
 						handlerResponse(response.getResMessage(), what);
 					}
 				}

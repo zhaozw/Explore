@@ -2,7 +2,7 @@ package com.explore.android.mobile.constants;
 
 public class AppStatus {
 
-    public static boolean IS_DEBUG_MODE = true;
+    public static boolean IS_DEBUG_MODE = false;
 	
 	public static boolean HOME_ACT_RUNNING = false;
 	

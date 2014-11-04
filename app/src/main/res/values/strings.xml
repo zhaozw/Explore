@@ -74,6 +74,9 @@
     <string name="app_no_value">无</string>
     <string name="app_data_keyword">输入关键字</string>
     <string name="app_qrcode">扫码</string>
+    <string name="app_user_action_failed">操作失败</string>
+    <string name="app_user_action_retry">重试</string>
+    <string name="app_user_action_know">知道了</string>
     
     <string name="gen_sts_new">新建</string>
     <string name="gen_sts_clo">锁定</string>

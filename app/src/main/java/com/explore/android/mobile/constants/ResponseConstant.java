@@ -16,6 +16,10 @@ public class ResponseConstant {
 	
 	public static final String EXCEPTION = "EXCEPTION";// 服务器返回值常量：操作出现错误
 
+    public static final String USEREXCEPTION = "USEREXCEPTION";// 用户提交数据异常
+
+    public static final String EXCEPTIONLIST = "EXCEPTIONLIST";// 用户提交异常信息
+
 	public static final String LOGIN_NOUSER = "NOUSER";// 登录常量：用户不存在
 
 	public static final String LOGIN_NODEVICE = "NODEVICE";// 登录常量：设备未注册

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/guide_layout_page1"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/view_guide_pager_title"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="微信开店首选口袋通"
+            android:layout_marginTop="70dp"
+            android:textSize="28sp"
+            android:textColor="@color/guide_pages_title"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/view_guide_pager_subtitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="超过 200,000 大小卖家正在使用"
+            android:layout_below="@+id/view_guide_pager_title"
+            android:textSize="16sp"
+            android:textColor="@color/guide_pages_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+</RelativeLayout>
