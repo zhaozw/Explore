@@ -17,6 +17,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
@@ -28,7 +29,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -55,7 +55,10 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
     private View[] pagerViews;
 
     private GridView p1_logos_grid; // page1
-    private ListView p2_imgs_listview; // page2
+    private LinearLayout p2_layout;
+    private ImageView[] p2_banner_photos;
+    private ListView p2_images_list; // page2
+    private LinearLayout p2_photos_layout;
     private List<Bitmap> p1_icons;
     // page3
     private RelativeLayout p3_views;
@@ -67,6 +70,10 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
     private SurfaceHolder surfaceHolder;
     private float[] rate;
     private LineThread lineThread;
+
+    private Animation gridAnimation;
+    private Animation listAnimation;
+    private int p2_anim_index = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,31 +118,33 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         p1_logos_grid.setAdapter(imgAdapter);
         initGridView();
 
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.guide_page1_grid_layout);
-        LayoutAnimationController lac = new LayoutAnimationController(animation);
+        gridAnimation = AnimationUtils.loadAnimation(this, R.anim.guide_page1_grid_layout);
+        LayoutAnimationController lac = new LayoutAnimationController(gridAnimation);
         lac.setInterpolator(new AccelerateInterpolator());
         lac.setOrder(LayoutAnimationController.ORDER_RANDOM);
-        lac.setDelay(0.3f);
-
+        lac.setDelay(0.2f);
         p1_logos_grid.setLayoutAnimation(lac);
 
         // page2
-        p2_imgs_listview = (ListView) findViewById(R.id.guide_view_products);
-        p2_imgs_listview.setVisibility(View.GONE);
-        p2_imgs_listview.setAdapter(imgAdapter);
+        p2_layout = (LinearLayout) findViewById(R.id.guide_page2_layout);
+        p2_banner_photos = new ImageView[3];
+        p2_banner_photos[0] = (ImageView) findViewById(R.id.guide_page2_photo1);
+        p2_banner_photos[1] = (ImageView) findViewById(R.id.guide_page2_photo2);
+        p2_banner_photos[2] = (ImageView) findViewById(R.id.guide_page2_photo3);
+        p2_photos_layout = (LinearLayout) findViewById(R.id.guide_page2_photo_layout);
+        p2_images_list = (ListView) findViewById(R.id.guide_view_products);
+        p2_images_list.setAdapter(imgAdapter);
 
-        Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.guide_page2_listview_layout);
-        LayoutAnimationController lac2 = new LayoutAnimationController(animation1);
+        listAnimation = AnimationUtils.loadAnimation(GuideActivity.this, R.anim.guide_page2_listview_layout);
+        LayoutAnimationController lac2 = new LayoutAnimationController(listAnimation);
         lac2.setInterpolator(new AccelerateInterpolator());
         lac2.setOrder(LayoutAnimationController.ORDER_NORMAL);
-        lac2.setDelay(0.3f);
-
-        p2_imgs_listview.setLayoutAnimation(lac2);
+        lac2.setDelay(0.2f);
+        p2_images_list.setLayoutAnimation(lac2);
 
         // page3
         p3_views = (RelativeLayout) findViewById(R.id.guide_page3_layout);
         p3_banner = (ImageView) findViewById(R.id.guide_page3_banner);
-
         p3_logos = new ImageView[5];
         p3_logos[0] = (ImageView) findViewById(R.id.guide_page3_logo1);
         p3_logos[1] = (ImageView) findViewById(R.id.guide_page3_logo2);
@@ -157,24 +166,53 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         imgAdapter.notifyDataSetChanged();
     }
 
-    private void initListView() {
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img1));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img2));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img3));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img4));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img5));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img6));
-        imgAdapter.notifyDataSetChanged();
+
+    private void initPage2View() {
+        p2_anim_index = 0;
+        p2_layout.setVisibility(View.VISIBLE);
+
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.guide_page2_photo_anim);
+        animation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                p2_anim_index ++;
+                if (p2_anim_index == 1) {
+                    mHandler.sendEmptyMessage(15);
+                }
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                LogUtil.debug("repeat");
+                animation.setDuration(animation.getDuration() - 15);
+            }
+        });
+        LayoutAnimationController lac = new LayoutAnimationController(animation);
+        lac.setOrder(LayoutAnimationController.ORDER_NORMAL);
+        lac.setDelay(0.2f);
+        p2_photos_layout.setLayoutAnimation(lac);
+        p2_photos_layout.setVisibility(View.VISIBLE);
+        p2_photos_layout.startLayoutAnimation();
     }
 
-    private void clearIamgesView() {
+    private void clearImagesView() {
         p1_icons.clear();
-        imgAdapter.notifyDataSetChanged();
+        // imgAdapter.notifyDataSetChanged();
+    }
+
+    private void clearPage2View() {
+        p2_images_list.setVisibility(View.GONE);
+        p2_photos_layout.setVisibility(View.GONE);
+        p2_layout.setVisibility(View.GONE);
     }
 
     private void clearPage3View() {
-        for (int i = 0; i < p3_logos.length; i++) {
-            p3_logos[i].setVisibility(View.INVISIBLE);
+        for (ImageView logo : p3_logos) {
+            logo.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -205,35 +243,46 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
             c++;
         }
 
-        lineThread = new LineThread(surfaceHolder);
-        lineThread.start();
+        Animation bannerAnim = AnimationUtils.loadAnimation(this, R.anim.guide_page3_banner_anim);
+        bannerAnim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                lineThread = new LineThread(surfaceHolder);
+                lineThread.start();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+        });
+        p3_banner.setAnimation(bannerAnim);
+        bannerAnim.startNow();
+
     }
 
-    private Handler mHanlder = new Handler() {
+    private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            // super.handleMessage(msg);
             if (msg.what >= 0 && msg.what < p3_logos.length) {
                 final int index = msg.what;
-                final Animation anim1 = AnimationUtils.loadAnimation(GuideActivity.this, R.anim.guide_page3_logo_anim1);
-                final Animation anim2 = AnimationUtils.loadAnimation(GuideActivity.this, R.anim.guide_page3_logo_anim1);
-                anim1.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-                    }
-
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        p3_logos[index].startAnimation(anim2);
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
-                    }
-                });
+                final Animation anim = AnimationUtils.loadAnimation(GuideActivity.this, R.anim.guide_page3_logo_anim);
                 p3_logos[index].setVisibility(View.VISIBLE);
-                p3_logos[index].setAnimation(anim1);
-                anim1.startNow();
+                p3_logos[index].setAnimation(anim);
+                anim.startNow();
+                return;
+            } else if (msg.what == 15) {
+                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img2));
+                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img3));
+                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img4));
+                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img5));
+                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img6));
+                p2_images_list.setVisibility(View.VISIBLE);
+                imgAdapter.notifyDataSetChanged();
+                p2_images_list.startLayoutAnimation();
             }
         }
     };
@@ -260,21 +309,16 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
             final Paint paint = new Paint();
             paint.setAntiAlias(true);
             paint.setStyle(Paint.Style.STROKE);
-            paint.setColor(Color.parseColor("#aaaaaa"));
+            paint.setColor(Color.parseColor("#cccccc"));
             paint.setStrokeWidth(2.0f);
 
-            float x = 0.2f;
+            float x = 0.1f;
             int i = 0;
             int delay = 10;
             boolean[] flags = new boolean[5];
-            try {
-                Thread.sleep(20);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
             while (isRun) {
 
-                x = x + 0.08f;
+                x = x + 0.12f + 0.03f * i;
 
                 canvas = holder.lockCanvas();
                 if (canvas == null) {
@@ -288,7 +332,7 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
                         continue;
                     }
 
-                    if ( flags[j] == false && (pointList.get(j).y1 + x * Math.abs(c)) <= pointList.get(j).y2) {
+                    if ( !flags[j] && (pointList.get(j).y1 + x * Math.abs(c)) <= pointList.get(j).y2) {
                         if (j <= 2) {
                             canvas.drawLine(pointList.get(j).x1, pointList.get(j).y1,
                                     pointList.get(j).x1 + (x * c * rate[j]), pointList.get(j).y1 + x * Math.abs(c),
@@ -304,9 +348,8 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
                         canvas.drawLine(pointList.get(j).x1, pointList.get(j).y1,
                                 pointList.get(j).x2, pointList.get(j).y2,
                                 paint);
-                        if (flags[j] == false) {
-                            LogUtil.debug("finish:" + j);
-                            mHanlder.sendEmptyMessage(j);
+                        if (!flags[j]) {
+                            mHandler.sendEmptyMessage(j);
                         }
                         flags[j] = true;
                     }
@@ -315,8 +358,8 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
                 i++;
 
                 int b = 0;
-                for (int a = 0; a < flags.length; a++) {
-                    if (flags[a] == true) {
+                for (boolean flag : flags) {
+                    if (flag) {
                         b++;
                     }
                 }
@@ -326,7 +369,7 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
                 }
 
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(20);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -355,9 +398,9 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         public void onPageScrolled(int i, float v, int i2) {
             if (i == 0) {
                 p1_logos_grid.setAlpha(1.0f - v);
-                p2_imgs_listview.setAlpha(v);
+                p2_layout.setAlpha(v);
             } else if (i == 1) {
-                p2_imgs_listview.setAlpha(1.0f -v);
+                p2_layout.setAlpha(1.0f -v);
                 p3_views.setAlpha(v);
             } else if (i == 2) {
                 p3_views.setAlpha(1.0f - v);
@@ -368,8 +411,8 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         public void onPageSelected(int i) {
             switch (i) {
                 case 0:
-                    p2_imgs_listview.setVisibility(View.GONE);
-                    clearIamgesView();
+                    clearImagesView();
+                    clearPage2View();
                     p1_logos_grid.setVisibility(View.VISIBLE);
                     p1_logos_grid.startLayoutAnimation();
                     initGridView();
@@ -377,12 +420,10 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
                     break;
                 case 1:
                     p1_logos_grid.setVisibility(View.GONE);
-                    clearIamgesView();
-                    p2_imgs_listview.setVisibility(View.VISIBLE);
-                    p2_imgs_listview.startLayoutAnimation();
-                    initListView();
-                    pagerItem2.setChecked(true);
+                    clearImagesView();
                     clearPage3View();
+                    initPage2View();
+                    pagerItem2.setChecked(true);
                     p3_views.setVisibility(View.GONE);
                     if (lineThread != null) {
                         lineThread.stopRun();
@@ -391,10 +432,13 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
                     }
                     break;
                 case 2:
-                    p2_imgs_listview.setVisibility(View.GONE);
+                    clearPage2View();
+                    clearPage2View();
                     p3_views.setVisibility(View.VISIBLE);
                     pagerItem3.setChecked(true);
                     initPage3View();
+                    break;
+                default:
                     break;
             }
         }
