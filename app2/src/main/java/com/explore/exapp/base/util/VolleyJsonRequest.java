@@ -1,12 +1,14 @@
 package com.explore.exapp.base.util;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.Cache;
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -44,9 +46,9 @@ public class VolleyJsonRequest extends Request<JsonObject> {
 	 * @param errorListener 请求失败的监听
 	 * @param map 向服务端发送的数据
 	 */
-	public VolleyJsonRequest(String url, Listener<JsonObject> listener, ErrorListener errorListener,
+	public VolleyJsonRequest(int method, String url, Listener<JsonObject> listener, ErrorListener errorListener,
                              Map<String, String> map) {
-		super(Method.POST, url, errorListener);
+		super(method, url, errorListener);
 		this.requestMap = map;
 		mListener = listener;
 	}
@@ -99,9 +101,5 @@ public class VolleyJsonRequest extends Request<JsonObject> {
 	protected void deliverResponse(JsonObject response) {
 		mListener.onResponse(response);
 	}
-	
-	@Override
-    public String getBodyContentType() {
-        return PROTOCOL_CONTENT_TYPE;
-    }
+
 }

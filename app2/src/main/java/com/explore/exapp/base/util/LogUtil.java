@@ -3,6 +3,7 @@ package com.explore.exapp.base.util;
 import android.os.Environment;
 import android.util.Log;
 
+import com.explore.exapp.data.AppStatus;
 import com.google.code.microlog4android.Logger;
 import com.google.code.microlog4android.LoggerFactory;
 
@@ -14,41 +15,50 @@ import java.io.IOException;
  */
 public class LogUtil {
 
+    public static boolean LOGGER_OPEN = true;
     private static final String TAG = "ExApp [log]";
     private static final Logger logger = LoggerFactory.getLogger(TAG);
 
     public static void debug(String msg) {
         Log.d(TAG, msg);
-        logger.debug("##----[DEBUG]----##");
-        logger.debug(msg);
+        if (LOGGER_OPEN) {
+            logger.debug("##----[DEBUG]----##");
+            logger.debug(msg);
+        }
     }
 
     public static void info(String msg) {
         Log.i(TAG, msg);
-        logger.debug("##----[INFO]-----##");
-        logger.debug(msg);
+        if (LOGGER_OPEN) {
+            logger.debug("##----[INFO]-----##");
+            logger.debug(msg);
+        }
     }
 
     public static void error(String msg) {
         Log.e(TAG, msg);
-        logger.debug("##----[ERROR]----##");
-        logger.debug(msg);
+        if (LOGGER_OPEN) {
+            logger.debug("##----[ERROR]----##");
+            logger.debug(msg);
+        }
     }
 
     public static void error(Throwable ex) {
-        if (ex == null) {
-            return;
+        if (LOGGER_OPEN) {
+            if (ex == null) {
+                return;
+            }
+            ex.printStackTrace();
+            StringBuffer buffer = new StringBuffer();
+            StackTraceElement[] traces = ex.getStackTrace();
+            int length = traces.length;
+            for (int i = 0; i < length; i++) {
+                buffer.append(traces[i].toString());
+                buffer.append("\n");
+            }
+            logger.debug("##----[ERROR]----##");
+            logger.debug(buffer.toString());
         }
-        ex.printStackTrace();
-        StringBuffer buffer = new StringBuffer();
-        StackTraceElement[] traces = ex.getStackTrace();
-        int length = traces.length;
-        for (int i = 0; i < length; i++) {
-            buffer.append(traces[i].toString());
-            buffer.append("\n");
-        }
-        logger.debug("##----[ERROR]----##");
-        logger.debug(buffer.toString());
     }
 
     public static void createLogFile() {

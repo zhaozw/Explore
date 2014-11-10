@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/frame_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="@dimen/table_padding"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/InputTag"
+            android:text="@string/init_setting_url_tag"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/server_setting_url_tag"
+                android:layout_width="wrap_content"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/edittext_padding_bottom"
+                android:paddingTop="@dimen/edittext_padding_top"
+                android:paddingLeft="@dimen/edittext_padding_x"
+                android:paddingRight="@dimen/edittext_padding_x"
+                android:textSize="@dimen/edittext_textsize"
+                android:textColor="#1294f7"
+                android:text="@string/http"/>
+
+            <EditText
+                android:id="@+id/server_setting_url"
+                android:layout_width="match_parent"
+                android:gravity="bottom"
+                android:layout_toEndOf="@id/server_setting_url_tag"
+                android:layout_toRightOf="@id/server_setting_url_tag"
+                android:inputType="textUri"
+                style="@style/InputEditText"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/table_button_layout_padding"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/TableButton"
+            android:text="@string/default_value"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/TableButton"
+            android:text="@string/reset"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

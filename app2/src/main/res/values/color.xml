@@ -5,7 +5,16 @@
     <color name="black">#000000</color>
     <color name="transparent">#00FFFFFF</color>
 
-    <color name="loading_layout_bg">#666666</color>
+    <color name="loading_layout_bg">#55666666</color>
+    <color name="edittext_hint">#bbbbbb</color>
+    <color name="frame_background">#e9e9e9</color>
+    <color name="line">#d0d0d0</color>
+
+    <color name="table_button">#1294f7</color>
+    <color name="table_button_pressed">#0984e2</color>
+    <color name="table_button_text">#ffffff</color>
+    <color name="table_text">#555555</color>
+    <color name="table_tag_text">#aaaaaa</color>
 
     <color name="login_btn">#587390</color>
     <color name="login_title">#aaaaaa</color>

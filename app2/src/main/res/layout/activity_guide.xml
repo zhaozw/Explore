@@ -51,7 +51,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/p2_banner_bg"/>
+                    android:src="@drawable/guide_page2_banner_bg"/>
                 
                 <LinearLayout
                     android:id="@+id/guide_page2_photo_layout"
@@ -64,21 +64,21 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="6dp"
                         android:layout_marginEnd="6dp"
-                        android:src="@drawable/p2_banner_photo1"/>
+                        android:src="@drawable/guide_page2_banner_photo1"/>
                     <ImageView
                         android:id="@+id/guide_page2_photo2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="6dp"
                         android:layout_marginEnd="6dp"
-                        android:src="@drawable/p2_banner_photo2"/>
+                        android:src="@drawable/guide_page2_banner_photo2"/>
                     <ImageView
                         android:id="@+id/guide_page2_photo3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="28dp"
                         android:layout_marginEnd="28dp"
-                        android:src="@drawable/p2_banner_photo3"/>
+                        android:src="@drawable/guide_page2_banner_photo3"/>
                 </LinearLayout>
             </RelativeLayout>
 
@@ -118,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:src="@drawable/page3_img1"/>
+                android:src="@drawable/guide_page3_img1"/>
 
             <LinearLayout
                 android:id="@+id/guide_page3_logos_layout1"
@@ -133,7 +133,7 @@
                     android:visibility="invisible"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/page3_logo1"/>
+                    android:src="@drawable/guide_page3_logo1"/>
                 <ImageView
                     android:id="@+id/guide_page3_logo2"
                     android:layout_marginTop="20dp"
@@ -141,14 +141,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/page3_logo2"/>
+                    android:src="@drawable/guide_page3_logo2"/>
                 <ImageView
                     android:id="@+id/guide_page3_logo3"
                     android:layout_width="wrap_content"
                     android:visibility="invisible"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/page3_logo5"/>
+                    android:src="@drawable/guide_page3_logo5"/>
             </LinearLayout>
 
             <LinearLayout
@@ -166,14 +166,14 @@
                     android:layout_height="wrap_content"
                     android:visibility="invisible"
                     android:layout_weight="1"
-                    android:src="@drawable/page3_logo3"/>
+                    android:src="@drawable/guide_page3_logo3"/>
                 <ImageView
                     android:id="@+id/guide_page3_logo5"
                     android:layout_width="wrap_content"
                     android:visibility="invisible"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/page3_logo4"/>
+                    android:src="@drawable/guide_page3_logo4"/>
             </LinearLayout>
 
         </RelativeLayout>

@@ -5,4 +5,40 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+
+    <style name="InputEditText" parent="android:Widget.EditText">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textSize">@dimen/edittext_textsize</item>
+        <item name="android:textColor">@color/table_text</item>
+        <item name="android:paddingBottom">@dimen/edittext_padding_bottom</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:paddingTop">@dimen/edittext_padding_top</item>
+        <item name="android:paddingLeft">@dimen/edittext_padding_x</item>
+        <item name="android:paddingRight">@dimen/edittext_padding_x</item>
+        <item name="android:textColorHint">@color/edittext_hint</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="InputTag" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/table_tag_testsize</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/table_tag_text</item>
+    </style>
+
+    <style name="TableButton">
+        <item name="android:textSize">@dimen/button_textsize</item>
+        <item name="android:background">@drawable/table_button_bg</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textColor">@color/table_button_text</item>
+    </style>
+
 </resources>

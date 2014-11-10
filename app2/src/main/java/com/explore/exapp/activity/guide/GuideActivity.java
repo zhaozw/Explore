@@ -17,7 +17,6 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
-import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
@@ -95,13 +94,13 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         // ViewPager title
         LayoutInflater inflater = LayoutInflater.from(this);
         pagerViews = new View[3];
-        pagerViews[0] = inflater.inflate(R.layout.view_guide_page1, null);
+        pagerViews[0] = inflater.inflate(R.layout.view_guide_pager, null);
         ((TextView) pagerViews[0].findViewById(R.id.view_guide_pager_title)).setText("微信开店首选口袋通");
         ((TextView) pagerViews[0].findViewById(R.id.view_guide_pager_subtitle)).setText("超过 200,000 大小卖家正在使用");
-        pagerViews[1] = inflater.inflate(R.layout.view_guide_page1, null);
+        pagerViews[1] = inflater.inflate(R.layout.view_guide_pager, null);
         ((TextView) pagerViews[1].findViewById(R.id.view_guide_pager_title)).setText("拍照即可上架商品");
         ((TextView) pagerViews[1].findViewById(R.id.view_guide_pager_subtitle)).setText("手机拍照，再设置价格即可开卖");
-        pagerViews[2] = inflater.inflate(R.layout.view_guide_page1, null);
+        pagerViews[2] = inflater.inflate(R.layout.view_guide_pager, null);
         ((TextView) pagerViews[2].findViewById(R.id.view_guide_pager_title)).setText("发送给你的粉丝们");
         ((TextView) pagerViews[2].findViewById(R.id.view_guide_pager_subtitle)).setText("在微信、朋友圈、微博、QQ空间上出售");
 
@@ -154,15 +153,15 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
     }
 
     private void initGridView() {
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.logo1));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.logo2));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.logo3));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.logo1));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.logo2));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.logo3));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.logo1));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.logo2));
-        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.logo3));
+        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page1_logo1));
+        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page1_logo2));
+        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page1_logo3));
+        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page1_logo1));
+        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page1_logo2));
+        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page1_logo3));
+        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page1_logo1));
+        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page1_logo2));
+        p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page1_logo3));
         imgAdapter.notifyDataSetChanged();
     }
 
@@ -275,11 +274,11 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
                 anim.startNow();
                 return;
             } else if (msg.what == 15) {
-                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img2));
-                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img3));
-                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img4));
-                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img5));
-                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.page2_img6));
+                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page2_img2));
+                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page2_img3));
+                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page2_img4));
+                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page2_img5));
+                p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page2_img6));
                 p2_images_list.setVisibility(View.VISIBLE);
                 imgAdapter.notifyDataSetChanged();
                 p2_images_list.startLayoutAnimation();

@@ -3,12 +3,14 @@ package com.explore.exapp.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.explore.exapp.activity.login.model.LoginInfo;
+
 /**
  * Created by ryan on 14/11/2.
  */
 public class AppPreferences {
 
-    public static SharedPreferences preferences = null;
+    private static SharedPreferences preferences = null;
     public static SharedPreferences prfs(Context context) {
         if (preferences == null) {
             preferences = context.getSharedPreferences("conf", Context.MODE_PRIVATE);
@@ -16,8 +18,34 @@ public class AppPreferences {
         return preferences;
     }
 
+    public static void initLoginPreferences(Context context, LoginInfo info) {
+        if (info == null) {
+            return;
+        }
+        prfs(context).edit().putString(Login.TOKEN, info.getTOKEN()).apply();
+        prfs(context).edit().putString(Login.USERID, info.getUSERID()).apply();
+        prfs(context).edit().putString(Login.REALNAME, info.getREALNAME()).apply();
+        prfs(context).edit().putString(Login.USERNAME, info.getUSERNAME()).apply();
+        prfs(context).edit().putString(Login.L1, info.getL1()).apply();
+        prfs(context).edit().putString(Login.L2, info.getL2()).apply();
+        prfs(context).edit().putString(Login.L3, info.getL3()).apply();
+        prfs(context).edit().putString(Login.AUDITACCOUNT, info.getAUDITCOUNT()).apply();
+    }
+
+    public static String getUserId(Context context) {
+        return prfs(context).getString(Login.USERID, "0");
+    }
+
+    public static String getTokenLast8(Context context) {
+        String token = prfs(context).getString(Login.TOKEN, "");
+        if (token.length() > 8) {
+            token = token.substring(token.length() - 8, token.length());
+        }
+        return token;
+    }
+
     // 开关
-    public static final class Config {
+    public static interface Config {
 
         public static final String FIRST_LOGIN = "first_login"; // 是否首次登录
 
@@ -36,7 +64,29 @@ public class AppPreferences {
         public static final String RECEIVE_P2PINFOS = "recevie_p2pinfos"; // 是否自动接收系统推送服务
     }
 
-    public static final class Default {
+    public static interface Login {
+
+        public static final String TOKEN = "token";
+
+        public static final String REALNAME = "real_name";
+
+        public static final String USERNAME = "user_name";
+
+        public static final String USERID = "user_id";
+
+        public static final String AUDITACCOUNT = "audit_account";
+
+        public static final String L1 = "l1";
+
+        public static final String L2 = "l2";
+
+        public static final String L3 = "l3";
+
+    }
+
+    public static interface Default {
+
+
 
         public static final String CUSTOMER_DEPT = "customer_dept";
 

@@ -1,11 +1,14 @@
 package com.explore.exapp.base.util;
 
 import android.content.Context;
+import android.content.DialogInterface;
 
+import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.explore.exapp.R;
 import com.explore.exapp.base.MyApplication;
+import com.explore.exapp.data.AppConstants;
 import com.google.gson.JsonObject;
 
 import java.util.HashMap;
@@ -24,11 +27,14 @@ public class HttpUtil {
         private Context mContext;
         private String url;
         private HashMap<String, String> parameters;
-        private Response.Listener<JsonObject> completeListener;
-        private Response.ErrorListener errorListener;
+
+        private OnCompleteListener completeListener;
+        private OnProgressFinishListener finishListener;
+        private OnErrorListener errorListener;
 
         public Builder(Context context) {
             this.mContext = context;
+            this.method = -2;
         }
 
         public Builder setUrl(String url) {
@@ -49,13 +55,18 @@ public class HttpUtil {
             return this;
         }
 
-        public Builder setCompleteListener(Response.Listener completeListener) {
-            this.completeListener = completeListener;
+        public Builder setMethod(int method) {
+            this.method = method;
             return this;
         }
 
-        public Builder setErrorListener(Response.ErrorListener errorListener) {
-            this.errorListener = errorListener;
+        public Builder setCompleteListener(OnCompleteListener listener) {
+            this.completeListener = listener;
+            return this;
+        }
+
+        public Builder setProgressFinishListener(OnProgressFinishListener listener) {
+            this.finishListener = listener;
             return this;
         }
 
@@ -63,35 +74,78 @@ public class HttpUtil {
 
             if (url == null || url.length() == 0) {
                 ToastUtil.showToast(mContext, R.string.http_error_no_url);
+                finishListener.onProgressFinish();
                 return;
             }
 
             if (completeListener == null) {
                 ToastUtil.showToast(mContext, R.string.http_error_no_complete_listener);
+                finishListener.onProgressFinish();
                 return;
             }
 
             if (parameters == null || parameters.size() == 0) {
                 ToastUtil.showToast(mContext, R.string.http_error_no_parameters);
+                finishListener.onProgressFinish();
                 return;
+            }
+
+            if (method == -2) {
+                method = Request.Method.POST;
             }
 
             if (errorListener == null) {
                 errorListener = defaultErrorListener;
             }
 
-            VolleyJsonRequest volleyJsonRequest = new VolleyJsonRequest(url, completeListener,
-                    errorListener, parameters);
+            VolleyJsonRequest volleyJsonRequest = new VolleyJsonRequest(method, url, new Response.Listener<JsonObject>() {
+                @Override
+                public void onResponse(JsonObject jsonObject) {
+                    finishListener.onProgressFinish();
+                    if (jsonObject.has(AppConstants.HTTP_STATUS)) {
+                        if (AppConstants.USEREXCEPTION.equals(jsonObject.get(AppConstants.HTTP_STATUS).getAsString())) {
+                            String msg = jsonObject.get(AppConstants.EXCEPTIONLIST).getAsString();
+                            DialogUtil.showMessageDialog(mContext, R.string.user_exception_title, msg,
+                                    R.string.known, new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            dialogInterface.dismiss();
+                                        }
+                                    });
+                        } else if (AppConstants.EXCEPTION.equals(jsonObject.get(AppConstants.HTTP_STATUS).getAsString())) {
+                            ToastUtil.showToast(mContext, R.string.http_request_exception);
+                        }
+                        completeListener.onComplete(jsonObject);
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+                    finishListener.onProgressFinish();
+                }
+            }, parameters);
             MyApplication.getRequestQueue().add(volleyJsonRequest);
         }
     }
 
-    private static final Response.ErrorListener defaultErrorListener = new Response.ErrorListener() {
+    private static final OnErrorListener defaultErrorListener = new OnErrorListener() {
         @Override
-        public void onErrorResponse(VolleyError volleyError) {
+        public void onError() {
 
         }
     };
+
+    public interface OnProgressFinishListener {
+        void onProgressFinish();
+    }
+
+    public interface OnCompleteListener {
+        void onComplete(JsonObject jsonObject);
+    }
+
+    public interface OnErrorListener {
+        void onError();
+    }
 
     private static String encodeData(String data) {
         try {

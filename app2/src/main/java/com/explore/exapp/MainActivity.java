@@ -8,8 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.explore.exapp.activity.LoginActivity;
 import com.explore.exapp.activity.guide.GuideActivity;
+import com.explore.exapp.activity.login.LoginActivity;
 import com.explore.exapp.base.component.CircleButton;
 import com.explore.exapp.base.util.LogUtil;
 import com.explore.exapp.data.AppPreferences;
@@ -59,7 +59,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         if (view == circleButton) {
-            Intent intent = new Intent(this, GuideActivity.class);
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }
     }
