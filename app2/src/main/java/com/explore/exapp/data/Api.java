@@ -1,11 +1,16 @@
 package com.explore.exapp.data;
 
+import android.content.Context;
+
 /**
  * Created by ryan on 14/11/1.
  */
 public class Api {
 
-    public static String getUrl(String requestName) {
+    public static String getUrl(Context context, String requestName) {
+        if (!"".equals(AppPreferences.getServerUrl(context))) {
+            return "http://" + AppPreferences.getServerUrl(context) + "/" + requestName;
+        }
         if (AppStatus.IS_DEBUG) {
             return "http://" + HTTPESB_DEBUG + "/" + requestName;
         } else {

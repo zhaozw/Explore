@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 
 import com.explore.exapp.activity.login.model.LoginInfo;
 
+import java.net.URI;
+
 /**
  * Created by ryan on 14/11/2.
  */
@@ -42,6 +44,14 @@ public class AppPreferences {
             token = token.substring(token.length() - 8, token.length());
         }
         return token;
+    }
+
+    public static void setServerUrl(Context context, String url) {
+        prfs(context).edit().putString(Default.SERVER_URL, url).apply();
+    }
+
+    public static String getServerUrl(Context context) {
+        return prfs(context).getString(Default.SERVER_URL, "");
     }
 
     // 开关
@@ -86,7 +96,7 @@ public class AppPreferences {
 
     public static interface Default {
 
-
+        public static final String SERVER_URL = "server_url";
 
         public static final String CUSTOMER_DEPT = "customer_dept";
 

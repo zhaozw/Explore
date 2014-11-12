@@ -5,17 +5,24 @@
     <color name="black">#000000</color>
     <color name="transparent">#00FFFFFF</color>
 
+    <!-- Common -->
     <color name="loading_layout_bg">#55666666</color>
     <color name="edittext_hint">#bbbbbb</color>
     <color name="frame_background">#e9e9e9</color>
     <color name="line">#d0d0d0</color>
 
+    <!-- For ActionBar -->
+    <color name="actionbar_title_text">#333333</color>
+    <color name="actionbar_menu_text">#666666</color>
+
+    <!-- For Table -->
     <color name="table_button">#1294f7</color>
     <color name="table_button_pressed">#0984e2</color>
     <color name="table_button_text">#ffffff</color>
     <color name="table_text">#555555</color>
     <color name="table_tag_text">#aaaaaa</color>
 
+    <!-- For Login & Register -->
     <color name="login_btn">#587390</color>
     <color name="login_title">#aaaaaa</color>
     <color name="login_btn_pressed">#ffbb33</color>
@@ -25,6 +32,7 @@
     <color name="register_btn_pressed">#33ffffff</color>
     <color name="register_btn_border">#E0E0E0</color>
 
+    <!-- For Custom circle button -->
     <color name="circle_btn">#587390</color>
     <color name="circle_btn_press">#42c2fd</color>
 
@@ -33,7 +41,12 @@
     <color name="guide_login_btn_pressed">#0066aa</color>
     <color name="guide_register_btn">#44bb00</color>
     <color name="guide_register_btn_pressed">#33aa00</color>
-
     <color name="guide_pages_title">#666666</color>
     <color name="guide_pages_sub_title">#999999</color>
+
+    <!-- For bottom tab -->
+    <color name="bottom_tab_layout_bg">#fafafa</color>
+    <color name="bottom_tab_tag_text">#666666</color>
+    <color name="bottom_tab_line">#e5e5e5</color>
+    <color name="bottom_tab_pressed">#e9e9e9</color>
 </resources>

@@ -22,6 +22,7 @@ public abstract class SubActivity extends Activity {
         if (mActionBar != null) {
             mActionBar.setDisplayShowHomeEnabled(false);
             mActionBar.setIcon(android.R.color.transparent);
+            mActionBar.setDisplayHomeAsUpEnabled(true);
         }
     }
 

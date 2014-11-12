@@ -47,6 +47,7 @@ public class CircleButton extends View {
         icon = a.getResourceId(R.styleable.CircleButton_circleIcon, 0);
 
         padding = 4;
+        a.recycle();
     }
 
     public CircleButton(Context context, AttributeSet attrs, int defStyleAttr) {

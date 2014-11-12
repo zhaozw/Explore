@@ -41,4 +41,11 @@
         <item name="android:textColor">@color/table_button_text</item>
     </style>
 
+    <style name="BottomTabTag" parent="android:Widget.TextView">
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:textSize">@dimen/tab_tag_textsize</item>
+        <item name="android:textColor">@color/bottom_tab_tag_text</item>
+    </style>
+
 </resources>

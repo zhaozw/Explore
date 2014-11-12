@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.explore.exapp.R;
+import com.explore.exapp.activity.MainTabActivity;
 import com.explore.exapp.activity.login.model.LoginInfo;
 import com.explore.exapp.base.BaseFragment;
 import com.explore.exapp.base.component.CustomProgress;
@@ -159,7 +160,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
         }
         CustomProgress.getInstance(attachActivity).show();
         HttpUtil.request(attachActivity)
-                .setUrl(Api.getUrl(Api.LOGIN))
+                .setUrl(Api.getUrl(attachActivity, Api.LOGIN))
                 .setParaMeters("DATA", gson.toJson(map))
                 .setProgressFinishListener(new HttpUtil.OnProgressFinishListener() {
                     @Override
@@ -202,7 +203,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
         }
         CustomProgress.getInstance(attachActivity).show();
         HttpUtil.request(attachActivity)
-                .setUrl(Api.getUrl(Api.REGISTER))
+                .setUrl(Api.getUrl(attachActivity, Api.REGISTER))
                 .setParaMeters("DATA", gson.toJson(map))
                 .setProgressFinishListener(new HttpUtil.OnProgressFinishListener() {
                     @Override

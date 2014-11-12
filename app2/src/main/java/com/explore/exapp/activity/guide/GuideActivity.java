@@ -1,5 +1,6 @@
 package com.explore.exapp.activity.guide;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -32,6 +33,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.explore.exapp.R;
+import com.explore.exapp.activity.MainTabActivity;
+import com.explore.exapp.activity.login.LoginActivity;
 import com.explore.exapp.base.BaseActivity;
 import com.explore.exapp.base.util.LogUtil;
 
@@ -41,7 +44,7 @@ import java.util.List;
 /**
  * Created by ryan on 14/11/3.
  */
-public class GuideActivity extends BaseActivity implements SurfaceHolder.Callback{
+public class GuideActivity extends BaseActivity implements SurfaceHolder.Callback, View.OnClickListener{
 
     private ViewPager guidePager;
     private Button buttonLogin;
@@ -85,7 +88,9 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         buttonRegister = (Button) findViewById(R.id.guide_btn_register);
 
         buttonLogin.setText("登录");
+        buttonLogin.setOnClickListener(this);
         buttonRegister.setText("注册");
+        buttonRegister.setOnClickListener(this);
 
         pagerItem1 = (RadioButton) findViewById(R.id.guide_pager_item1);
         pagerItem2 = (RadioButton) findViewById(R.id.guide_pager_item2);
@@ -144,12 +149,40 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         // page3
         p3_views = (RelativeLayout) findViewById(R.id.guide_page3_layout);
         p3_banner = (ImageView) findViewById(R.id.guide_page3_banner);
+        page3Canvas = (SurfaceView) findViewById(R.id.guide_page3_canvas);
+        surfaceHolder = page3Canvas.getHolder();
+        surfaceHolder.addCallback(this);
         p3_logos = new ImageView[5];
         p3_logos[0] = (ImageView) findViewById(R.id.guide_page3_logo1);
         p3_logos[1] = (ImageView) findViewById(R.id.guide_page3_logo2);
         p3_logos[2] = (ImageView) findViewById(R.id.guide_page3_logo3);
         p3_logos[3] = (ImageView) findViewById(R.id.guide_page3_logo4);
         p3_logos[4] = (ImageView) findViewById(R.id.guide_page3_logo5);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view == buttonLogin) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        } else if (view == buttonRegister) {
+            Intent intent = new Intent(this, MainTabActivity.class);
+            startActivity(intent);
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (surfaceHolder != null) {
+            surfaceHolder.addCallback(this);
+            initPage3View();
+        }
     }
 
     private void initGridView() {
@@ -164,7 +197,6 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         p1_icons.add(BitmapFactory.decodeResource(getResources(), R.drawable.guide_page1_logo3));
         imgAdapter.notifyDataSetChanged();
     }
-
 
     private void initPage2View() {
         p2_anim_index = 0;
@@ -215,11 +247,7 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         }
     }
 
-
     private void initPage3View() {
-
-        page3Canvas = (SurfaceView) findViewById(R.id.guide_page3_canvas);
-        surfaceHolder = page3Canvas.getHolder();
 
         int banner_x = p3_banner.getLeft() + p3_banner.getWidth()/2;
         int banner_y = p3_banner.getTop() + p3_banner.getHeight();
@@ -376,8 +404,6 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         }
     }
 
-
-
     public class XyPoint {
         int x1, x2;
         int y1, y2;
@@ -509,15 +535,18 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
         this.surfaceHolder = surfaceHolder;
+        LogUtil.debug("surfaceCreated");
     }
 
     @Override
     public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i2, int i3) {
         this.surfaceHolder = surfaceHolder;
+        LogUtil.debug("surfaceChanged");
     }
 
     @Override
     public void surfaceDestroyed(SurfaceHolder surfaceHolder) {
         surfaceHolder.removeCallback(this);
+        LogUtil.debug("surfaceDestroyed");
     }
 }

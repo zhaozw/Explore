@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ExTheme" parent="android:Theme.Holo.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/CustomActionBar</item>
+        <item name="android:actionMenuTextAppearance">@style/LightABmenuTextAppearance</item> // 使用自定义的菜单文本风格
+        <item name="android:actionMenuTextColor">@color/actionbar_menu_text</item> //定义ActionItem字体颜色
+    </style>
+
+    <style name="LightABmenuTextAppearance" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Menu">
+        <item name="android:textSize">@dimen/actionbar_menu_textsize</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="CustomActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+        <item name="android:titleTextStyle">@style/CustomActionBarTitle</item>
+    </style>
+
+    <style name="CustomActionBarTitle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/actionbar_title_text</item>
+        <item name="android:textSize">@dimen/actionbar_title_textsize</item>
+    </style>
+
+    <!-- Add for Explore ActionBar
+    <style name="ExploreActionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/c_actionbar_backgroud_soild</item>
+        <item name="android:titleTextStyle">@style/ExploreExActionBar.Title</item>
+        <item name="android:backgroundStacked">@drawable/actionbar_tab_stacked</item>
+    </style>
+
+    <style name="ExploreExActionBar.Title" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/c_actionbar_title_default</item>
+        <item name="android:textSize">@dimen/explore_actionbar_text_size</item>
+    </style>
+
+    <style name="ExploreActionBar.TabView" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/actionbar_tab_background</item>
+    </style>
+
+    <style name="ExploreActionBar.TabBar" parent="@android:style/Widget.Holo.Light.ActionBar.TabBar">
+        <item name="android:dividerPadding">@dimen/actionbar_divderpadding</item>
+    </style>
+
+    <style name="ExploreActionBar.TabText" parent="@android:style/Widget.Holo.Light.ActionBar.TabText">
+        <item name="android:textColor">@color/c_actionbar_tab_title</item>
+        <item name="android:textSize">@dimen/fs_top_tab</item>
+    </style>
+    -->
+
+
+</resources>
