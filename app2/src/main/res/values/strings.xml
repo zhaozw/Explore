@@ -55,9 +55,13 @@
     <string name="phone_error_no_imsi">无法获取SIM卡信息，请检查SIM卡状态</string>
     <string name="phone_error_no_imei">无法获取手机IMEI信息</string>
 
+    <!-- Main tab title -->
     <string name="tab_title_overview">概况</string>
     <string name="tab_title_order">订单</string>
     <string name="tab_title_logistics">物流</string>
     <string name="tab_title_product">商品</string>
     <string name="tab_title_more">更多</string>
+
+    <!-- Overview -->
+    <string name="overview_table1_title"></string>
 </resources>

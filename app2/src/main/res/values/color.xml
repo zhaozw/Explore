@@ -10,6 +10,9 @@
     <color name="edittext_hint">#bbbbbb</color>
     <color name="frame_background">#e9e9e9</color>
     <color name="line">#d0d0d0</color>
+    <color name="tablelayout_text_tag">#aaaaaa</color>
+    <color name="tablelayout_text">#888888</color>
+    <color name="tablelayout_line">#dddddd</color>
 
     <!-- For ActionBar -->
     <color name="actionbar_title_text">#333333</color>
@@ -49,4 +52,5 @@
     <color name="bottom_tab_tag_text">#666666</color>
     <color name="bottom_tab_line">#e5e5e5</color>
     <color name="bottom_tab_pressed">#e9e9e9</color>
+    <color name="bottom_tab_tag_selected">#1294f7</color>
 </resources>

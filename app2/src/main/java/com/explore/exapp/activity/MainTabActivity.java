@@ -2,28 +2,37 @@ package com.explore.exapp.activity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.explore.exapp.R;
+import com.explore.exapp.activity.overview.OverviewFragment;
 import com.explore.exapp.base.BaseActivity;
 import com.explore.exapp.base.util.ToastUtil;
+import com.explore.exapp.data.AppConstants;
 
 /**
  * Created by ryan on 14/11/9.
  */
 public class MainTabActivity extends BaseActivity implements View.OnClickListener {
 
-    public static final int TAB_OVERVIEW = 1;
-    public static final int TAB_ORDER = 2;
-    public static final int TAB_LOGISTICES = 3;
-    public static final int TAB_PRODUCT = 4;
-    public static final int TAB_MORE = 5;
+    public static final int TAB_OVERVIEW = 0;
+    public static final int TAB_ORDER = 1;
+    public static final int TAB_LOGISTICES = 2;
+    public static final int TAB_PRODUCT = 3;
+    public static final int TAB_MORE = 4;
 
     private RelativeLayout tabOverview;
     private RelativeLayout tabOrder;
     private RelativeLayout tabLogistics;
     private RelativeLayout tabProduct;
     private RelativeLayout tabMore;
+
+    private TextView[] tabTagViews;
+    private ImageView[] tabIconViews;
+
+    private OverviewFragment overviewFragment;
 
     public int currentTabId = 0;
 
@@ -43,6 +52,26 @@ public class MainTabActivity extends BaseActivity implements View.OnClickListene
         tabLogistics.setOnClickListener(this);
         tabProduct.setOnClickListener(this);
         tabMore.setOnClickListener(this);
+
+        tabTagViews = new TextView[5];
+        tabTagViews[0] = (TextView) findViewById(R.id.tab_main_tab_tag_overview);
+        tabTagViews[1] = (TextView) findViewById(R.id.tab_main_tab_tag_order);
+        tabTagViews[2] = (TextView) findViewById(R.id.tab_main_tab_tag_logistics);
+        tabTagViews[3] = (TextView) findViewById(R.id.tab_main_tab_tag_product);
+        tabTagViews[4] = (TextView) findViewById(R.id.tab_main_tab_tag_more);
+
+        tabIconViews = new ImageView[5];
+        tabIconViews[0] = (ImageView) findViewById(R.id.tab_main_icon_overview);
+        tabIconViews[1] = (ImageView) findViewById(R.id.tab_main_icon_order);
+        tabIconViews[2] = (ImageView) findViewById(R.id.tab_main_icon_logistics);
+        tabIconViews[3] = (ImageView) findViewById(R.id.tab_main_icon_product);
+        tabIconViews[4] = (ImageView) findViewById(R.id.tab_main_icon_more);
+
+        overviewFragment = OverviewFragment.getInstance();
+        currentTabId = 0;
+        refreshActionBar();
+
+        getFragmentManager().beginTransaction().replace(R.id.frame_tab_main_pages, overviewFragment).commit();
     }
 
     @Override
@@ -71,7 +100,17 @@ public class MainTabActivity extends BaseActivity implements View.OnClickListene
         }
     }
 
+    private void resetTabStatus() {
+        for (int i = 0; i < 5; i++) {
+            tabIconViews[i].setImageResource(AppConstants.TAB_ICON[i]);
+            tabTagViews[i].setTextColor(getResources().getColor(R.color.bottom_tab_tag_text));
+        }
+    }
+
     private void refreshActionBar() {
+        resetTabStatus();
+        tabIconViews[currentTabId].setImageResource(AppConstants.TAB_ICON_SELECTED[currentTabId]);
+        tabTagViews[currentTabId].setTextColor(getResources().getColor(R.color.bottom_tab_tag_selected));
         switch (currentTabId) {
             case TAB_OVERVIEW:
                 mActionBar.setTitle(R.string.tab_title_overview);

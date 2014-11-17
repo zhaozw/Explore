@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:layout_margin="5dp"
+                android:id="@+id/overview_table1_title"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="64dp">
+
+                        <TextView
+                            android:id="@+id/overview_table_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutText"
+                            android:text="121231"/>
+
+                        <TextView
+                            android:id="@+id/overview_table_tag1"
+                            android:layout_below="@id/overview_table_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutTextTag"
+                            android:text="121231"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="5dp"
+                            android:background="@color/tablelayout_line" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/tablelayout_line" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="64dp">
+
+                        <TextView
+                            android:id="@+id/overview_table_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutText"
+                            android:text="121231"/>
+
+                        <TextView
+                            android:id="@+id/overview_table_tag2"
+                            android:layout_below="@id/overview_table_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutTextTag"
+                            android:text="121231"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="5dp"
+                            android:background="@color/tablelayout_line" />
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="64dp">
+
+                        <TextView
+                            android:id="@+id/overview_table_text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutText"
+                            android:text="121231"/>
+
+                        <TextView
+                            android:id="@+id/overview_table_tag3"
+                            android:layout_below="@id/overview_table_text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutTextTag"
+                            android:text="121231"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/tablelayout_line" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="64dp">
+
+                        <TextView
+                            android:id="@+id/overview_table_text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutText"
+                            android:text="121231"/>
+
+                        <TextView
+                            android:id="@+id/overview_table_tag4"
+                            android:layout_below="@id/overview_table_text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutTextTag"
+                            android:text="121231"/>
+                    </RelativeLayout>
+                </TableRow>
+            </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

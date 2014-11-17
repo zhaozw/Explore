@@ -50,7 +50,6 @@ public class RoundProgressBar extends View {
 	
 	public RoundProgressBar(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-		
 		paint = new Paint();
 
 		TypedArray mTypedArray = context.obtainStyledAttributes(attrs,

@@ -48,4 +48,22 @@
         <item name="android:textColor">@color/bottom_tab_tag_text</item>
     </style>
 
+    <style name="TableLayoutTextTag" parent="android:Widget.TextView">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/tablelayout_text_tag_textsize</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:textColor">@color/tablelayout_text_tag</item>
+    </style>
+
+    <style name="TableLayoutText" parent="android:Widget.TextView">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">@dimen/tablelayout_text_textsize</item>
+        <item name="android:textColor">@color/tablelayout_text</item>
+    </style>
+
 </resources>

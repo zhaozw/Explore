@@ -10,6 +10,10 @@
     <dimen name="table_tag_testsize">14sp</dimen>
     <dimen name="table_padding">16dp</dimen>
     <dimen name="table_button_layout_padding">8dp</dimen>
+    
+    <dimen name="tablelayout_text_tag_textsize">14sp</dimen>
+    <dimen name="tablelayout_text_textsize">20sp</dimen>
+    <dimen name="tablelayout_padding_y">5dp</dimen>
 
     <!-- Common -->
     <dimen name="button_height">48dp</dimen>

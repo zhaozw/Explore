@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/tab_main_tab_tag_overview"
                 android:contentDescription="@string/image"
-                android:src="@drawable/icon_order"/>
+                android:src="@drawable/icon_home"/>
             <TextView
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
@@ -64,13 +64,13 @@
                 android:layout_width="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/tab_main_tab_tag_trade"
+                android:layout_above="@+id/tab_main_tab_tag_order"
                 android:contentDescription="@string/image"
                 android:src="@drawable/icon_order"/>
             <TextView
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/tab_main_tab_tag_trade"
+                android:id="@+id/tab_main_tab_tag_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/BottomTabTag"
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/tab_main_tab_tag_logistics"
                 android:contentDescription="@string/image"
-                android:src="@drawable/icon_order"/>
+                android:src="@drawable/icon_logistics"/>
             <TextView
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
@@ -118,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/tab_main_tab_tag_product"
                 android:contentDescription="@string/image"
-                android:src="@drawable/icon_order"/>
+                android:src="@drawable/icon_product"/>
             <TextView
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"

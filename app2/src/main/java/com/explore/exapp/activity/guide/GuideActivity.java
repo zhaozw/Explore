@@ -57,6 +57,7 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
     private View[] pagerViews;
 
     private GridView p1_logos_grid; // page1
+    private RelativeLayout p1_logos_layout; // new page1
     private LinearLayout p2_layout;
     private ImageView[] p2_banner_photos;
     private ListView p2_images_list; // page2
@@ -115,19 +116,20 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         guidePager.setAnimationCacheEnabled(false);
 
         // page1
-        p1_logos_grid = (GridView)findViewById(R.id.guide_view_customer_logos);
-        p1_logos_grid.setSelector(new ColorDrawable(Color.TRANSPARENT));
+        // p1_logos_grid = (GridView)findViewById(R.id.guide_view_customer_logos);
+        // p1_logos_grid.setSelector(new ColorDrawable(Color.TRANSPARENT));
         p1_icons = new ArrayList<Bitmap>();
         imgAdapter = new ImageAdapter();
-        p1_logos_grid.setAdapter(imgAdapter);
-        initGridView();
+        // p1_logos_grid.setAdapter(imgAdapter);
+        // initGridView();
+        p1_logos_layout = (RelativeLayout) findViewById(R.id.guide_page1_layout);
 
         gridAnimation = AnimationUtils.loadAnimation(this, R.anim.guide_page1_grid_layout);
         LayoutAnimationController lac = new LayoutAnimationController(gridAnimation);
         lac.setInterpolator(new AccelerateInterpolator());
         lac.setOrder(LayoutAnimationController.ORDER_RANDOM);
         lac.setDelay(0.2f);
-        p1_logos_grid.setLayoutAnimation(lac);
+        p1_logos_layout.setLayoutAnimation(lac);
 
         // page2
         p2_layout = (LinearLayout) findViewById(R.id.guide_page2_layout);
@@ -233,6 +235,10 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
     private void clearImagesView() {
         p1_icons.clear();
         // imgAdapter.notifyDataSetChanged();
+    }
+
+    private void clearPage1View() {
+        p1_logos_layout.setVisibility(View.GONE);
     }
 
     private void clearPage2View() {
@@ -422,7 +428,8 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
         @Override
         public void onPageScrolled(int i, float v, int i2) {
             if (i == 0) {
-                p1_logos_grid.setAlpha(1.0f - v);
+                //p1_logos_grid.setAlpha(1.0f - v);
+                p1_logos_layout.setAlpha(1.0f - v);
                 p2_layout.setAlpha(v);
             } else if (i == 1) {
                 p2_layout.setAlpha(1.0f -v);
@@ -438,14 +445,16 @@ public class GuideActivity extends BaseActivity implements SurfaceHolder.Callbac
                 case 0:
                     clearImagesView();
                     clearPage2View();
-                    p1_logos_grid.setVisibility(View.VISIBLE);
-                    p1_logos_grid.startLayoutAnimation();
+                    // p1_logos_grid.setVisibility(View.VISIBLE);
+                    p1_logos_layout.setVisibility(View.VISIBLE);
+                    p1_logos_layout.startLayoutAnimation();
                     initGridView();
                     pagerItem1.setChecked(true);
                     break;
                 case 1:
-                    p1_logos_grid.setVisibility(View.GONE);
+                    // p1_logos_grid.setVisibility(View.GONE);
                     clearImagesView();
+                    clearPage1View();
                     clearPage3View();
                     initPage2View();
                     pagerItem2.setChecked(true);

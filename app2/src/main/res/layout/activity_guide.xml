@@ -14,12 +14,115 @@
         android:layout_above="@+id/guide_buttons_layout"
         android:layout_height="match_parent">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/guide_page1_layout"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:src="@drawable/guide_page1_logo_afu"
+                android:id="@+id/guide_page1_center2"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/guide_page1_logo_luojisiwei"
+                android:id="@+id/guide_page1_center1"
+                android:layout_above="@id/guide_page1_center2"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/guide_page1_logo_durex"
+                android:layout_below="@id/guide_page1_center2"
+                android:layout_toRightOf="@id/guide_page1_center2"
+                android:layout_toEndOf="@id/guide_page1_center2"
+                android:layout_marginTop="10dp"
+                android:id="@+id/guide_page1_right3" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/guide_page1_logo_yunifang"
+                android:id="@+id/guide_page1_left4"
+                android:layout_below="@+id/guide_page1_left3"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="55dp"
+                android:layout_toLeftOf="@+id/guide_page1_right3"
+                android:layout_toStartOf="@+id/guide_page1_right3" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/guide_page1_logo_nanrenwa"
+                android:id="@+id/guide_page1_left3"
+                android:layout_alignBottom="@+id/guide_page1_right2"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@id/guide_page1_center2"
+                android:layout_toStartOf="@id/guide_page1_center2"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/guide_page1_logo_aikangguobin"
+                android:id="@+id/guide_page1_left2"
+                android:layout_toLeftOf="@id/guide_page1_center2"
+                android:layout_toStartOf="@id/guide_page1_center2"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="22dp"
+                android:layout_above="@+id/guide_page1_left3" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/guide_page1_logo_wis"
+                android:id="@+id/guide_page1_left1"
+                android:layout_above="@id/guide_page1_left2"
+                android:layout_marginBottom="22dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/guide_page1_center2"
+                android:layout_toStartOf="@id/guide_page1_center2"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/guide_page1_logo_huangyaoshi"
+                android:layout_above="@id/guide_page1_right3"
+                android:layout_toRightOf="@id/guide_page1_center2"
+                android:layout_toEndOf="@id/guide_page1_center2"
+                android:id="@+id/guide_page1_right2" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/guide_page1_logo_weflower"
+                android:layout_above="@id/guide_page1_right2"
+                android:layout_toRightOf="@id/guide_page1_center2"
+                android:layout_toEndOf="@id/guide_page1_center2"
+                android:id="@+id/guide_page1_right1" />
+
+        </RelativeLayout>
+
+        <!--
         <GridView
             android:id="@+id/guide_view_customer_logos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnWidth="64dp"
             android:background="@null"
+            android:visibility="gone"
             android:numColumns="3"
             android:layout_marginTop="60dp"
             android:layout_marginLeft="50dp"
@@ -29,7 +132,7 @@
             android:scrollbars="none"
             android:stretchMode="columnWidth"
             android:gravity="center"
-            android:columnCount="3" />
+            android:columnCount="3" /> -->
 
         <LinearLayout
             android:id="@+id/guide_page2_layout"
