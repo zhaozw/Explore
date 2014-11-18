@@ -43,6 +43,9 @@ public class OutLineAddPreData {
 		wmsList.add(new BaseKeyValue(R.string.sd_whs_back, SDConstants.WHS_50));
 		wmsList.add(new BaseKeyValue(R.string.sd_whs_scrap, SDConstants.WHS_99));
 		wmsList.add(new BaseKeyValue(R.string.sd_whs_package, SDConstants.WHS_49));
+        wmsList.add(new BaseKeyValue(R.string.sd_whs_tj, SDConstants.WHS_TJ));
+        wmsList.add(new BaseKeyValue(R.string.sd_whs_zp, SDConstants.WHS_ZP));
+        wmsList.add(new BaseKeyValue(R.string.sd_whs_broken, SDConstants.WHS_89));
 		
 		return wmsList;
 	}

@@ -1,14 +1,14 @@
 package com.explore.exapp.base;
 
-import android.app.Application;
-
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+
+import org.litepal.LitePalApplication;
 
 /**
  * Created by ryan on 14/10/31.
  */
-public class MyApplication extends Application {
+public class MyApplication extends LitePalApplication {
 
     private static MyApplication application;
     public static RequestQueue mRequestQueue;

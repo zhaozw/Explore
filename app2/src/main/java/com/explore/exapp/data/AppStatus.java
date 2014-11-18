@@ -20,10 +20,10 @@ public class AppStatus {
         HashMap<String, String> map = new HashMap<String, String>();
         TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         if (telephonyManager.getDeviceId() == null) {
-            map.put("IMEI", telephonyManager.getDeviceId());
+            map.put("IMEI", "");
             ToastUtil.showToast(context, R.string.phone_error_no_imei);
         } else {
-            map.put("IMSI", "");
+            map.put("IMEI", telephonyManager.getDeviceId());
         }
         if (telephonyManager.getSubscriberId() == null) {
             ToastUtil.showToast(context, R.string.phone_error_no_imsi);

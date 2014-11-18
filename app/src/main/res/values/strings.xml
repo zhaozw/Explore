@@ -463,6 +463,9 @@
     <string name="sd_whs_overday">超期</string>
     <string name="sd_whs_scrap">报废</string>
     <string name="sd_whs_package">打包</string>
+    <string name="sd_whs_zp">赠品</string>
+    <string name="sd_whs_tj">特价</string>
+    <string name="sd_whs_broken">残损</string>
     
     <string name="stockdetail_title">库存详情</string>
     <string name="stockdetail_info">商品编码</string>

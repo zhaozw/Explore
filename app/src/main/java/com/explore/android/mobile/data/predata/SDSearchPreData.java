@@ -68,6 +68,9 @@ public class SDSearchPreData {
 		whsList.add(new BaseKeyValue(R.string.sd_whs_back, SDConstants.WHS_50));
 		whsList.add(new BaseKeyValue(R.string.sd_whs_scrap, SDConstants.WHS_99));
 		whsList.add(new BaseKeyValue(R.string.sd_whs_package, SDConstants.WHS_49));
+        whsList.add(new BaseKeyValue(R.string.sd_whs_tj, SDConstants.WHS_TJ));
+        whsList.add(new BaseKeyValue(R.string.sd_whs_zp, SDConstants.WHS_ZP));
+        whsList.add(new BaseKeyValue(R.string.sd_whs_broken, SDConstants.WHS_89));
 		
 		if(isDdList == null){
 			isDdList = new ArrayList<BaseKeyValue>();

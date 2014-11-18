@@ -61,9 +61,18 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:singleLine">true</item>
-        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginTop">10dp</item>
         <item name="android:textSize">@dimen/tablelayout_text_textsize</item>
         <item name="android:textColor">@color/tablelayout_text</item>
+    </style>
+
+    <style name="SubHeader" parent="android:Widget.TextView">
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/subheader_padding</item>
+        <item name="android:paddingRight">@dimen/subheader_padding</item>
+        <item name="android:textSize">@dimen/subheader_textsize</item>
+        <item name="android:textColor">@color/subheader_text</item>
     </style>
 
 </resources>

@@ -85,6 +85,7 @@
     <orderEntry type="library" exported="" name="support-v4-21.0.0" level="project" />
     <orderEntry type="library" exported="" name="commons-codec-1.7" level="project" />
     <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />
+    <orderEntry type="library" exported="" name="litepal-1.1.1-src" level="project" />
     <orderEntry type="library" exported="" name="android-volley-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="microlog4android-1.1" level="project" />
     <orderEntry type="library" exported="" name="afinal_0.5.1_bin" level="project" />

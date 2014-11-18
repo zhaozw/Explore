@@ -8,11 +8,15 @@
     <!-- Common -->
     <color name="loading_layout_bg">#55666666</color>
     <color name="edittext_hint">#bbbbbb</color>
-    <color name="frame_background">#e9e9e9</color>
+    <color name="frame_background">#f8f8f8</color>
     <color name="line">#d0d0d0</color>
     <color name="tablelayout_text_tag">#aaaaaa</color>
-    <color name="tablelayout_text">#888888</color>
+    <color name="tablelayout_text">#919191</color>
     <color name="tablelayout_line">#dddddd</color>
+    <color name="subheader_text">#888888</color>
+    <color name="tablelayout_item">#00f8f8f8</color>
+    <color name="tablelayout_item_pressed">#eeeeee</color>
+    <color name="tablelayout_title_bar">#1294f7</color>
 
     <!-- For ActionBar -->
     <color name="actionbar_title_text">#333333</color>
@@ -48,9 +52,11 @@
     <color name="guide_pages_sub_title">#999999</color>
 
     <!-- For bottom tab -->
-    <color name="bottom_tab_layout_bg">#fafafa</color>
+    <color name="bottom_tab_layout_bg">#fefefe</color>
     <color name="bottom_tab_tag_text">#666666</color>
     <color name="bottom_tab_line">#e5e5e5</color>
     <color name="bottom_tab_pressed">#e9e9e9</color>
     <color name="bottom_tab_tag_selected">#1294f7</color>
+
+    <!-- Overview -->
 </resources>

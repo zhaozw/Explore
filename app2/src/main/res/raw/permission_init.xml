@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+    
+    <permission>
+        <name>首页</name>
+        <code>0</code>
+        <action>null</action>
+        <level>1</level>
+        <father>0</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <permission>
+        <name>销售</name>
+        <code>1</code>
+        <action>null</action>
+        <level>1</level>
+        <father>0</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <permission>
+        <name>物流</name>
+        <code>2</code>
+        <action>null</action>
+        <level>1</level>
+        <father>0</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <permission>
+        <name>财务</name>
+        <code>3</code>
+        <action>null</action>
+        <level>1</level>
+        <father>0</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <permission>
+        <name>行政办公</name>
+        <code>4</code>
+        <action>null</action>
+        <level>1</level>
+        <father>0</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <permission>
+        <name>人力资源</name>
+        <code>5</code>
+        <action>null</action>
+        <level>1</level>
+        <father>0</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <permission>
+        <name>IT服务</name>
+        <code>6</code>
+        <action>null</action>
+        <level>1</level>
+        <father>0</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <permission>
+        <name>配置</name>
+        <code>7</code>
+        <action>null</action>
+        <level>1</level>
+        <father>0</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <permission>
+        <name>个人控制台</name>
+        <code>8</code>
+        <action>null</action>
+        <level>1</level>
+        <father>0</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <!-- 销售相关 code:2 -->
+    
+    <permission>
+        <name>销售管理</name>
+        <code>10</code>
+        <action>null</action>
+        <level>2</level>
+        <father>1</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <!-- 物流相关 code:2 -->
+	<permission>
+        <name>库存查询</name>
+        <code>20</code>
+        <action>StockSearchActivity</action>
+        <level>2</level>
+        <father>2</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+	<permission>
+        <name>发货查询</name>
+        <code>21</code>
+        <action>OutSearchActivity</action>
+        <level>2</level>
+        <father>2</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <!-- 人力资源相关 code:5 -->
+    <permission>
+        <name>联系人</name>
+        <code>50</code>
+        <action>ContactActivity</action>
+        <level>2</level>
+        <father>5</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <!-- 配置相关 code:7 -->
+    <permission>
+        <name>商品查询</name>
+        <code>70</code>
+        <action>ProductSearchActivity</action>
+        <level>2</level>
+        <father>7</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <permission>
+        <name>客户查询</name>
+        <code>71</code>
+        <action>CustomerSearchActivity</action>
+        <level>2</level>
+        <father>7</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <!-- 个人控制台相关 code:8 -->
+    
+    <permission>
+        <name>我的审核</name>
+        <code>80</code>
+        <action>AuditActivity</action>
+        <level>2</level>
+        <father>8</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <permission>
+        <name>我的日程</name>
+        <code>81</code>
+        <action>ScheduleActivity</action>
+        <level>2</level>
+        <father>8</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+    <permission>
+        <name>应用设置</name>
+        <code>82</code>
+        <action>ScheduleActivity</action>
+        <level>2</level>
+        <father>8</father>
+        <haspermission>Y</haspermission>
+        <icon>default</icon>
+    </permission>
+    
+</permissions>

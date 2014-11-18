@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:background="@color/frame_background"
+    android:layout_height="match_parent"
+    android:padding="@dimen/tablelayout_left_padding">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -10,163 +12,285 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="60dp"
-            android:layout_height="wrap_content">
+            android:background="@drawable/tablelayout_bg">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Title"
-                android:layout_margin="5dp"
-                android:id="@+id/overview_table1_title"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="60dp"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="@dimen/subheader_bar_width"
+                    android:layout_height="@dimen/subheader_bar_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/tablelayout_title_bar"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/subheader_height"
+                    android:text="@string/overview_table1_title"
+                    style="@style/SubHeader"
+                    android:id="@+id/overview_table1_title"/>
+
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/line" />
+                android:background="@color/tablelayout_line" />
 
             <TableLayout
+                android:id="@+id/overview_table1_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TableRow
-                    android:orientation="horizontal"
-                    android:weightSum="2">
+                <TableRow>
 
                     <RelativeLayout
-                        android:layout_width="wrap_content"
+                        android:id="@+id/overview_table1_item1"
+                        android:layout_width="0dp"
+                        android:background="@drawable/table_layout_item_bg"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:layout_height="64dp">
 
                         <TextView
-                            android:id="@+id/overview_table_text1"
+                            android:id="@+id/overview_table1_text1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/TableLayoutText"
-                            android:text="121231"/>
+                            android:text="@string/count_zero"/>
 
                         <TextView
-                            android:id="@+id/overview_table_tag1"
-                            android:layout_below="@id/overview_table_text1"
+                            android:id="@+id/overview_table1_tag1"
+                            android:layout_below="@id/overview_table1_text1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/TableLayoutTextTag"
-                            android:text="121231"/>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_gravity="bottom"
-                            android:layout_marginLeft="5dp"
-                            android:background="@color/tablelayout_line" />
+                            android:text="@string/overview_out_sal"/>
                     </RelativeLayout>
 
                     <View
                         android:layout_width="1dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
                         android:background="@color/tablelayout_line" />
 
                     <RelativeLayout
-                        android:layout_width="wrap_content"
+                        android:id="@+id/overview_table1_item2"
+                        android:background="@drawable/table_layout_item_bg"
+                        android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:orientation="vertical"
                         android:layout_height="64dp">
 
                         <TextView
-                            android:id="@+id/overview_table_text2"
+                            android:id="@+id/overview_table1_text2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/TableLayoutText"
-                            android:text="121231"/>
+                            android:text="@string/count_zero"/>
 
                         <TextView
-                            android:id="@+id/overview_table_tag2"
-                            android:layout_below="@id/overview_table_text2"
+                            android:id="@+id/overview_table1_tag2"
+                            android:layout_below="@id/overview_table1_text2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/TableLayoutTextTag"
-                            android:text="121231"/>
+                            android:text="@string/overview_out_dtc"/>
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_alignParentBottom="true"
-                            android:layout_gravity="bottom"
-                            android:layout_marginLeft="5dp"
-                            android:background="@color/tablelayout_line" />
                     </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/tablelayout_line" />
                 </TableRow>
 
-                <TableRow
-                    android:orientation="horizontal"
-                    android:weightSum="2">
+                <TableRow>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/tablelayout_line" />
+
+                </TableRow>
+
+                <TableRow>
 
                     <RelativeLayout
+                        android:id="@+id/overview_table1_item3"
+                        android:background="@drawable/table_layout_item_bg"
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:orientation="vertical"
                         android:layout_height="64dp">
 
                         <TextView
-                            android:id="@+id/overview_table_text3"
+                            android:id="@+id/overview_table1_text3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/TableLayoutText"
-                            android:text="121231"/>
+                            android:text="@string/count_zero"/>
 
                         <TextView
-                            android:id="@+id/overview_table_tag3"
-                            android:layout_below="@id/overview_table_text3"
+                            android:id="@+id/overview_table1_tag3"
+                            android:layout_below="@id/overview_table1_text3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/TableLayoutTextTag"
-                            android:text="121231"/>
+                            android:text="@string/overview_out_ttc"/>
 
                     </RelativeLayout>
 
                     <View
                         android:layout_width="1dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
                         android:background="@color/tablelayout_line" />
 
                     <RelativeLayout
+                        android:id="@+id/overview_table1_item4"
+                        android:background="@drawable/table_layout_item_bg"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:layout_height="64dp">
 
                         <TextView
-                            android:id="@+id/overview_table_text4"
+                            android:id="@+id/overview_table1_text4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/TableLayoutText"
-                            android:text="121231"/>
+                            android:text="@string/count_zero"/>
 
                         <TextView
-                            android:id="@+id/overview_table_tag4"
-                            android:layout_below="@id/overview_table_text4"
+                            android:id="@+id/overview_table1_tag4"
+                            android:layout_below="@id/overview_table1_text4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/TableLayoutTextTag"
-                            android:text="121231"/>
+                            android:text="@string/overview_transport"/>
                     </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/tablelayout_line" />
                 </TableRow>
             </TableLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/line" />
+                android:background="@color/tablelayout_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="@dimen/subheader_bar_width"
+                    android:layout_height="@dimen/subheader_bar_height"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/tablelayout_title_bar"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/subheader_height"
+                    android:text="@string/overview_table2_title"
+                    style="@style/SubHeader"
+                    android:id="@+id/overview_table2_title"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/tablelayout_line" />
+
+            <TableLayout
+                android:id="@+id/overview_table2_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <RelativeLayout
+                        android:id="@+id/overview_table2_item1"
+                        android:layout_width="0dp"
+                        android:background="@drawable/table_layout_item_bg"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="64dp">
+
+                        <TextView
+                            android:id="@+id/overview_table2_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutText"
+                            android:text="@string/count_zero"/>
+
+                        <TextView
+                            android:id="@+id/overview_table2_tag1"
+                            android:layout_below="@id/overview_table2_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutTextTag"
+                            android:text="@string/overview_out_sal"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/tablelayout_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/overview_table2_item2"
+                        android:background="@drawable/table_layout_item_bg"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="64dp">
+
+                        <TextView
+                            android:id="@+id/overview_table2_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutText"
+                            android:text="@string/count_zero"/>
+
+                        <TextView
+                            android:id="@+id/overview_table2_tag2"
+                            android:layout_below="@id/overview_table2_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/TableLayoutTextTag"
+                            android:text="@string/overview_out_dtc"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/tablelayout_line" />
+                </TableRow>
+
+            </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/tablelayout_line" />
 
         </LinearLayout>
-
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>

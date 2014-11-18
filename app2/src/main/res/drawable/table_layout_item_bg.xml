@@ -3,15 +3,13 @@
 
     <item android:state_pressed="true">
         <shape>
-            <corners android:radius="2dp" />
-            <solid android:color="@color/table_button_pressed" />
+            <solid android:color="@color/tablelayout_item_pressed" />
         </shape>
     </item>
 
     <item>
         <shape>
-            <corners android:radius="2dp" />
-            <solid android:color="@color/table_button" />
+            <solid android:color="@color/tablelayout_item" />
         </shape>
     </item>
 

@@ -58,6 +58,9 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
         buttonRegister.setOnClickListener(this);
         loginTitle.setOnLongClickListener(titleLongClickListener);
 
+        String savedName = AppPreferences.prfs(attachActivity).getString(AppPreferences.Login.USERNAME, "");
+        edtUserName.setText(savedName);
+
         return view;
     }
 
@@ -175,6 +178,15 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
                             LoginInfo loginInfo = gson.fromJson(jsonObject, LoginInfo.class);
                             AppPreferences.initLoginPreferences(attachActivity, loginInfo);
                             ToastUtil.showToast(attachActivity, R.string.login_success);
+                            AppPreferences.prfs(attachActivity).edit().putString(AppPreferences.Login.USERNAME, loginInfo.getUserName()).apply();
+                            boolean flag = AppPreferences.prfs(attachActivity).getBoolean(AppPreferences.Config.FIRST_LOGIN, true);
+                            if (flag) {
+                                Intent intent1 = new Intent(attachActivity, InitDataActivity.class);
+                                startActivity(intent1);
+                            } else {
+                                Intent intent = new Intent(attachActivity, MainTabActivity.class);
+                                startActivity(intent);
+                            }
                         }
                     }
                 })

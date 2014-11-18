@@ -11,11 +11,13 @@
     <dimen name="table_padding">16dp</dimen>
     <dimen name="table_button_layout_padding">8dp</dimen>
     
-    <dimen name="tablelayout_text_tag_textsize">14sp</dimen>
+    <dimen name="tablelayout_text_tag_textsize">12sp</dimen>
     <dimen name="tablelayout_text_textsize">20sp</dimen>
     <dimen name="tablelayout_padding_y">5dp</dimen>
+    <dimen name="tablelayout_left_padding">8dp</dimen>
 
     <!-- Common -->
+    <dimen name="height">48dp</dimen>
     <dimen name="button_height">48dp</dimen>
     <dimen name="button_textsize">16sp</dimen>
     <dimen name="edittext_height">42dp</dimen>
@@ -23,6 +25,12 @@
     <dimen name="edittext_padding_top">10dp</dimen>
     <dimen name="edittext_padding_bottom">8dp</dimen>
     <dimen name="edittext_textsize">16sp</dimen>
+
+    <dimen name="subheader_textsize">14sp</dimen>
+    <dimen name="subheader_padding">10dp</dimen>
+    <dimen name="subheader_height">48dp</dimen>
+    <dimen name="subheader_bar_height">32dp</dimen>
+    <dimen name="subheader_bar_width">4dp</dimen>
 
     <!-- Bottom Tab -->
     <dimen name="tab_height">54dp</dimen>

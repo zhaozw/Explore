@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/prefs_categoty_account" >
+        <CheckBoxPreference
+            android:key="save_logininfo"
+            android:summary="@string/prefs_account_save_login_summary"
+            android:title="@string/prefs_account_save_login" />
+        <CheckBoxPreference
+            android:dependency="save_logininfo"
+            android:key="auto_login"
+            android:summary="@string/prefs_account_auto_login_summary"
+            android:title="@string/prefs_account_auto_login" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefs_categoty_service" >
+        <SwitchPreference
+            android:key="location_server"
+            android:summary="@string/prefs_service_location_summary"
+            android:title="@string/prefs_service_location" />
+        <SwitchPreference
+            android:key="recevie_p2pinfos"
+            android:summary="@string/prefs_service_receive_p2pinfo_summary"
+            android:title="@string/prefs_service_receive_p2pinfo" />
+    </PreferenceCategory>
+
+    <Preference
+        android:key="prefs_logout"
+        android:summary="@string/prefs_account_logout"
+        android:title="@string/prefs_account_logout_summary" />
+
+</PreferenceScreen>

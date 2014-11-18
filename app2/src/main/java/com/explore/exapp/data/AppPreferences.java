@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.explore.exapp.activity.login.model.LoginInfo;
+import com.explore.exapp.base.util.Base64Coder;
 
 import java.net.URI;
 
@@ -24,14 +25,14 @@ public class AppPreferences {
         if (info == null) {
             return;
         }
-        prfs(context).edit().putString(Login.TOKEN, info.getTOKEN()).apply();
-        prfs(context).edit().putString(Login.USERID, info.getUSERID()).apply();
-        prfs(context).edit().putString(Login.REALNAME, info.getREALNAME()).apply();
-        prfs(context).edit().putString(Login.USERNAME, info.getUSERNAME()).apply();
+        prfs(context).edit().putString(Login.TOKEN, info.getToken()).apply();
+        prfs(context).edit().putString(Login.USERID, info.getUserId()).apply();
+        prfs(context).edit().putString(Login.REALNAME, info.getRealName()).apply();
+        prfs(context).edit().putString(Login.USERNAME, info.getUserName()).apply();
         prfs(context).edit().putString(Login.L1, info.getL1()).apply();
         prfs(context).edit().putString(Login.L2, info.getL2()).apply();
         prfs(context).edit().putString(Login.L3, info.getL3()).apply();
-        prfs(context).edit().putString(Login.AUDITACCOUNT, info.getAUDITCOUNT()).apply();
+        prfs(context).edit().putString(Login.AUDITACCOUNT, info.getAuditCount()).apply();
     }
 
     public static String getUserId(Context context) {
@@ -91,6 +92,8 @@ public class AppPreferences {
         public static final String L2 = "l2";
 
         public static final String L3 = "l3";
+
+        public static final String PASSWORD = "password";
 
     }
 

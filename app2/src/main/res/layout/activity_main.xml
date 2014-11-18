@@ -95,6 +95,4 @@
         cbtn:circleIcon="@drawable/icon_add"
         cbtn:circleRadius="22dp"/>
 
-
-
 </LinearLayout>

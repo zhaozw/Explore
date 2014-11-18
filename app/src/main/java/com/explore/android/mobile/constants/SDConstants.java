@@ -17,6 +17,12 @@ public class SDConstants {
 	public static final String WHS_99 = "99"; // 报废
 	
 	public static final String WHS_49 = "49"; // 打包
+
+    public static final String WHS_89 = "89"; // 残损
+
+    public static final String WHS_ZP = "ZP"; // 赠品
+
+    public static final String WHS_TJ = "59"; //  特价
 	
 	public static final String QTYUNIT_BOX = ""; // 箱包装
 	
