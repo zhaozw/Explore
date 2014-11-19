@@ -1,4 +1,4 @@
-package com.explore.exapp.activity.login.model;
+package com.explore.exapp.activity.init.model;
 
 import org.litepal.crud.DataSupport;
 

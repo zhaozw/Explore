@@ -62,6 +62,8 @@ public class AppPreferences {
 
         public static final String PERMISSION_INIT = "permission_init";// 权限文件是否初始化
 
+        public static final String BASIC_DATA_INIT = "basic_data_init"; // 基础数据是否初始化
+
         public static final String PRODUCTCATEGORY_INIT = "productcategory_init"; // 商品类别是否初始化
 
         public static final String ADDRESSCONSTANTS_INIT = "addressconstants_init"; // 地址常量信息是否初始化
@@ -101,7 +103,11 @@ public class AppPreferences {
 
         public static final String SERVER_URL = "server_url";
 
-        public static final String CUSTOMER_DEPT = "customer_dept";
+        public static final String DEPT_INIT = "dept_init";
+
+        public static final String DEPT_NAME = "dept_name";
+
+        public static final String DEPT_ID = "dept_id";
 
     }
 }

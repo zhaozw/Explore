@@ -3,20 +3,28 @@ package com.explore.exapp.activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.explore.exapp.R;
+import com.explore.exapp.activity.login.ChooseDeptActivity;
 import com.explore.exapp.activity.logistics.LogisticsFragment;
 import com.explore.exapp.activity.more.MoreFragment;
 import com.explore.exapp.activity.order.OrderFragment;
 import com.explore.exapp.activity.overview.OverviewFragment;
 import com.explore.exapp.activity.product.ProductFragment;
 import com.explore.exapp.base.BaseActivity;
+import com.explore.exapp.base.util.ToastUtil;
 import com.explore.exapp.data.AppConstants;
+import com.explore.exapp.data.AppPreferences;
 
 /**
  * Created by ryan on 14/11/9.
@@ -53,6 +61,8 @@ public class MainTabActivity extends BaseActivity implements View.OnClickListene
 
     public int currentTabId = 0;
     public String currentTabTag;
+
+    private static boolean isExit = false;
 
     private static final String[] TAB_TAG_ARRAR = new String[] {
             "TAB_OVERVIEW",
@@ -101,13 +111,11 @@ public class MainTabActivity extends BaseActivity implements View.OnClickListene
         tabIconViews[3] = (ImageView) findViewById(R.id.tab_main_icon_product);
         tabIconViews[4] = (ImageView) findViewById(R.id.tab_main_icon_more);
 
-        // overviewFragment = OverviewFragment.newInstance();
         currentTabId = 0;
         currentTabTag = OVERVIEW_TAG;
         refreshActionBar();
         updateTabPage();
 
-        // getFragmentManager().beginTransaction().replace(R.id.frame_tab_main_pages, overviewFragment).commit();
     }
 
     @Override
@@ -201,38 +209,10 @@ public class MainTabActivity extends BaseActivity implements View.OnClickListene
         }
 
         if (mFragment != null) {
-            // fragmentTransaction.add(TAB_CONTENT_ARRAY[currentTabId], mFragment, currentTabTag).commit();
             fragmentTransaction.replace(R.id.frame_tab_main_pages, mFragment).commit();
         } else {
             fragmentTransaction.attach(mFragment).commit();
         }
-
-        /*
-        if (mFragment == null) {
-            if (OVERVIEW_TAG.equals(currentTabTag)) {
-                mFragment = OverviewFragment.newInstance();
-            }
-            else if (LOGISTICS_TAG.equals(currentTabTag)) {
-                mFragment = LogisticsFragment.newInstance();
-            }
-            else if (PRODUCT_TAG.equals(currentTabTag)) {
-                mFragment = ProductFragment.newInstance();
-            }
-            else if (ORDER_TAG.equals(currentTabTag)) {
-                mFragment = OrderFragment.newInstance();
-            }
-            else if (MORE_TAG.equals(currentTabTag)) {
-                mFragment = MoreFragment.newInstance();
-            }
-        }
-
-        if (mFragment != null) {
-            fragmentTransaction.add(TAB_CONTENT_ARRAY[currentTabId], mFragment, currentTabTag).commit();
-        } else {
-            fragmentTransaction.attach(mFragment).commit();
-        }
-        */
-
     }
 
     private void refreshActionBar() {
@@ -259,4 +239,27 @@ public class MainTabActivity extends BaseActivity implements View.OnClickListene
                 break;
         }
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK){
+            if(!isExit){
+                isExit = true;
+                ToastUtil.showToast(MainTabActivity.this, R.string.back_event_msg);
+                keyHandle.sendEmptyMessageDelayed(0, 2000);
+            }else{
+                System.exit(0);
+            }
+        }
+
+        return false;
+    }
+
+    private Handler keyHandle = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            isExit = false;
+        }
+    };
 }

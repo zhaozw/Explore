@@ -35,7 +35,7 @@ import com.explore.android.mobile.service.P2PStaticService;
 
 public class ExHomeActivity extends ActionBarActivity implements NavigationFragmentCallbacks{
 
-	private static boolean isExit = false;
+    private static boolean isExit = false;
 	private SharePreferencesManager preferences;
 	private NavigationFragment navigationFragment;
 	private CharSequence mTitle;

@@ -59,4 +59,5 @@
     <color name="bottom_tab_tag_selected">#1294f7</color>
 
     <!-- Overview -->
+    <color name="overview_title_bar">#44bb00</color>
 </resources>

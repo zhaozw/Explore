@@ -26,9 +26,10 @@
 
         <activity android:name=".activity.login.LoginActivity" android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
         <activity android:name=".activity.guide.GuideActivity" android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait" />
-        <activity android:name=".activity.login.InitSettingActivity" />
-        <activity android:name=".activity.login.InitDataActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.init.InitSettingActivity" />
+        <activity android:name=".activity.init.InitDataActivity" android:screenOrientation="portrait" />
 
+        <activity android:name=".activity.login.ChooseDeptActivity" android:screenOrientation="portrait" />
         <activity android:name=".activity.MainTabActivity" android:screenOrientation="portrait" />
     </application>
 

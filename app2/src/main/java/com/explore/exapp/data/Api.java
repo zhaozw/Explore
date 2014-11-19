@@ -11,7 +11,7 @@ public class Api {
         if (!"".equals(AppPreferences.getServerUrl(context))) {
             return "http://" + AppPreferences.getServerUrl(context) + "/" + requestName;
         }
-        if (AppStatus.IS_DEBUG) {
+        if (CommonData.IS_DEBUG) {
             return "http://" + HTTPESB_DEBUG + "/" + requestName;
         } else {
             return "http://" + HTTPESB + "/" + requestName;
@@ -114,7 +114,7 @@ public class Api {
     //================================
     public static final String OUT_OUTSEARCH = "out.do?command=androidlist"; // 销售查询
 
-    public static final String OUT_GET_CUSTOMERDEPT = "customerdept.do?command=android"; // 初始化经营单位下拉
+    public static final String GET_CUSTOMERDEPT = "customerdept.do?command=android"; // 初始化经营单位下拉
 
     public static final String OUT_GET_DEPT_EXTRA = "customerdeptextend.do?command=android"; // 经营单位变化引起的联动
 

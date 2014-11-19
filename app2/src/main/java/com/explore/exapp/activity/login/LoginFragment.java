@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.explore.exapp.R;
 import com.explore.exapp.activity.MainTabActivity;
+import com.explore.exapp.activity.init.InitDataActivity;
+import com.explore.exapp.activity.init.InitSettingActivity;
 import com.explore.exapp.activity.login.model.LoginInfo;
 import com.explore.exapp.base.BaseFragment;
 import com.explore.exapp.base.component.CustomProgress;
@@ -22,7 +24,7 @@ import com.explore.exapp.base.util.ToastUtil;
 import com.explore.exapp.data.Api;
 import com.explore.exapp.data.AppConstants;
 import com.explore.exapp.data.AppPreferences;
-import com.explore.exapp.data.AppStatus;
+import com.explore.exapp.data.CommonData;
 import com.google.gson.JsonObject;
 
 import java.util.HashMap;
@@ -152,7 +154,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
         HashMap<String, String> map = new HashMap<String, String>();
         map.put("USERNAME", name);
         map.put("PASSWORD", password);
-        HashMap<String, String> info = AppStatus.getImeiImstInfo(attachActivity);
+        HashMap<String, String> info = CommonData.getImeiImstInfo(attachActivity);
         String imei = info.get("IMEI");
         String imsi = info.get("IMSI");
         if (imei.length() > 4 && imsi.length() > 4) {
@@ -179,14 +181,15 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
                             AppPreferences.initLoginPreferences(attachActivity, loginInfo);
                             ToastUtil.showToast(attachActivity, R.string.login_success);
                             AppPreferences.prfs(attachActivity).edit().putString(AppPreferences.Login.USERNAME, loginInfo.getUserName()).apply();
-                            boolean flag = AppPreferences.prfs(attachActivity).getBoolean(AppPreferences.Config.FIRST_LOGIN, true);
-                            if (flag) {
+                            boolean flag = AppPreferences.prfs(attachActivity).getBoolean(AppPreferences.Config.BASIC_DATA_INIT, false);
+                            if (!flag) {
                                 Intent intent1 = new Intent(attachActivity, InitDataActivity.class);
                                 startActivity(intent1);
                             } else {
                                 Intent intent = new Intent(attachActivity, MainTabActivity.class);
                                 startActivity(intent);
                             }
+                            attachActivity.finish();
                         }
                     }
                 })
@@ -205,7 +208,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
         HashMap<String, String> map = new HashMap<String, String>();
         map.put("USERNAME", name);
         map.put("PASSWORD", password);
-        HashMap<String, String> info = AppStatus.getImeiImstInfo(attachActivity);
+        HashMap<String, String> info = CommonData.getImeiImstInfo(attachActivity);
         String imei = info.get("IMEI");
         String imsi = info.get("IMSI");
         if (imei.length() > 4 && imsi.length() > 4) {

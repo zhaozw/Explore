@@ -3,7 +3,6 @@ package com.explore.exapp.base.util;
 import android.os.Environment;
 import android.util.Log;
 
-import com.explore.exapp.data.AppStatus;
 import com.google.code.microlog4android.Logger;
 import com.google.code.microlog4android.LoggerFactory;
 

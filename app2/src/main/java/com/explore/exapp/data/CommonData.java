@@ -7,11 +7,12 @@ import com.explore.exapp.R;
 import com.explore.exapp.base.util.ToastUtil;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by ryan on 14/11/1.
  */
-public class AppStatus {
+public class CommonData {
 
     public static final boolean IS_DEBUG = false;
 
@@ -33,6 +34,14 @@ public class AppStatus {
         }
         imeiImsiMap.putAll(map);
         return imeiImsiMap;
+    }
+
+    public static Map<String, String> getBaseRequestMap(Context context) {
+        Map<String, String> map = new HashMap<String, String>();
+
+        map.put("TOKEN", AppPreferences.getTokenLast8(context));
+        map.put("USERID", AppPreferences.getUserId(context));
+        return map;
     }
 
 }

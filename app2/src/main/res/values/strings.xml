@@ -29,6 +29,9 @@
     <string name="wait">等待</string>
     <string name="failed">失败</string>
     <string name="finish">完成</string>
+    <string name="unset">未设置</string>
+    <string name="back_event_msg">再按一次后退键退出</string>
+    <string name="click_here_setup">点此设置</string>
 
     <!-- Login & Register -->
     <string name="login">登录</string>
@@ -88,6 +91,11 @@
     <string name="first_login_init_date_msg">正在初始化数据&#8230;</string>
     <string name="first_login_init_product_category">初始化商品类别数据</string>
     <string name="first_login_init_location_data">初始化地理信息数据</string>
+
+    <!-- Choose dept -->
+    <string name="choose_dept_actionbar_title">选择经营单位</string>
+    <string name="choose_dept_dialog_title">确认经营单位</string>
+    <string name="choose_dept_dialog_msg">确定要选择%1$s作为默认的经营单位吗？</string>
 
     <!-- 应用设置 -->
     <string name="setup_title">系統设置</string>

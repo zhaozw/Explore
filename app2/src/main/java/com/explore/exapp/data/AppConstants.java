@@ -19,6 +19,8 @@ public class AppConstants {
 
     public static final String EXCEPTIONLIST = "EXCEPTIONLIST";
 
+    public static final int RESULT_OK = -1;
+
     public static final int[] TAB_ICON = new int[] {
             R.drawable.icon_home,
             R.drawable.icon_order,

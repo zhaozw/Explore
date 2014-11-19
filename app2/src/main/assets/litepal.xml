@@ -5,7 +5,7 @@
     <version value="1" ></version>
 
     <list>
-        <mapping class="com.explore.exapp.activity.login.model.ProductCategory"></mapping>
-        <mapping class="com.explore.exapp.activity.login.model.MapAddress"></mapping>
+        <mapping class="com.explore.exapp.activity.init.model.ProductCategory"></mapping>
+        <mapping class="com.explore.exapp.activity.init.model.MapAddress"></mapping>
     </list>
 </litepal>

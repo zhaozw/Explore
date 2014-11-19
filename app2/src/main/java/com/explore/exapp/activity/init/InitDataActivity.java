@@ -1,18 +1,18 @@
-package com.explore.exapp.activity.login;
+package com.explore.exapp.activity.init;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.explore.exapp.R;
 import com.explore.exapp.activity.MainTabActivity;
-import com.explore.exapp.activity.login.model.MapAddress;
-import com.explore.exapp.activity.login.model.ProductCategory;
+import com.explore.exapp.activity.init.model.MapAddress;
+import com.explore.exapp.activity.init.model.ProductCategory;
+import com.explore.exapp.activity.login.ChooseDeptActivity;
 import com.explore.exapp.base.BaseAsyncTask;
 import com.explore.exapp.base.util.LogUtil;
 import com.explore.exapp.data.AppPreferences;
@@ -109,9 +109,9 @@ public class InitDataActivity extends Activity{
 				break;
 				
 			case TYPE_FINISH:
-				Intent intent = new Intent(InitDataActivity.this, MainTabActivity.class);
-				startActivity(intent);
-                AppPreferences.prfs(InitDataActivity.this).edit().putBoolean(AppPreferences.Config.FIRST_LOGIN, true).apply();
+                AppPreferences.prfs(InitDataActivity.this).edit().putBoolean(AppPreferences.Config.BASIC_DATA_INIT, true).apply();
+                Intent intent = new Intent(InitDataActivity.this, MainTabActivity.class);
+                startActivity(intent);
 				InitDataActivity.this.finish();
 				break;
 				
@@ -119,7 +119,6 @@ public class InitDataActivity extends Activity{
 				break;
 			}
 		}
-		
 	};
 	
 	private void initCategory(){
@@ -260,7 +259,7 @@ public class InitDataActivity extends Activity{
         }
 
         public void startDocument() throws SAXException {
-            Log.i(TAG, "文档解析开始");
+            LogUtil.debug("Parser xml file.");
             super.startDocument();
         }
 

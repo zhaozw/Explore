@@ -1,8 +1,7 @@
-package com.explore.exapp.activity.login;
+package com.explore.exapp.activity.init;
 
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -10,11 +9,9 @@ import android.widget.EditText;
 
 import com.explore.exapp.R;
 import com.explore.exapp.base.SubActivity;
-import com.explore.exapp.base.util.ToastUtil;
 import com.explore.exapp.data.Api;
-import com.explore.exapp.data.AppConstants;
 import com.explore.exapp.data.AppPreferences;
-import com.explore.exapp.data.AppStatus;
+import com.explore.exapp.data.CommonData;
 
 /**
  * Created by ryan on 14/11/7.
@@ -41,7 +38,7 @@ public class InitSettingActivity extends SubActivity implements View.OnClickList
         if (!"".equals(AppPreferences.getServerUrl(this))) {
             urlEdit.setText(AppPreferences.getServerUrl(this));
         }
-        if (AppStatus.IS_DEBUG) {
+        if (CommonData.IS_DEBUG) {
             urlEdit.setText(Api.HTTPESB_DEBUG);
         } else {
             urlEdit.setText(Api.HTTPESB);
